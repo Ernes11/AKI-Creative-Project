@@ -1,0 +1,50 @@
+@import "../global.scss";
+
+.top-slider {
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 20px;
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 100px;
+  }
+  .slider-img img {
+    opacity: 0.5;
+    width: 302px;
+    height: 272px;
+  }
+  .slick-next:before,
+  .slick-prev:before {
+    color: white;
+  }
+  .center .slick-center slider-img {
+    opacity: 0.5;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.08);
+    -moz-transform: scale(1.2);
+    transform: scale(1);
+    z-index: 1;
+  }
+  .center slider-img {
+    transition: all 0.3s ease;
+  }
+
+  .slick-arrow.slick-prev btn {
+    height: 100px;
+  }
+  .slick-arrow.slick-next::before {
+    content: "\02C3";
+    font-size: 103.64px;
+    position: absolute;
+    right: 19rem;
+    top: -3rem;
+  }
+  .slick-arrow.slick-prev::before {
+    position: absolute;
+    content: "\02C2";
+    font-size: 103.64px;
+    top: -3rem;
+    left: 19rem;
+  }
+}

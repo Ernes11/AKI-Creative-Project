@@ -1,0 +1,78 @@
+@import "../global.scss";
+
+.aboutassociation {
+
+  border-bottom: 1px solid #ffffff;
+ 
+  .container {
+    .about-title {
+      text-align: center;
+      font-weight: 300;
+      font-size: 40px;
+      line-height: 81px;
+      margin-top: 72px;
+      margin-bottom: 72px;
+      color: white;
+    }
+    .about-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .about-column-1 {
+        .column-1-img1 {
+          img {
+            width: 798px;
+            height: 367px;
+
+          }
+        }
+        .about-desc {
+          max-width: 700px;
+          width: 100%;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 32px;
+          color: $primary-color5;
+          margin-top: 72px;
+          margin-bottom: 73px;
+        }
+      }
+
+      .about-column-2 {
+        .about-desc-2 {
+          max-width: 700px;
+          width: 100%;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 32px;
+          color: $primary-color5;
+          padding-left: 32px;
+          position: absolute;
+          top: 49rem;
+        }
+
+        img {
+          width: 692px;
+          height: 166px;
+          padding: 0px 77px 37px 32px;
+          margin-top: 246px;
+        }
+
+        .buttom-text {
+          .buttom-desc {
+            max-width: 700px;
+            width: 100%;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 32px;
+            color: $primary-color5;
+            padding-left: 32px;
+            position: absolute;
+            top: 86rem;
+          }
+        }
+      }
+    }
+  }
+}

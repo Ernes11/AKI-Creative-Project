@@ -1,0 +1,45 @@
+@import "../global.scss";
+
+.content {
+  .container {
+      max-width: 1200px;
+      width: 100%;
+
+
+    h2 {
+        font-weight: 300;
+        font-size: 47px;
+        line-height: 81px;
+        color: $primary-color5;
+        text-align: center;
+        
+      }
+    .content_info {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 140px;
+      row-gap: 100px;
+      margin-top: 15%;
+
+      h3{
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 49px;
+        display: flex;
+        align-items: center;
+        color:$primary-color5;
+      }
+
+      p{
+        
+        height: 190px;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 32px;
+        color: $primary-color5;
+        margin-top: 24px;
+        
+      }
+    }
+  }
+}

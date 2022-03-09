@@ -1,0 +1,79 @@
+@import "../global.scss";
+
+.footer {
+  .container{
+    max-width: 1200px;
+    width: 100%;
+
+  }
+  .footer-fixed {
+    background-color: $primary-color;
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .footer-links {
+        color: white;
+        text-decoration: none;
+        list-style: none;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        margin-top: 80px;
+
+        li {
+          margin-bottom: 24px;
+        }
+      }
+
+      .footer-column {
+        .footer-contact {
+          li {
+            color: white;
+            list-style: none;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 24px;
+
+            a {
+              color: white;
+            }
+          }
+        }
+        .social-icons {
+          display: flex;
+          align-items: center;
+          list-style: none;
+
+          li {
+            margin-right: 46px;
+            a {
+            
+              color: white;
+            }
+          }
+        }
+      }
+
+      .footer-logo {
+        img {
+          width: 180px;
+          height: auto;
+        }
+      }
+    }
+
+    .footer-copyright{
+      margin-top: 40px;
+      margin-bottom: 0;
+      text-align: center;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 22px;
+      color: $primary-color5;
+    }
+  }
+}

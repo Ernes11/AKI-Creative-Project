@@ -1,0 +1,45 @@
+@import "../global.scss";
+
+
+.container-card {
+  
+
+  .top-title {
+    text-align: center;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 81px;
+    margin-top: 72px;
+    margin-bottom: 72px;
+    color: white;
+  }
+  .row-2 {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 50px;
+    grid-template-rows: 27.5rem 27.5rem 32rem;
+
+    .column {
+      display: block;
+      border: solid 1px;
+      width: 334px;
+      height: 440px;
+      &:nth-child(5n - 1) {
+        grid-column: 2;
+      }
+
+      &:nth-child(6n + 1) {
+        grid-column: 1;
+      }
+      &:nth-child(9n) {
+        grid-column: 3;
+      }
+
+      .card-photo {
+        width: 330px;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "../global.scss";
+
+
+.task {
+  .container {
+    .task-title {
+      text-align: center;
+      font-weight: 300;
+      font-size: 40px;
+      line-height: 81px;
+      margin-top: 72px;
+      margin-bottom: 72px;
+      color: white;
+    }
+
+    .task-text {
+      .task-desc {
+        max-width: 1100px;
+        width: 100%;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        padding-bottom: 70px;
+        color: $primary-color5;
+      }
+    }
+  }
+}

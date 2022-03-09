@@ -1,0 +1,71 @@
+@import "../global.scss";
+
+.info {
+  display: flex;
+  position: relative;
+  border: 1px solid $primary-color5;
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    border-left: 1px solid $primary-color5;
+    .aki-row-1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+
+      img {
+        width: 565px;
+        height: auto;
+      }
+      .aki-desc {
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 32px;
+        color: $primary-color5;
+        padding-left: 35px;
+        padding-top: 72px;
+        margin-right: -61px;
+        padding-bottom: 72px;
+      }
+    }
+
+    .aki-row-2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      img {
+        width: 475px;
+        height: auto;
+      }
+
+      .aki-desc-2 {
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 32px;
+        color: $primary-color5;
+        padding-left: 123px;
+        padding-top: 72px;
+        margin-right: -61px;
+        padding-bottom: 72px;
+      }
+    }
+  }
+  .box {
+    position: absolute;
+    left: 82%;
+    top: 0%;
+    width: 160px;
+    height: 642px;
+    box-sizing: border-box;
+    border-left: 1px solid $primary-color5;
+    border-right: 1px solid $primary-color5;
+
+    background: linear-gradient(
+      91.36deg,
+      rgba(255, 0, 255, 0.15) 1.4%,
+      rgba(255, 0, 255, 0) 99.1%
+    );
+  }
+}
