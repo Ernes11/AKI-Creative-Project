@@ -1,0 +1,106 @@
+@import "../global.scss";
+
+
+.event-section__element {
+    box-sizing: border-box;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    height: 350px;
+
+    .main-event__info {
+        height: 310px;
+        
+        .info-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        p {
+            white-space: pre-line;
+            display: -webkit-box;
+            margin-bottom: 0;
+            -webkit-line-clamp: 7;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            color: white;
+            text-align: start;
+            font-size: 16px;
+            line-height: unset;
+        }
+        h4{
+            font-size: 28px;
+            color: white;
+            text-align: start;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            margin-bottom: 15px;
+        }
+        button{
+            font-size: 18px;
+            width: 40%;
+            margin-top: 5px;
+            padding: 2px;
+        }
+        
+    }
+    .fullHeight{
+        background-color: #050505;
+        display: block !important;
+        height: auto !important;
+        position: relative;
+        z-index: 10;
+        text-align: start;
+        padding-bottom: 10px;
+        border-radius: 12px;
+        outline: 1px solid #00fffe;
+        p,
+        h4{
+        position: relative;
+        display: block;
+        z-index: 10;
+        }
+        
+    }
+    .main-event__image-album {
+        align-self: center;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+
+        .control-arrow{
+            opacity: 0.8;
+        }
+        .control-prev:before {
+            border-right: 8px solid #00fffe;
+        }
+        .control-next:before {
+            border-left: 8px solid #00fffe;
+
+        }
+    }
+}
+
+.event-section__element1 {
+    border-right: 1px solid white;
+}
+.event-section__element0 {
+    border-left: 1px solid white;
+
+    .main-event__info {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        
+    }
+    .main-event__image-album {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+}
