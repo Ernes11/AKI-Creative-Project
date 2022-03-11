@@ -19,6 +19,9 @@ function Info() {
           <hr class="line_horizontal-1"/>
           <hr class="line_vertical-1"/>
 
+
+        <h1>Hello</h1>
+
         </div>
         <div className="aki-row-2">
           <img src="../../images/Creative.png" alt="" />
