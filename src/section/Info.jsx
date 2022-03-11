@@ -16,6 +16,9 @@ function Info() {
             архитектура и дизайн интерьера, ивент-агентство, образование и
             медиа....
           </p>
+          <hr class="line_horizontal-1"/>
+          <hr class="line_vertical-1"/>
+
         </div>
         <div className="aki-row-2">
           <img src="../../images/Creative.png" alt="" />
@@ -27,8 +30,9 @@ function Info() {
             Кыргызстане
           </p>
         </div>
+        <div className="box"></div>
       </div>
-      <div className="box"></div>
+    
     </div>
   );
 }

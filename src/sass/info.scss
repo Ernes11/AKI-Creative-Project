@@ -2,23 +2,27 @@
 
 .info {
   display: flex;
-  position: relative;
   border: 1px solid $primary-color5;
   .container {
     max-width: 1200px;
     width: 100%;
+    position: relative;
     border-left: 1px solid $primary-color5;
     .aki-row-1 {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      
+      position: relative;
 
       img {
-        width: 565px;
-        height: auto;
+        width: 577.1px;
+        height: 318px;
+        position: absolute;
+        top: 0%;
+        left: -1.2%;
       }
       .aki-desc {
+        width: 57%;
         font-weight: normal;
         font-size: 21px;
         line-height: 32px;
@@ -28,6 +32,29 @@
         margin-right: -61px;
         padding-bottom: 72px;
       }
+
+      .line_horizontal-1 {
+        background-color: $primary-color5;
+        color: $primary-color5;
+        position: absolute;
+        width: 106.9%;
+        height: 1px;
+        left: -1.5%;
+        top: 78.8%;
+        border: 2px;
+      }
+
+      .line_vertical-1 {
+        background-color: $primary-color5;
+        color: $primary-color5;
+        -webkit-transform: rotate(90deg);
+        position: absolute;
+        width: 47.9%;
+        height: 1px;
+        left: 24.5%;
+        top: 68.9%;
+        border: 2px;
+      }
     }
 
     .aki-row-2 {
@@ -36,36 +63,39 @@
       justify-content: space-between;
 
       img {
-        width: 475px;
-        height: auto;
+        width: 545px;
+        height: 197px;
+        position: absolute;
+        top: 61%;
+        left: 1%;
       }
 
       .aki-desc-2 {
+        width: 57%;
         font-weight: normal;
         font-size: 21px;
         line-height: 32px;
         color: $primary-color5;
-        padding-left: 123px;
-        padding-top: 72px;
-        margin-right: -61px;
-        padding-bottom: 72px;
+        padding-top: 6px;
+        margin-left: 51%;
+        padding-bottom: 28px;
       }
     }
-  }
-  .box {
-    position: absolute;
-    left: 82%;
-    top: 0%;
-    width: 160px;
-    height: 642px;
-    box-sizing: border-box;
-    border-left: 1px solid $primary-color5;
-    border-right: 1px solid $primary-color5;
 
-    background: linear-gradient(
-      91.36deg,
-      rgba(255, 0, 255, 0.15) 1.4%,
-      rgba(255, 0, 255, 0) 99.1%
-    );
+    .box {
+      position: absolute;
+      left: 104%;
+      top: 0%;
+      width: 142px;
+      height: 563px;
+      box-sizing: border-box;
+      border-left: 1px solid $primary-color5;
+      border-right: 1px solid $primary-color5;
+      background: linear-gradient(
+        91.36deg,
+        rgba(255, 0, 255, 0.15) 1.4%,
+        rgba(255, 0, 255, 0) 99.1%
+      );
+    }
   }
 }
