@@ -1,0 +1,30 @@
+@import '../global.scss';
+
+.customButton {
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+    user-select: none;
+    
+}
+.customButtoncontained {
+    border: none;
+
+    background: linear-gradient(to left, #00FFFE, #39A2B9E0 88%, #6060FF);
+}
+.customButtonoutlined {
+    border-color: #00fffe;
+    background-color: transparent;
+    transition: 0.3s all;
+}
+.customButton:focus {
+    outline: none;
+}
+.customButtonoutlined:hover {
+    background: linear-gradient(to left, #00ffff85, #39a1b977 88%, #6060ff83);
+
+}
