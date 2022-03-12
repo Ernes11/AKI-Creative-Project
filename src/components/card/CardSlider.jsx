@@ -4,7 +4,9 @@ import {
   MdOutlineArrowBackIos,
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
-import { social } from "../data";
+import { FaFacebookSquare, FaTelegram } from "react-icons/fa";
+import { RiWhatsappFill } from "react-icons/ri";
+import { AiFillInstagram } from "react-icons/ai";
 
 const CardSlider = (props) => {
   const slideLeft = () => {
@@ -42,14 +44,10 @@ const CardSlider = (props) => {
               <p className="slider-card-title">{slide.title}</p>
               <p className="slider-card-description">{slide.description}</p>
               <ul className="social-icons">
-                {social.map((socialIcon) => {
-                  const { id, url, icon } = socialIcon;
-                  return (
-                    <li key={id}>
-                      <a href={url}>{icon}</a>
-                    </li>
-                  );
-                })}
+                <FaFacebookSquare size={30} className="icons" />
+                <FaTelegram size={30} className="icons" />
+                <RiWhatsappFill size={32} className="icons" />
+                <AiFillInstagram size={32} className="icons"  />
               </ul>
             </div>
           );

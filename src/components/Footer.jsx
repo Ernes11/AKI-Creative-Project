@@ -1,6 +1,8 @@
 import React from "react";
-import { social } from "../components/data";
-import '../sass/footer.scss';
+import { FaFacebookSquare, FaTelegram } from "react-icons/fa";
+import { RiWhatsappFill } from "react-icons/ri";
+import { AiFillInstagram } from "react-icons/ai";
+import "../sass/footer.scss";
 
 function Footer() {
   return (
@@ -24,19 +26,20 @@ function Footer() {
                   <a href="e-mail">creative.kyrgyzstan@gmail.com </a>
                 </li>
               </ul>
+
               <ul className="social-icons">
-                {social.map((socialIcon) => {
-                  const { id, url, icon } = socialIcon;
-                  return (
-                    <li key={id}>
-                      <a href={url}>{icon}</a>
-                    </li>
-                  );
-                })}
+                <FaFacebookSquare size={30} className="icons" />
+                <FaTelegram size={30} className="icons" />
+                <RiWhatsappFill size={32} className="icons" />
+                <AiFillInstagram size={32} className="icons" />
               </ul>
             </div>
             <div className="footer-logo">
-              <img src="../../images/Footer_logo.png" alt="" className="footer-img" />
+              <img
+                src="../../images/Footer_logo.png"
+                alt=""
+                className="footer-img"
+              />
             </div>
           </div>
 
