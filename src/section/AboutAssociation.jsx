@@ -4,7 +4,7 @@ import "../sass/aboutassociation.scss";
 function AboutAssociation() {
   return (
     <div className="aboutassociation">
-      <div class="container">
+      <div className="container">
         <h1 className="about-title">Об Ассоциации</h1>
 
         <div className="about-row">

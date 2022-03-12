@@ -7,19 +7,19 @@ function Content() {
       <h2>ПОЧЕМУ ЦЕННО БЫТЬ ЧЛЕНОМ АССОЦИАЦИИ?</h2>
 
       <div className="horizontal-line">
-        <hr class="line_horizontal-1" />
-        <hr class="line_horizontal-2" />
+        <hr className="line_horizontal-1" />
+        <hr className="line_horizontal-2" />
       </div>
 
       <div class="container">
         <hr class="line_horizontal-3" />
 
         <div className="vertical">
-          <hr class="line_vertical-1" />
-          <hr class="line_vertical-2" />
-          <hr class="line_vertical-3" />
+          <hr className="line_vertical-1" />
+          <hr className="line_vertical-2" />
+          <hr className="line_vertical-3" />
         </div>
-        <div class="content_info">
+        <div className="content_info">
           <div>
             <h3>Нетворкинг</h3>
             <p>
