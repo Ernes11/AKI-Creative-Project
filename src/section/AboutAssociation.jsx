@@ -6,12 +6,17 @@ function AboutAssociation() {
     <div className="aboutassociation">
       <div className="container">
         <h1 className="about-title">Об Ассоциации</h1>
-
+        <hr class="line_horizontal-1"/>
+        <hr class="line_horizontal-2"/>
+        <hr class="line_horizontal-3"/>
+        
         <div className="about-row">
+        
           <div className="about-column-1">
             <div className="column-1-img1">
               <img src="../../images/top-unsplash.png" alt="" />
             </div>
+            
 
             <p className="about-desc">
               Основная цель Ассоциации - консолидация и объединение усилий
@@ -33,17 +38,17 @@ function AboutAssociation() {
               медиа
             </p>
 
-            <img src="../../images/Creative.png" alt="" />
+            <div className="column-2-img">
+              <img src="../../images/Creative.png" alt="" />
+            </div>
 
             <div className="buttom-text">
-            <p className="buttom-desc">
-              Видение Ассоциации: высокомаржинальные продукты креативных
-              индустрий с высокой экономической ценностью экспортируются на
-              развитые рынки мира
-            </p>
-
+              <p className="buttom-desc">
+                Видение Ассоциации: высокомаржинальные продукты креативных
+                индустрий с высокой экономической ценностью экспортируются на
+                развитые рынки мира
+              </p>
             </div>
-            
           </div>
         </div>
       </div>
