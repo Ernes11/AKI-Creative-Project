@@ -6,21 +6,19 @@ function AboutAssociation() {
     <div className="aboutassociation">
       <div className="container">
         <h1 className="about-title">Об Ассоциации</h1>
-        <hr class="line_horizontal-1"/>
-        <hr class="line_horizontal-2"/>
-        <hr class="line_horizontal-3"/>
-        <hr class="line_horizontal-4"/>
-        <hr class="line_vertical-1"/>
-        <hr class="line_vertical-2"/>
-        <hr class="line_vertical-3"/>
+        <hr className="line_horizontal-1" />
+        <hr className="line_horizontal-2" />
+        <hr className="line_horizontal-3" />
+        <hr className="line_horizontal-4" />
+        <hr className="line_vertical-1" />
+        <hr className="line_vertical-2" />
+        <hr className="line_vertical-3" />
 
         <div className="about-row">
-        
           <div className="about-column-1">
             <div className="column-1-img1">
               <img src="../../images/top-unsplash.png" alt="" />
             </div>
-            
 
             <p className="about-desc">
               Основная цель Ассоциации - консолидация и объединение усилий

@@ -9,6 +9,13 @@ const Card = ({ item }) => {
     <>
       <div className="container-card">
         <h1 className="top-title">учредители Ассоциации</h1>
+        <hr className="line_horizontal-1" />
+        <hr className="line_horizontal-2" />
+        <hr className="line_horizontal-3" />
+        <hr className="line_horizontal-4" />
+        <hr className="line_horizontal-5" />
+        <hr className="line_horizontal-6" />
+
         <div className="row-2">
           {item.map((Val) => {
             return (
