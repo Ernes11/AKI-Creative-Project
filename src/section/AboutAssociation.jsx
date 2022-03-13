@@ -9,7 +9,11 @@ function AboutAssociation() {
         <hr class="line_horizontal-1"/>
         <hr class="line_horizontal-2"/>
         <hr class="line_horizontal-3"/>
-        
+        <hr class="line_horizontal-4"/>
+        <hr class="line_vertical-1"/>
+        <hr class="line_vertical-2"/>
+        <hr class="line_vertical-3"/>
+
         <div className="about-row">
         
           <div className="about-column-1">
@@ -51,6 +55,7 @@ function AboutAssociation() {
             </div>
           </div>
         </div>
+        <div className="box"></div>
       </div>
     </div>
   );

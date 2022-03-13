@@ -22,7 +22,7 @@
       position: absolute;
       width: 110.9%;
       height: 1px;
-      left: -10.5%;
+      left: -22.3%;
       top: 91.8%;
       border: 2px;
     }
@@ -42,8 +42,52 @@
       position: absolute;
       width: 110.9%;
       height: 1px;
-      left: -10.5%;
+      left: -22.3%;
       top: 61.7%;
+      border: 2px;
+    }
+    .line_horizontal-4 {
+      background-color: $primary-color5;
+      color: $primary-color5;
+      position: absolute;
+      width: 110.9%;
+      height: 1px;
+      left: -10.5%;
+      top: 110.6%;
+      border: 2px;
+    }
+
+    .line_vertical-1 {
+      background-color: $primary-color5;
+      color: $primary-color5;
+      -webkit-transform: rotate(90deg);
+      position: absolute;
+      width: 22.9%;
+      height: 1px;
+      left: -10.1%;
+      top: 70.2%;
+      border: 2px;
+    }
+    .line_vertical-2 {
+      background-color: $primary-color5;
+      color: $primary-color5;
+      -webkit-transform: rotate(90deg);
+      position: absolute;
+      width: 22.9%;
+      height: 1px;
+      left: 29.8%;
+      top: 70.2%;
+      border: 2px;
+    }
+    .line_vertical-3 {
+      background-color: $primary-color5;
+      color: $primary-color5;
+      -webkit-transform: rotate(90deg);
+      position: absolute;
+      width: 39.5%;
+      height: 1px;
+      left: 68.8%;
+      top: 65.1%;
       border: 2px;
     }
 
@@ -71,13 +115,13 @@
           font-size: 16px;
           line-height: 32px;
           color: $primary-color5;
+          padding-left: 10px;
           margin-top: 72px;
           margin-bottom: 80px;
-          
         }
         .column-1-img2 {
           img {
-            max-width: 500px;
+            max-width: 480px;
             width: 100%;
             position: absolute;
             top: 89%;
@@ -124,6 +168,22 @@
           }
         }
       }
+    }
+    .box {
+      position: absolute;
+      left: 88.5%;
+      top: 22.4%;
+      width: 142px;
+      height: 476.5px;
+      box-sizing: border-box;
+      border-left: 1px solid $primary-color5;
+      border-right: 1px solid $primary-color5;
+     
+      background: linear-gradient(
+        91.36deg,
+        rgba(255, 0, 255, 0.15) 1.4%,
+        rgba(255, 0, 255, 0) 99.1%
+      );
     }
   }
 }

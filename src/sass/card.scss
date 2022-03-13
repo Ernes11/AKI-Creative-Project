@@ -19,13 +19,15 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: 50px;
-    grid-template-rows: 27.5rem 27.5rem 32rem;
+    grid-template-rows: 22.2rem 22.2rem 22rem;
 
     .column {
       display: block;
       border: solid 1px;
-      width: 334px;
-      height: 440px;
+      width: 282px;
+      height: 356px;
+      color: $primary-color5;
+      background-color: rgba(37, 37, 37, 0.6);
       &:nth-child(5n - 1) {
         grid-column: 2;
       }
@@ -38,7 +40,13 @@
       }
 
       .card-photo {
-        width: 330px;
+        width: 280px;
+      }
+
+      .social-icons{
+
+        margin-left: 20px;
+
       }
     }
   }
