@@ -39,7 +39,7 @@ function Navigation() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/joinus">
+                <NavLink className="nav-link" to="/resource">
                 Ресурсы
                 </NavLink>
               </li>
