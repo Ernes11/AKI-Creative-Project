@@ -1,0 +1,43 @@
+.joinUs-modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.63);
+  z-index: 3000;
+  align-items: center;
+
+  .joinUs-modal {
+    position: inherit;
+    max-width: 60%;
+    gap: 15px;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    color: white;
+    background-color: #201f1f;
+    padding: 60px 40px;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h3 {
+      color: #3774d0;
+      font-size: 1.5rem;
+      padding-bottom: 10px;
+    }
+    p {
+      font-size: 1rem;
+      margin: 0;
+      text-transform: uppercase;
+    }
+    button {
+      padding-left: 0;
+    }
+  }
+}
