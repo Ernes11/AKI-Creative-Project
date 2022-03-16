@@ -1,4 +1,3 @@
-
 import Button from '@mui/material/Button';
 import './JoinUsModal.scss';
 import { useEffect, useState } from 'react';
