@@ -14,12 +14,16 @@
     width: 302px;
     height: 272px;
   }
+
+  .slick-arrow.slick-prev{
+    z-index: 3;
+  }
   .slick-next:before,
   .slick-prev:before {
     color: white;
   }
   .center .slick-center slider-img {
-    opacity: 0.5;
+    opacity: 1;
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.08);
     -moz-transform: scale(1.2);
@@ -28,6 +32,7 @@
   }
   .center slider-img {
     transition: all 0.3s ease;
+    transform: scale(1);
   }
 
   .slick-arrow.slick-prev btn {

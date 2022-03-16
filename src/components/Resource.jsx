@@ -1,6 +1,6 @@
 import React from "react";
 
-function Membership() {
+function Resource() {
   return (
     <div className="event">
       <div className="container">
@@ -13,7 +13,7 @@ function Membership() {
             />
           </div>
           <div className="col-lg-5">
-            <h1 className="font-weight-light">Membership</h1>
+            <h1 className="font-weight-light">Resource</h1>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -27,4 +27,4 @@ function Membership() {
   );
 }
 
-export default Membership;
+export default Resource;

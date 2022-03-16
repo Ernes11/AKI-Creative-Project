@@ -1,8 +1,10 @@
 @import "../global.scss";
 
 .navigation {
-  border: 0.5px solid #FFFFFF;
+  
   .navbar {
+    border-bottom: 1px solid white;
+    
     background-color: $primary-color;
     .container {
       margin: 0 auto;

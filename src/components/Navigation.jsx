@@ -39,6 +39,11 @@ function Navigation() {
                 </NavLink>
               </li>
               <li className="nav-item">
+                <NavLink className="nav-link" to="/resource">
+                Ресурсы
+                </NavLink>
+              </li>
+              <li className="nav-item">
                 <NavLink className="nav-link" to="/contact">
                   Контакты
                 </NavLink>
@@ -46,9 +51,9 @@ function Navigation() {
             </ul>
           </div>
           <select className="language">
-            <option value="Russian">Русский</option>
-            <option value="English">English</option>
-            <option value="Kyrgyz">Кыргызча</option>
+            <option value="Russian">Рус</option>
+            <option value="English">Eng</option>
+            <option value="Kyrgyz">Кыр</option>
           </select>
         </div>
       </nav>
