@@ -1,0 +1,13 @@
+@import "../global.scss";
+
+.homepage {
+  &-title {
+    text-align: center;
+    margin-top: 8rem;
+    text-align: center;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 81px;
+    color: white;
+  }
+}

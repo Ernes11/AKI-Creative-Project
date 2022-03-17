@@ -1,0 +1,55 @@
+@import "../global.scss";
+
+.steps {
+  background: url(../img/ellipse1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 115%;
+
+  .container {
+    .steps-title {
+        padding-top: 2rem;
+      font-weight: 200;
+      font-size: 35px;
+      line-height: 72px;
+      text-align: center;
+      text-transform: uppercase;
+      color: white;
+    }
+
+    .steps-main {
+      margin-top: 4rem;
+      position: relative;
+
+      .steps-images {
+        position: absolute;
+        top: 0%;
+        left: 59%;
+      }
+      .steps-row {
+        display: grid;
+        grid-row-gap: 16px;
+        width: 51%;
+        margin-right: 32rem;
+
+        .steps-row-text {
+          color: white;
+          border-radius: 3.5px;
+          background-color: rgb(48, 47, 47);
+          font-weight: 200;
+          font-size: 16px;
+          line-height: 16px;
+          text-align: left;
+          padding-left: 1rem;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+
+          img {
+            width: 35px;
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
