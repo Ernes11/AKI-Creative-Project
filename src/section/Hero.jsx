@@ -4,7 +4,7 @@ import "../sass/hero.scss";
 function Hero() {
   return (
     <div className="main_page">
-      <div class="container">
+      <div className="container">
         <div className="main_background">
           <div className="v1"></div>
           <div className="v2"></div>
@@ -26,10 +26,10 @@ function Hero() {
             </div>
           </div>
         </div>
-        <div class="scrolldown">
-          <div class="chevrons">
-            <div class="chevrondown"></div>
-            <div class="chevrondown"></div>
+        <div className="scrolldown">
+          <div className="chevrons">
+            <div className="chevrondown"></div>
+            <div className="chevrondown"></div>
           </div>
         </div>
       </div>

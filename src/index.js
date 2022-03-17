@@ -11,7 +11,8 @@ import {
   Contact,
   Event,
   JoinUs,
-  Membership,
+  // Resource,
+  Membership
 } from "./components";
 
 ReactDOM.render(
@@ -22,8 +23,10 @@ ReactDOM.render(
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/event" element={<Event />} />
-      <Route path="/JoinUs" element={<JoinUs />} />
-      <Route path="/Membership" element={<Membership />} />
+      <Route path="/joinUs" element={<JoinUs />} />
+      <Route path="/membership" element={<Membership />} />
+      {/* <Route path="/resource" element={<Resource />} /> */}
+
     </Routes>
     <Footer />
   </Router>,

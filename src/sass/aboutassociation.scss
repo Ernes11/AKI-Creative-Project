@@ -1,78 +1,189 @@
 @import "../global.scss";
 
 .aboutassociation {
-
-  border-bottom: 1px solid #ffffff;
- 
   .container {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+
     .about-title {
       text-align: center;
       font-weight: 300;
       font-size: 40px;
       line-height: 81px;
-      margin-top: 72px;
-      margin-bottom: 72px;
       color: white;
+      margin-bottom: 12rem;
+      margin-top: 72px;
     }
+
+    .line_horizontal-1 {
+      background-color: $primary-color5;
+      color: $primary-color5;
+      position: absolute;
+      width: 110.9%;
+      height: 1px;
+      left: -22.3%;
+      top: 91.8%;
+      border: 2px;
+    }
+    .line_horizontal-2 {
+      background-color: $primary-color5;
+      color: $primary-color5;
+      position: absolute;
+      width: 110.9%;
+      height: 1px;
+      left: -10.5%;
+      top: 19.2%;
+      border: 2px;
+    }
+    .line_horizontal-3 {
+      background-color: $primary-color5;
+      color: $primary-color5;
+      position: absolute;
+      width: 110.9%;
+      height: 1px;
+      left: -22.3%;
+      top: 61.7%;
+      border: 2px;
+    }
+    .line_horizontal-4 {
+      background-color: $primary-color5;
+      color: $primary-color5;
+      position: absolute;
+      width: 110.9%;
+      height: 1px;
+      left: -10.5%;
+      top: 110.6%;
+      border: 2px;
+    }
+
+    .line_vertical-1 {
+      background-color: $primary-color5;
+      color: $primary-color5;
+      -webkit-transform: rotate(90deg);
+      position: absolute;
+      width: 22.9%;
+      height: 1px;
+      left: -10.1%;
+      top: 70.2%;
+      border: 2px;
+    }
+    .line_vertical-2 {
+      background-color: $primary-color5;
+      color: $primary-color5;
+      -webkit-transform: rotate(90deg);
+      position: absolute;
+      width: 22.9%;
+      height: 1px;
+      left: 29.8%;
+      top: 70.2%;
+      border: 2px;
+    }
+    .line_vertical-3 {
+      background-color: $primary-color5;
+      color: $primary-color5;
+      -webkit-transform: rotate(90deg);
+      position: absolute;
+      width: 39.5%;
+      height: 1px;
+      left: 68.8%;
+      top: 65.1%;
+      border: 2px;
+    }
+
     .about-row {
       display: flex;
       align-items: center;
       justify-content: center;
 
       .about-column-1 {
+        position: relative;
         .column-1-img1 {
           img {
-            width: 798px;
-            height: 367px;
-
+            max-width: 480px;
+            width: 100%;
+            position: absolute;
+            top: -63%;
+            left: 0%;
+            border: 1px solid white;
           }
         }
         .about-desc {
-          max-width: 700px;
+          max-width: 518px;
           width: 100%;
           font-weight: normal;
-          font-size: 24px;
+          font-size: 16px;
           line-height: 32px;
           color: $primary-color5;
+          padding-left: 10px;
           margin-top: 72px;
-          margin-bottom: 73px;
+          margin-bottom: 80px;
+        }
+        .column-1-img2 {
+          img {
+            max-width: 480px;
+            width: 100%;
+            position: absolute;
+            top: 89%;
+            left: 0%;
+            border: 1px solid white;
+          }
         }
       }
 
       .about-column-2 {
+        position: relative;
         .about-desc-2 {
-          max-width: 700px;
+          max-width: 542px;
           width: 100%;
           font-weight: normal;
-          font-size: 24px;
+          font-size: 16px;
           line-height: 32px;
           color: $primary-color5;
-          padding-left: 32px;
+          padding-left: 10px;
           position: absolute;
-          top: 49rem;
+          top: -195%;
+          left: 0%;
         }
 
-        img {
-          width: 692px;
-          height: 166px;
-          padding: 0px 77px 37px 32px;
-          margin-top: 246px;
+        .column-2-img {
+          position: relative;
+          img {
+            width: 68%;
+            padding-left: 5px;
+          }
         }
 
         .buttom-text {
           .buttom-desc {
-            max-width: 700px;
+            max-width: 542px;
             width: 100%;
             font-weight: normal;
-            font-size: 24px;
+            font-size: 16px;
             line-height: 32px;
             color: $primary-color5;
             padding-left: 32px;
             position: absolute;
-            top: 86rem;
+            top: 10rem;
           }
         }
       }
+    }
+    .box {
+      position: absolute;
+      left: 88.5%;
+      top: 22.4%;
+      width: 142px;
+      height: 476.5px;
+      box-sizing: border-box;
+      border-left: 1px solid $primary-color5;
+      border-right: 1px solid $primary-color5;
+     
+      background: linear-gradient(
+        91.36deg,
+        rgba(255, 0, 255, 0.15) 1.4%,
+        rgba(255, 0, 255, 0) 99.1%
+      );
     }
   }
 }

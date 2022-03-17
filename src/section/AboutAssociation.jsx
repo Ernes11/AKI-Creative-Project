@@ -4,8 +4,15 @@ import "../sass/aboutassociation.scss";
 function AboutAssociation() {
   return (
     <div className="aboutassociation">
-      <div class="container">
+      <div className="container">
         <h1 className="about-title">Об Ассоциации</h1>
+        <hr className="line_horizontal-1" />
+        <hr className="line_horizontal-2" />
+        <hr className="line_horizontal-3" />
+        <hr className="line_horizontal-4" />
+        <hr className="line_vertical-1" />
+        <hr className="line_vertical-2" />
+        <hr className="line_vertical-3" />
 
         <div className="about-row">
           <div className="about-column-1">
@@ -33,19 +40,20 @@ function AboutAssociation() {
               медиа
             </p>
 
-            <img src="../../images/Creative.png" alt="" />
+            <div className="column-2-img">
+              <img src="../../images/Creative.png" alt="" />
+            </div>
 
             <div className="buttom-text">
-            <p className="buttom-desc">
-              Видение Ассоциации: высокомаржинальные продукты креативных
-              индустрий с высокой экономической ценностью экспортируются на
-              развитые рынки мира
-            </p>
-
+              <p className="buttom-desc">
+                Видение Ассоциации: высокомаржинальные продукты креативных
+                индустрий с высокой экономической ценностью экспортируются на
+                развитые рынки мира
+              </p>
             </div>
-            
           </div>
         </div>
+        <div className="box"></div>
       </div>
     </div>
   );
