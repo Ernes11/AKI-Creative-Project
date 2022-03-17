@@ -5,7 +5,7 @@ const UsersList = ({ users, isLoading }) => {
   return (
     <div className="users-list">
       {isLoading ? (
-        <p className="loading">Loading...</p>
+        <p className="loading"></p>
       ) : (
         <React.Fragment>
           {users.map((user, index) => (
