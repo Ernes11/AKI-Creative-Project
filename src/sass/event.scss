@@ -1,64 +1,65 @@
-@import '../global.scss';
+@import "../global.scss";
 
-.main-event{
-    section {
-        width: 100%;
-        border-bottom: 1px solid white;
-    }
-    .main-event__container {
-        text-align: center;
-        width: 80%;
-        margin: 0 auto;
+.main-event {
+  section {
+    width: 100%;
+    border-bottom: 1px solid white;
+  }
+  .main-event__container {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1400px;
 
-        h1 {
-            text-transform: uppercase;
-            font-size: 46px;
-            color: white;
-        }
+    h1 {
+      text-transform: uppercase;
+      font-size: 46px;
+      color: white;
     }
-    .main-event__buttons {
-        display: flex;
-        justify-content: space-between;
-        
-        button {
-            width: 30%;
-            margin: 50px 0;
-        }
-    }
-    
-    .lookMore {
-        margin: 50px auto;
-        display: block;
-        border: none;
-        background: transparent;
-        text-align: center;
-        text-decoration: none;
-        color: white;
-        font-size: 25px;
-        position: relative;
-        transition: 0.3s all;
+  }
+  .main-event__buttons {
+    display: flex;
+    justify-content: space-between;
 
-        .arrowDown {
-            position: absolute;
-            top: calc(50% - 4px);
-            right: -20px;
-            border: solid white;
-            border-width: 0 3px 3px 0;
-            display: inline-block;
-            line-height: 25px;
-            padding: 3px;
-            transform: rotate(45deg);
-            transition: 0.3s all;
-        }
+    button {
+      width: 30%;
+      margin: 50px 0;
     }
-    .lookMore:focus {
-        outline: none;
-    }
-    button[class*="lookMore"]:hover {
-        color: #00fffe;
+  }
 
-        .arrowDown{
-            border-color: #00fffe;
-        }
+  .lookMore {
+    margin: 50px auto;
+    display: block;
+    border: none;
+    background: transparent;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    position: relative;
+    transition: 0.3s all;
+
+    .arrowDown {
+      position: absolute;
+      top: calc(50% - 4px);
+      right: -20px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      line-height: 25px;
+      padding: 3px;
+      transform: rotate(45deg);
+      transition: 0.3s all;
     }
+  }
+  .lookMore:focus {
+    outline: none;
+  }
+  button[class*="lookMore"]:hover {
+    color: #00fffe;
+
+    .arrowDown {
+      border-color: #00fffe;
+    }
+  }
 }
