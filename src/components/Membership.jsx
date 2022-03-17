@@ -8,8 +8,9 @@ import "../sass/filters.scss";
 function Membership() {
   return (
     <>
-      <Provider store={store} />
+      <Provider store={store}>
       <HomePage />
+      </Provider>
     </>
   );
 }
