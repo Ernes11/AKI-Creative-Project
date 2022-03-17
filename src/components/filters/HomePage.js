@@ -5,6 +5,8 @@ import { loadUsers } from '../../actions/users';
 import UsersList from './UsersList';
 import Header from './Header';
 import Filters from './Filters';
+import '../../sass/homepage.scss'
+
 
 const HomePage = (props) => {
   const [users, setUsers] = useState(props.users);
@@ -52,6 +54,9 @@ const HomePage = (props) => {
  
   return (
     <React.Fragment>
+      <div className="homepage">
+        <h1 className="homepage-title"> Члены Ассоциации</h1>
+      </div>
       <Header handleSearch={handleSearch} />
       <Filters handleSort={handleSort} sortOrder={sortOrder} />
       <UsersList users={users} isLoading={isLoading} />

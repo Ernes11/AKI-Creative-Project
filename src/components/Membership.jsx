@@ -12,7 +12,7 @@ function Membership() {
       <Provider store={store}>
         <div className="container">
           <Steps />
-          <HomePage />
+          <HomePage/>
         </div>
       </Provider>
     </>
