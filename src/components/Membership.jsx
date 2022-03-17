@@ -9,7 +9,9 @@ function Membership() {
   return (
     <>
       <Provider store={store}>
-      <HomePage />
+        <div className="container">
+          <HomePage />
+        </div>
       </Provider>
     </>
   );
