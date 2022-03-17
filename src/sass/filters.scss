@@ -1,13 +1,6 @@
-html {
-  font-size: 62.5%;
-}
+@import "../global.scss";
 
-body {
-  background-color: black;
-  color: white;
-  letter-spacing: 1px;
-  font-size: 16px;
-}
+
 
 .header {
   padding: 2rem;

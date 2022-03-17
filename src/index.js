@@ -26,7 +26,6 @@ ReactDOM.render(
       <Route path="/joinUs" element={<JoinUs />} />
       <Route path="/membership" element={<Membership />} />
       {/* <Route path="/resource" element={<Resource />} /> */}
-
     </Routes>
     <Footer />
   </Router>,

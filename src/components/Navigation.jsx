@@ -39,9 +39,9 @@ function Navigation() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/resource">
+                {/* <NavLink className="nav-link" to="/resource">
                 Ресурсы
-                </NavLink>
+                </NavLink> */}
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/contact">
