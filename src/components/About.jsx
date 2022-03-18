@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AboutAssociation from "../section/AboutAssociation";
 import Carousel from "../section/Carousel";
 import CoFounder from "../components/card/CoFounder";
@@ -7,6 +7,10 @@ import Report from "../section/Report";
 import '../../src/global.scss'
 
 function About() {
+
+  useEffect(() =>{
+    window.scrollTo(0, 0);
+  },[])
   return (
     <>
       <div className="container">

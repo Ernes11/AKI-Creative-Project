@@ -1,5 +1,6 @@
 import Button from '@mui/material/Button';
 import './JoinUsModal.scss';
+import { Link } from 'react-router-dom';
 
 export default function JoinUsModal({ display ='none', setDisplay }){
 
@@ -9,10 +10,12 @@ export default function JoinUsModal({ display ='none', setDisplay }){
         <h3>Отправлено</h3>
         <p>ваша заявка отправлена на рассмотрение</p>
         <p>наши сотрудники в ближайшее время свяжутся с вами, спасибо!</p>
-        <Button
-        type='text'
-        onClick={() => setDisplay('none')}
-        >вернуться на главную страничку</Button>
+        <Link to='/'>
+          <Button
+          type='text'
+          onClick={() => setDisplay('none')}
+          >вернуться на главную страничку</Button>
+        </Link>
        </div>
      </div>
   )

@@ -3,6 +3,7 @@ import { FaFacebookSquare, FaTelegram } from "react-icons/fa";
 import { RiWhatsappFill } from "react-icons/ri";
 import { AiFillInstagram } from "react-icons/ai";
 import "../sass/footer.scss";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -11,19 +12,19 @@ function Footer() {
         <div className="container">
           <div className="footer-row">
             <ul className="footer-links">
-              <li>Главная</li>
-              <li>О нас</li>
-              <li>Мероприятия</li>
-              <li>Членство</li>
-              <li>Вступить в ассоциацию</li>
+              <li><Link to='/'>Главная</Link></li>
+              <li><Link to='/about'>О нас</Link></li>
+              <li><Link to='/event'>Мероприятия</Link></li>
+              <li><Link to='/membership'>Членство</Link></li>
+              <li><Link to='/joinus'>Вступить в ассоциацию</Link></li>
             </ul>
 
             <div className="footer-column">
               <ul className="footer-contact">
-                <li>Контакты</li>
-                <li>Адрес</li>
+                <li><Link to='/contact'>Контакты</Link></li>
+                <li>Адрес: г. Бишкек,  ул. Исанова 105/3</li>
                 <li>
-                  <a href="e-mail">creative.kyrgyzstan@gmail.com </a>
+                  creative.kyrgyzstan@gmail.com 
                 </li>
               </ul>
 

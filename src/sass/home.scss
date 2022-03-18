@@ -1,12 +1,12 @@
 @import "../global.scss";
 
-.join_btn.container{
-    text-align: center;
-    margin-top: 6rem;
+.join_btn.container {
+  text-align: center;
+  margin-top: 6rem;
 
-    CustomButton{
-        background-color: transparent;
-        border-color: $primary-color5;
-        color: $primary-color5;
-    }
+  CustomButton {
+    background-color: transparent;
+    border-color: $primary-color5;
+    color: $primary-color5;
+  }
 }
