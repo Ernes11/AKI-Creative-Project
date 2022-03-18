@@ -4,17 +4,18 @@ import Carousel from "../section/Carousel";
 import CoFounder from "../components/card/CoFounder";
 import Task from "../section/Task";
 import Report from "../section/Report";
-
-
+import '../../src/global.scss'
 
 function About() {
   return (
     <>
-      <Carousel />
-      <AboutAssociation />
-      <CoFounder />
-      <Task/>
-      <Report/>
+      <div className="container">
+        <Carousel />
+        <AboutAssociation />
+        <CoFounder />
+        <Task />
+        <Report />
+      </div>
     </>
   );
 }

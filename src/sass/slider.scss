@@ -3,6 +3,9 @@
 .top-slider {
   border-bottom: 1px solid #ffffff;
   padding-bottom: 20px;
+  max-width: 1200px;
+  width: 100%;
+  
   .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -10,9 +13,9 @@
     margin-top: 100px;
   }
   .slider-img img {
-    opacity: 0.5;
-    width: 302px;
-    height: 272px;
+    opacity: 1;
+    width: 348px;
+    height: 278px;
   }
 
   .slick-arrow.slick-prev{

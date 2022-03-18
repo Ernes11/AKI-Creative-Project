@@ -11,6 +11,7 @@ function Home() {
   const [eventPoint, setEventPoint] = useState(4);
   return (
     <>
+    <div className="container">
       <Hero />
       <Info />
       <Content />
@@ -28,6 +29,7 @@ function Home() {
         >
           Присоединиться
         </CustomButton>
+      </div>
       </div>
     </>
   );

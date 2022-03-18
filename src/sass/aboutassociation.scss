@@ -1,9 +1,11 @@
 @import "../global.scss";
 
 .aboutassociation {
+  max-width: 1200px;
+  width: 100%;
+  // display: flex;
+  // justify-content: center;
   .container {
-    max-width: 1200px;
-    width: 100%;
     position: relative;
 
     .about-title {
@@ -75,7 +77,7 @@
       position: absolute;
       width: 22.9%;
       height: 1px;
-      left: 29.8%;
+      left: 30.8%;
       top: 70.2%;
       border: 2px;
     }
