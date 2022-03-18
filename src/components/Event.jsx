@@ -29,13 +29,10 @@ function Event() {
   }
 
   useEffect(()=>{
-    // const datas = []
     fetchEvents()
-    // datas.push(fetchEvents('http://creative.kg/api/eventpast/'));
-    // setEventsFuture(datas[0]);
-    // setEventsPast(datas[1]);
-
+    window.scrollTo(0, 0);
   }, []);
+
   return (
       <main className="main-event">
         <section>
@@ -63,13 +60,13 @@ function Event() {
         {currentData().map((event, index) => {
           if(index <= eventPoint){
             let odd = 0;
-            event.id%2? odd = 1 : odd = 0;
+            index%2? odd = 1 : odd = 0;
             return (
               <EventSection
               oddClass = {odd}
               key={'eventsection'+event.id}
               info={event.text}
-              images={['/images/events/1.png', '/images/events/2.png', '/images/events/3.png', '/images/events/4.png']}
+              imageId={event.id}
               title={event.name}
               />
             )
@@ -88,104 +85,3 @@ function Event() {
 
 export default Event;
 
-// const actualEvents = [
-//   {
-//     id: 1,
-//     title: 'Lorem ipsum dolor sit amet consectetur.',
-//     info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro veniam error aliquid, voluptas quisquam nam? Saepe esse repellat autem sapiente molestias in magni?\n\n Doloribus incidunt porro cum atque eius, possimus accusamus eligendi illum sit facere repellendus nobis vitae tempora quam, at sed? Veritatis modi unde ipsum, consequuntur a autem debitis molestiae? Tempore incidunt illum numquam in animi molestias voluptates nam dolor error odio adipisci, corrupti mollitia. Tempora enim atque voluptatibus, velit, nobis aperiam nam aspernatur rerum cum consequatur quibusdam beatae? Reiciendis provident accusamus optio natus error. Modi a, laudantium aspernatur beatae impedit, facilis eum aut quis, iure fuga libero reprehenderit cumque tenetur ut perspiciatis! Debitis maiores harum velit corporis eligendi doloribus est impedit quos repellendus? Iusto dolor minima consequuntur aperiam placeat! Placeat, sequi!',
-//     photo: ['/images/events/1.png', '/images/events/2.png', '/images/events/3.png', '/images/events/4.png']
-//   },
-//   {
-//     id: 2,
-//     title: 'Lorem ipsum dolor sit amet consectetur.',
-//     info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro veniam error aliquid, voluptas quisquam nam? Saepe esse repellat autem sapiente molestias in magni?\n\n Doloribus incidunt porro cum atque eius, possimus accusamus eligendi illum sit facere repellendus nobis vitae tempora quam, at sed? Veritatis modi unde ipsum, consequuntur a autem debitis molestiae? Tempore incidunt illum numquam in animi molestias voluptates nam dolor error odio adipisci, corrupti mollitia. Tempora enim atque voluptatibus, velit, nobis aperiam nam aspernatur rerum cum consequatur quibusdam beatae? Reiciendis provident accusamus optio natus error. Modi a, laudantium aspernatur beatae impedit, facilis eum aut quis, iure fuga libero reprehenderit cumque tenetur ut perspiciatis! Debitis maiores harum velit corporis eligendi doloribus est impedit quos repellendus? Iusto dolor minima consequuntur aperiam placeat! Placeat, sequi!',
-//     photo: ['/images/events/2.png', '/images/events/1.png', '/images/events/3.png', '/images/events/4.png']
-//   },
-//   {
-//     id: 3,
-//     title: 'Lorem ipsum dolor sit amet consectetur.',
-//     info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro veniam error aliquid, voluptas quisquam nam? Saepe esse repellat autem sapiente molestias in magni?\n\n Doloribus incidunt porro cum atque eius, possimus accusamus eligendi illum sit facere repellendus nobis vitae tempora quam, at sed? Veritatis modi unde ipsum, consequuntur a autem debitis molestiae? Tempore incidunt illum numquam in animi molestias voluptates nam dolor error odio adipisci, corrupti mollitia. Tempora enim atque voluptatibus, velit, nobis aperiam nam aspernatur rerum cum consequatur quibusdam beatae? Reiciendis provident accusamus optio natus error. Modi a, laudantium aspernatur beatae impedit, facilis eum aut quis, iure fuga libero reprehenderit cumque tenetur ut perspiciatis! Debitis maiores harum velit corporis eligendi doloribus est impedit quos repellendus? Iusto dolor minima consequuntur aperiam placeat! Placeat, sequi!',
-//     photo: ['/images/events/1.png', '/images/events/2.png', '/images/events/3.png', '/images/events/4.png']
-//   },
-//   {
-//     id: 4,
-//     title: 'Lorem ipsum dolor sit amet consectetur.',
-//     info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro veniam error aliquid, voluptas quisquam nam? Saepe esse repellat autem sapiente molestias in magni?\n\n Doloribus incidunt porro cum atque eius, possimus accusamus eligendi illum sit facere repellendus nobis vitae tempora quam, at sed? Veritatis modi unde ipsum, consequuntur a autem debitis molestiae? Tempore incidunt illum numquam in animi molestias voluptates nam dolor error odio adipisci, corrupti mollitia. Tempora enim atque voluptatibus, velit, nobis aperiam nam aspernatur rerum cum consequatur quibusdam beatae? Reiciendis provident accusamus optio natus error. Modi a, laudantium aspernatur beatae impedit, facilis eum aut quis, iure fuga libero reprehenderit cumque tenetur ut perspiciatis! Debitis maiores harum velit corporis eligendi doloribus est impedit quos repellendus? Iusto dolor minima consequuntur aperiam placeat! Placeat, sequi!',
-//     photo: ['/images/events/2.png', '/images/events/1.png', '/images/events/3.png', '/images/events/4.png']
-//   },
-//   {
-//     id: 5,
-//     title: 'Lorem ipsum dolor sit amet consectetur.',
-//     info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro veniam error aliquid, voluptas quisquam nam? Saepe esse repellat autem sapiente molestias in magni?\n\n Doloribus incidunt porro cum atque eius, possimus accusamus eligendi illum sit facere repellendus nobis vitae tempora quam, at sed? Veritatis modi unde ipsum, consequuntur a autem debitis molestiae? Tempore incidunt illum numquam in animi molestias voluptates nam dolor error odio adipisci, corrupti mollitia. Tempora enim atque voluptatibus, velit, nobis aperiam nam aspernatur rerum cum consequatur quibusdam beatae? Reiciendis provident accusamus optio natus error. Modi a, laudantium aspernatur beatae impedit, facilis eum aut quis, iure fuga libero reprehenderit cumque tenetur ut perspiciatis! Debitis maiores harum velit corporis eligendi doloribus est impedit quos repellendus? Iusto dolor minima consequuntur aperiam placeat! Placeat, sequi!',
-//     photo: ['/images/events/1.png', '/images/events/2.png', '/images/events/3.png', '/images/events/4.png']
-//   },
-//   {
-//     id: 6,
-//     title: 'Lorem ipsum dolor sit amet consectetur.',
-//     info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro veniam error aliquid, voluptas quisquam nam? Saepe esse repellat autem sapiente molestias in magni?\n\n Doloribus incidunt porro cum atque eius, possimus accusamus eligendi illum sit facere repellendus nobis vitae tempora quam, at sed? Veritatis modi unde ipsum, consequuntur a autem debitis molestiae? Tempore incidunt illum numquam in animi molestias voluptates nam dolor error odio adipisci, corrupti mollitia. Tempora enim atque voluptatibus, velit, nobis aperiam nam aspernatur rerum cum consequatur quibusdam beatae? Reiciendis provident accusamus optio natus error. Modi a, laudantium aspernatur beatae impedit, facilis eum aut quis, iure fuga libero reprehenderit cumque tenetur ut perspiciatis! Debitis maiores harum velit corporis eligendi doloribus est impedit quos repellendus? Iusto dolor minima consequuntur aperiam placeat! Placeat, sequi!',
-//     photo: ['/images/events/2.png', '/images/events/1.png', '/images/events/3.png', '/images/events/4.png']
-//   },
-//   {
-//     id: 7,
-//     title: 'Lorem ipsum dolor sit amet consectetur.',
-//     info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro veniam error aliquid, voluptas quisquam nam? Saepe esse repellat autem sapiente molestias in magni?\n\n Doloribus incidunt porro cum atque eius, possimus accusamus eligendi illum sit facere repellendus nobis vitae tempora quam, at sed? Veritatis modi unde ipsum, consequuntur a autem debitis molestiae? Tempore incidunt illum numquam in animi molestias voluptates nam dolor error odio adipisci, corrupti mollitia. Tempora enim atque voluptatibus, velit, nobis aperiam nam aspernatur rerum cum consequatur quibusdam beatae? Reiciendis provident accusamus optio natus error. Modi a, laudantium aspernatur beatae impedit, facilis eum aut quis, iure fuga libero reprehenderit cumque tenetur ut perspiciatis! Debitis maiores harum velit corporis eligendi doloribus est impedit quos repellendus? Iusto dolor minima consequuntur aperiam placeat! Placeat, sequi!',
-//     photo: ['/images/events/1.png', '/images/events/2.png', '/images/events/3.png', '/images/events/4.png']
-//   },
-//   {
-//     id: 8,
-//     title: 'Lorem ipsum dolor sit amet consectetur.',
-//     info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro veniam error aliquid, voluptas quisquam nam? Saepe esse repellat autem sapiente molestias in magni?\n\n Doloribus incidunt porro cum atque eius, possimus accusamus eligendi illum sit facere repellendus nobis vitae tempora quam, at sed? Veritatis modi unde ipsum, consequuntur a autem debitis molestiae? Tempore incidunt illum numquam in animi molestias voluptates nam dolor error odio adipisci, corrupti mollitia. Tempora enim atque voluptatibus, velit, nobis aperiam nam aspernatur rerum cum consequatur quibusdam beatae? Reiciendis provident accusamus optio natus error. Modi a, laudantium aspernatur beatae impedit, facilis eum aut quis, iure fuga libero reprehenderit cumque tenetur ut perspiciatis! Debitis maiores harum velit corporis eligendi doloribus est impedit quos repellendus? Iusto dolor minima consequuntur aperiam placeat! Placeat, sequi!',
-//     photo: ['/images/events/2.png', '/images/events/1.png', '/images/events/3.png', '/images/events/4.png']
-//   },
-// ]
-
-// const notActualEvents = [
-//   {
-//     id: 1,
-//     title: 'Lorem ipsum dolor sit amet consectetur.',
-//     info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro veniam error aliquid, voluptas quisquam nam? Saepe esse repellat autem sapiente molestias in magni?\n\n Doloribus incidunt porro cum atque eius, possimus accusamus eligendi illum sit facere repellendus nobis vitae tempora quam, at sed? Veritatis modi unde ipsum, consequuntur a autem debitis molestiae? Tempore incidunt illum numquam in animi molestias voluptates nam dolor error odio adipisci, corrupti mollitia. Tempora enim atque voluptatibus, velit, nobis aperiam nam aspernatur rerum cum consequatur quibusdam beatae? Reiciendis provident accusamus optio natus error. Modi a, laudantium aspernatur beatae impedit, facilis eum aut quis, iure fuga libero reprehenderit cumque tenetur ut perspiciatis! Debitis maiores harum velit corporis eligendi doloribus est impedit quos repellendus? Iusto dolor minima consequuntur aperiam placeat! Placeat, sequi!',
-//     photo: ['/images/events/3.png', '/images/events/2.png', '/images/events/1.png', '/images/events/4.png']
-//   },
-//   {
-//     id: 2,
-//     title: 'Lorem ipsum dolor sit amet consectetur.',
-//     info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro veniam error aliquid, voluptas quisquam nam? Saepe esse repellat autem sapiente molestias in magni?\n\n Doloribus incidunt porro cum atque eius, possimus accusamus eligendi illum sit facere repellendus nobis vitae tempora quam, at sed? Veritatis modi unde ipsum, consequuntur a autem debitis molestiae? Tempore incidunt illum numquam in animi molestias voluptates nam dolor error odio adipisci, corrupti mollitia. Tempora enim atque voluptatibus, velit, nobis aperiam nam aspernatur rerum cum consequatur quibusdam beatae? Reiciendis provident accusamus optio natus error. Modi a, laudantium aspernatur beatae impedit, facilis eum aut quis, iure fuga libero reprehenderit cumque tenetur ut perspiciatis! Debitis maiores harum velit corporis eligendi doloribus est impedit quos repellendus? Iusto dolor minima consequuntur aperiam placeat! Placeat, sequi!',
-//     photo: ['/images/events/4.png', '/images/events/1.png', '/images/events/3.png', '/images/events/2.png']
-//   },
-//   {
-//     id: 3,
-//     title: 'Lorem ipsum dolor sit amet consectetur.',
-//     info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro veniam error aliquid, voluptas quisquam nam? Saepe esse repellat autem sapiente molestias in magni?\n\n Doloribus incidunt porro cum atque eius, possimus accusamus eligendi illum sit facere repellendus nobis vitae tempora quam, at sed? Veritatis modi unde ipsum, consequuntur a autem debitis molestiae? Tempore incidunt illum numquam in animi molestias voluptates nam dolor error odio adipisci, corrupti mollitia. Tempora enim atque voluptatibus, velit, nobis aperiam nam aspernatur rerum cum consequatur quibusdam beatae? Reiciendis provident accusamus optio natus error. Modi a, laudantium aspernatur beatae impedit, facilis eum aut quis, iure fuga libero reprehenderit cumque tenetur ut perspiciatis! Debitis maiores harum velit corporis eligendi doloribus est impedit quos repellendus? Iusto dolor minima consequuntur aperiam placeat! Placeat, sequi!',
-//     photo: ['/images/events/3.png', '/images/events/2.png', '/images/events/1.png', '/images/events/4.png']
-//   },
-//   {
-//     id: 4,
-//     title: 'Lorem ipsum dolor sit amet consectetur.',
-//     info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro veniam error aliquid, voluptas quisquam nam? Saepe esse repellat autem sapiente molestias in magni?\n\n Doloribus incidunt porro cum atque eius, possimus accusamus eligendi illum sit facere repellendus nobis vitae tempora quam, at sed? Veritatis modi unde ipsum, consequuntur a autem debitis molestiae? Tempore incidunt illum numquam in animi molestias voluptates nam dolor error odio adipisci, corrupti mollitia. Tempora enim atque voluptatibus, velit, nobis aperiam nam aspernatur rerum cum consequatur quibusdam beatae? Reiciendis provident accusamus optio natus error. Modi a, laudantium aspernatur beatae impedit, facilis eum aut quis, iure fuga libero reprehenderit cumque tenetur ut perspiciatis! Debitis maiores harum velit corporis eligendi doloribus est impedit quos repellendus? Iusto dolor minima consequuntur aperiam placeat! Placeat, sequi!',
-//     photo: ['/images/events/4.png', '/images/events/1.png', '/images/events/3.png', '/images/events/2.png']
-//   },
-//   {
-//     id: 5,
-//     title: 'Lorem ipsum dolor sit amet consectetur.',
-//     info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro veniam error aliquid, voluptas quisquam nam? Saepe esse repellat autem sapiente molestias in magni?\n\n Doloribus incidunt porro cum atque eius, possimus accusamus eligendi illum sit facere repellendus nobis vitae tempora quam, at sed? Veritatis modi unde ipsum, consequuntur a autem debitis molestiae? Tempore incidunt illum numquam in animi molestias voluptates nam dolor error odio adipisci, corrupti mollitia. Tempora enim atque voluptatibus, velit, nobis aperiam nam aspernatur rerum cum consequatur quibusdam beatae? Reiciendis provident accusamus optio natus error. Modi a, laudantium aspernatur beatae impedit, facilis eum aut quis, iure fuga libero reprehenderit cumque tenetur ut perspiciatis! Debitis maiores harum velit corporis eligendi doloribus est impedit quos repellendus? Iusto dolor minima consequuntur aperiam placeat! Placeat, sequi!',
-//     photo: ['/images/events/3.png', '/images/events/2.png', '/images/events/1.png', '/images/events/4.png']
-//   },
-//   {
-//     id: 6,
-//     title: 'Lorem ipsum dolor sit amet consectetur.',
-//     info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro veniam error aliquid, voluptas quisquam nam? Saepe esse repellat autem sapiente molestias in magni?\n\n Doloribus incidunt porro cum atque eius, possimus accusamus eligendi illum sit facere repellendus nobis vitae tempora quam, at sed? Veritatis modi unde ipsum, consequuntur a autem debitis molestiae? Tempore incidunt illum numquam in animi molestias voluptates nam dolor error odio adipisci, corrupti mollitia. Tempora enim atque voluptatibus, velit, nobis aperiam nam aspernatur rerum cum consequatur quibusdam beatae? Reiciendis provident accusamus optio natus error. Modi a, laudantium aspernatur beatae impedit, facilis eum aut quis, iure fuga libero reprehenderit cumque tenetur ut perspiciatis! Debitis maiores harum velit corporis eligendi doloribus est impedit quos repellendus? Iusto dolor minima consequuntur aperiam placeat! Placeat, sequi!',
-//     photo: ['/images/events/4.png', '/images/events/1.png', '/images/events/3.png', '/images/events/2.png']
-//   },
-//   {
-//     id: 7,
-//     title: 'Lorem ipsum dolor sit amet consectetur.',
-//     info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro veniam error aliquid, voluptas quisquam nam? Saepe esse repellat autem sapiente molestias in magni?\n\n Doloribus incidunt porro cum atque eius, possimus accusamus eligendi illum sit facere repellendus nobis vitae tempora quam, at sed? Veritatis modi unde ipsum, consequuntur a autem debitis molestiae? Tempore incidunt illum numquam in animi molestias voluptates nam dolor error odio adipisci, corrupti mollitia. Tempora enim atque voluptatibus, velit, nobis aperiam nam aspernatur rerum cum consequatur quibusdam beatae? Reiciendis provident accusamus optio natus error. Modi a, laudantium aspernatur beatae impedit, facilis eum aut quis, iure fuga libero reprehenderit cumque tenetur ut perspiciatis! Debitis maiores harum velit corporis eligendi doloribus est impedit quos repellendus? Iusto dolor minima consequuntur aperiam placeat! Placeat, sequi!',
-//     photo: ['/images/events/3.png', '/images/events/2.png', '/images/events/1.png', '/images/events/4.png']
-//   },
-//   {
-//     id: 8,
-//     title: 'Lorem ipsum dolor sit amet consectetur.',
-//     info: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro veniam error aliquid, voluptas quisquam nam? Saepe esse repellat autem sapiente molestias in magni?\n\n Doloribus incidunt porro cum atque eius, possimus accusamus eligendi illum sit facere repellendus nobis vitae tempora quam, at sed? Veritatis modi unde ipsum, consequuntur a autem debitis molestiae? Tempore incidunt illum numquam in animi molestias voluptates nam dolor error odio adipisci, corrupti mollitia. Tempora enim atque voluptatibus, velit, nobis aperiam nam aspernatur rerum cum consequatur quibusdam beatae? Reiciendis provident accusamus optio natus error. Modi a, laudantium aspernatur beatae impedit, facilis eum aut quis, iure fuga libero reprehenderit cumque tenetur ut perspiciatis! Debitis maiores harum velit corporis eligendi doloribus est impedit quos repellendus? Iusto dolor minima consequuntur aperiam placeat! Placeat, sequi!',
-//     photo: ['/images/events/4.png', '/images/events/1.png', '/images/events/3.png', '/images/events/2.png']
-//   },
-// ]
