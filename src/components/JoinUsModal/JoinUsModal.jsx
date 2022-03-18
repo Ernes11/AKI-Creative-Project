@@ -1,10 +1,7 @@
 import Button from '@mui/material/Button';
 import './JoinUsModal.scss';
-import { useEffect, useState } from 'react';
 
 export default function JoinUsModal({ display ='none', setDisplay }){
-  // let currentDisplay = display;
-  // const [displayStyle, setDisplayStyle] = useState(display);
 
   return (
      <div className="joinUs-modal-container" style={{display: display}}>
