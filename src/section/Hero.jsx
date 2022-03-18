@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import CustomButton from "../components/button/CustomButton";
 import "../sass/hero.scss";
 
 function Hero() {
@@ -18,11 +20,16 @@ function Hero() {
             <h4 className="main_subtitle">
               Добро пожаловать на сайт Ассоциации Креативных Индустрий
             </h4>
+
             <div className="buttons">
-              <div className="button_1"><span>ПРИСОЕДИНИТСЯ</span></div>
-              <button class="button_2">
+              <Link to='/joinus'>
+                <CustomButton type="contained">присоединиться</CustomButton>
+              </Link>
+              <Link to='/about'>
+                <CustomButton className="button_2"  type="outlined">
                 <span>ПОДРОБНЕЕ</span>
-              </button>
+                </CustomButton>
+              </Link>
             </div>
           </div>
         </div>

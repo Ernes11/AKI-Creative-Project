@@ -1,10 +1,20 @@
 @import "../global.scss";
 
 .footer {
-  .container{
+  .container {
     max-width: 1200px;
     width: 100%;
-
+    a,
+    p,
+    li {
+      font-size: 1.2rem !important;
+    }
+    a {
+      color: white !important;
+      &:hover {
+        color: #3774d0 !important;
+      }
+    }
   }
   .footer-fixed {
     background-color: $primary-color;
@@ -44,13 +54,10 @@
           }
         }
         .social-icons {
-          
-          .icons{
+          .icons {
             margin-right: 10px;
             color: $primary-color5;
-            
           }
-
         }
       }
 
@@ -62,12 +69,12 @@
       }
     }
 
-    .footer-copyright{
+    .footer-copyright {
       margin-top: 40px;
       margin-bottom: 0;
       text-align: center;
       font-weight: normal;
-      font-size: 15px;
+      font-size: 15px !important;
       line-height: 22px;
       color: $primary-color5;
     }

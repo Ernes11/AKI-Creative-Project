@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import CustomButton from "./button/CustomButton";
 import '../sass/joinUs.scss';
 import Button from "@mui/material/Button";
@@ -70,6 +70,10 @@ function JoinUs() {
     )
   }
 
+  useEffect(() =>{
+    window.scrollTo(0, 0);
+  },[])
+
   return (
     <main className="joinUs">
       {modal(modalStyle)}
@@ -117,7 +121,7 @@ function JoinUs() {
             </label>
           </div>
         </form>
-        <CustomButton type='contained' onClick={() => setModalStyle('flex')}>отправить</CustomButton>
+          <CustomButton type='contained' onClick={() => setModalStyle('flex')}>отправить</CustomButton>
       </div>
     </main>
   );
