@@ -1,8 +1,9 @@
-@import "../global.scss";
-
 .task {
+  width: 100%;
   .container {
     text-align: center;
+    width: 80%;
+    margin: 0 auto;
 
     .task-title {
       text-align: center;
@@ -18,8 +19,8 @@
       position: relative;
 
       .line_horizontal-1 {
-        background-color: $primary-color5;
-        color: $primary-color5;
+        background-color: white;
+        color: white;
         position: absolute;
         width: 149%;
         height: 1px;
@@ -28,8 +29,8 @@
         border: 2px;
       }
       .line_horizontal-2 {
-        background-color: $primary-color5;
-        color: $primary-color5;
+        background-color: white;
+        color: white;
         position: absolute;
         width: 149%;
         height: 1px;
@@ -38,8 +39,8 @@
         border: 2px;
       }
       .line_horizontal-3 {
-        background-color: $primary-color5;
-        color: $primary-color5;
+        background-color: white;
+        color: white;
         position: absolute;
         width: 149%;
         height: 1px;
@@ -48,8 +49,8 @@
         border: 2px;
       }
       .line_horizontal-4 {
-        background-color: $primary-color5;
-        color: $primary-color5;
+        background-color: white;
+        color: white;
         position: absolute;
         width: 149%;
         height: 1px;
@@ -59,23 +60,23 @@
       }
 
       .line_vertical-1 {
-        background-color: $primary-color5;
-        color: $primary-color5;
+        background-color: white;
+        color: white;
         -webkit-transform: rotate(90deg);
         position: absolute;
-        width: 26.9%;
+        width: 36.5%;
         height: 1px;
-        left: -8.5%;
+        left: -12.5%;
         top: 33.9%;
         border: 2px;
       }
 
       .line_vertical-2 {
-        background-color: $primary-color5;
-        color: $primary-color5;
+        background-color: white;
+        color: white;
         -webkit-transform: rotate(90deg);
         position: absolute;
-        width: 26.9%;
+        width: 36.5%;
         height: 1px;
         left: 79.5%;
         top: 33.9%;
@@ -88,7 +89,7 @@
         font-size: 24px;
         line-height: 29px;
         padding-bottom: 70px;
-        color: $primary-color5;
+        color: white;
       }
     }
   }

@@ -6,8 +6,8 @@ import { AiFillInstagram } from "react-icons/ai";
 
 const Card = ({ item }) => {
   return (
-    <>
-      <div className="container-card">
+    <div className="card"  style={{ backgroundColor: "transparent"}}>
+      <div className="container-card" >
         <h1 className="top-title">учредители Ассоциации</h1>
         <hr className="line_horizontal-1" />
         <hr className="line_horizontal-2" />
@@ -45,7 +45,7 @@ const Card = ({ item }) => {
           })}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

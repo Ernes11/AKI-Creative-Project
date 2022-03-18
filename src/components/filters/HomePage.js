@@ -26,7 +26,6 @@ const HomePage = (props) => {
     }
   }, [props.users]);
 
-
   // ==================SEARCH FUNCTION=========================
 
   function onSearchText(text, props) {
@@ -35,7 +34,8 @@ const HomePage = (props) => {
       filtered = props.users.filter(
         (user) =>
           user.name.toLowerCase().includes(text.toLowerCase()) ||
-          user.position.toLowerCase().includes(text.toLowerCase())
+          user.position.toLowerCase().includes(text.toLowerCase()) ||
+          user.title.toLowerCase().includes(text.toLowerCase())
       );
     } else {
       filtered = props.users;
@@ -47,7 +47,7 @@ const HomePage = (props) => {
   function handleSearch(event) {
     inputRef.current(event.target.value, props);
   }
-// =================SORT FUNCTION ====================
+  // =================SORT FUNCTION ====================
   function handleSort(sortOrder) {
     setSortOrder(sortOrder);
     if (sortOrder.value) {
