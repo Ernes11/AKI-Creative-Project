@@ -12,6 +12,39 @@
   .container {
     width: 100%;
     margin: 0 auto;
+    position: relative;
+
+    .line_horizontal-1 {
+      background-color: white;
+      color: white;
+      position: absolute;
+      width: 90%;
+      height: 1px;
+      left: 1.9%;
+      top: 72.9%;
+      border: 2px;
+    }
+    .line_horizontal-2 {
+      background-color: white;
+      color: white;
+      position: absolute;
+      width: 90%;
+      height: 1px;
+      left: 1.9%;
+      top: 47.7%;
+      border: 2px;
+    }
+    .line_vertical-1 {
+      background-color: white;
+      color: white;
+      -webkit-transform: rotate(90deg);
+      position: absolute;
+      width: 22.9%;
+      height: 1px;
+      left: 34.9%;
+      top: 67.5%;
+      border: 2px;
+    }
 
     .about-row {
       display: inline-grid;
@@ -41,7 +74,6 @@
         }
 
         .about-desc {
-         
           width: 100%;
           font-weight: normal;
           font-size: 14px;
@@ -70,7 +102,7 @@
           }
         }
 
-        .buttom-desc{
+        .buttom-desc {
           width: 50%;
           font-size: 14px;
           margin-right: 25rem;
@@ -78,6 +110,20 @@
           color: white;
         }
       }
+    }
+    .box {
+      position: absolute;
+      left: 92%;
+      top: 0%;
+      width: 142px;
+      height: 447.9px;
+      box-sizing: border-box;
+      border: 1px solid white;
+      background: linear-gradient(
+        91.36deg,
+        rgba(255, 0, 255, 0.15) 1.4%,
+        rgba(255, 0, 255, 0) 99.1%
+      );
     }
   }
 }
