@@ -34,7 +34,7 @@ const HomePage = (props) => {
       filtered = props.users.filter(
         (user) =>
           user.name.toLowerCase().includes(text.toLowerCase()) ||
-          user.position.toLowerCase().includes(text.toLowerCase()) ||
+          user.position.toLowerCase().includes(text.toLowerCase()) &&
           user.title.toLowerCase().includes(text.toLowerCase())
       );
     } else {
