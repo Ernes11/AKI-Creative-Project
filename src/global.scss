@@ -32,13 +32,13 @@ $primary-color6: #3774d0;
 
 body {
   background-color: $primary-color;
-  font-family: "Inter", sans-serif;
+  overflow-x:hidden;
 }
 
-.container {
-  max-width: 1200px;
-  width: 100%;
-}
+// .container {
+//   max-width: 1200px;
+//   width: 100%;
+// }
 
 ul {
   list-style-type: none;
@@ -62,14 +62,5 @@ h1 {
 }
 
 // Report /////
-h2 {
-  font-size: 40px;
-  line-height: 48px;
-}
 
-// All paragraph///
-p {
-  font-style: normal;
-  font-size: 24px;
-  line-height: 32px;
-}
+

@@ -1,113 +1,118 @@
-@import "../global.scss";
-
-.container-card {
-  max-width: 1220px;
+.card {
   width: 100%;
-  position: relative;
 
-  .top-title {
+  .container-card {
+    background-color: transparent;
     text-align: center;
-    font-weight: 300;
-    font-size: 40px;
-    line-height: 81px;
-    margin-top: 142px;
-    margin-bottom: 72px;
-    color: white;
-  }
-  .line_horizontal-1 {
-    background-color: $primary-color5;
-    color: $primary-color5;
-    position: absolute;
     width: 100%;
-    height: 1px;
-    left: 46.4%;
-    top: 20.6%;
-    border: 2px;
-  }
-  .line_horizontal-2 {
-    background-color: $primary-color5;
-    color: $primary-color5;
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    left: 46.4%;
-    top: 46.6%;
-    border: 2px;
-  }
-  .line_horizontal-3 {
-    background-color: $primary-color5;
-    color: $primary-color5;
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    left: 46.4%;
-    top: 72.9%;
-    border: 2px;
-  }
-  .line_horizontal-4 {
-    background-color: $primary-color5;
-    color: $primary-color5;
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    left: -77%;
-    top: 20.5%;
-    border: 2px;
-  }
-  .line_horizontal-5 {
-    background-color: $primary-color5;
-    color: $primary-color5;
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    left: -77%;
-    top: 46.8%;
-    border: 2px;
-  }
-  .line_horizontal-6 {
-    background-color: $primary-color5;
-    color: $primary-color5;
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    left: -77%;
-    top: 72.9%;
-    border: 2px;
-  }
-  .row-2 {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-auto-rows: 50px;
-    grid-template-rows: 22.2rem 22.2rem 22rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
 
-    .column {
-      display: block;
-      border: solid 1px;
-      width: 282px;
-      height: 356px;
-      color: rgba(255, 255, 255, 0.541);
-      background-color: rgba(37, 37, 37, 0.6);
-      &:nth-child(5n - 1) {
-        grid-column: 2;
-      }
+    .top-title {
+      text-align: center;
+      font-weight: 300;
+      font-size: 40px;
+      line-height: 81px;
+      margin-top: 142px;
+      margin-bottom: 72px;
+      color: white;
+    }
+    .line_horizontal-1 {
+      background-color: white;
+      color: white;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 46.4%;
+      top: 20.6%;
+      border: 2px;
+    }
+    .line_horizontal-2 {
+      background-color: white;
+      color: white;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 46.4%;
+      top: 46.6%;
+      border: 2px;
+    }
+    .line_horizontal-3 {
+      background-color: white;
+      color: white;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 46.4%;
+      top: 72.9%;
+      border: 2px;
+    }
+    .line_horizontal-4 {
+      background-color: white;
+      color: white;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: -77%;
+      top: 20.5%;
+      border: 2px;
+    }
+    .line_horizontal-5 {
+      background-color: white;
+      color: white;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: -77%;
+      top: 46.8%;
+      border: 2px;
+    }
+    .line_horizontal-6 {
+      background-color: white;
+      color: white;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: -77%;
+      top: 72.9%;
+      border: 2px;
+    }
+    .row-2 {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: 50px;
+      grid-template-rows: 22.2rem 22.2rem 22rem;
 
-      &:nth-child(6n + 1) {
-        grid-column: 1;
-      }
-      &:nth-child(9n) {
-        grid-column: 3;
-      }
-
-      .card-photo {
-        width: 280px;
-      }
-
-      .social-icons {
-        margin-left: 20px;
+      .column {
+        display: block;
+        border: solid 1px;
+        width: 282px;
+        height: 356px;
         color: rgba(255, 255, 255, 0.541);
+        background-color: rgba(37, 37, 37, 0.6);
+        &:nth-child(5n - 1) {
+          grid-column: 2;
+        }
 
-        .icons {
-          margin-right: 10px;
+        &:nth-child(6n + 1) {
+          grid-column: 1;
+        }
+        &:nth-child(9n) {
+          grid-column: 3;
+        }
+
+        .card-photo {
+          width: 280px;
+        }
+
+        .social-icons {
+          margin-left: 20px;
+          color: rgba(255, 255, 255, 0.541);
+
+          .icons {
+            margin-right: 10px;
+          }
         }
       }
     }

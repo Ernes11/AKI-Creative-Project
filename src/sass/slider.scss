@@ -3,6 +3,9 @@
 .top-slider {
   border-bottom: 1px solid #ffffff;
   padding-bottom: 20px;
+  max-width: 1200px;
+  width: 100%;
+  
   .container {
     max-width: 1400px;
     margin: 0 auto;
@@ -10,9 +13,9 @@
     margin-top: 100px;
   }
   .slider-img img {
-    opacity: 0.5;
-    width: 302px;
-    height: 272px;
+    opacity: 1;
+    width: 348px;
+    height: 278px;
   }
 
   .slick-arrow.slick-prev{
@@ -40,16 +43,16 @@
   }
   .slick-arrow.slick-next::before {
     content: "\02C3";
-    font-size: 103.64px;
+    font-size: 70px;
     position: absolute;
     right: 19rem;
-    top: -3rem;
+    top: -2rem;
   }
   .slick-arrow.slick-prev::before {
     position: absolute;
     content: "\02C2";
-    font-size: 103.64px;
-    top: -3rem;
+    font-size: 70px;
+    top: -2rem;
     left: 19rem;
   }
 }

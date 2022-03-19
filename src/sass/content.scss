@@ -1,21 +1,21 @@
-@import "../global.scss";
 
 .content {
   margin-top: 72px;
   position: relative;
+  width: 100%;
 
   h2 {
     font-weight: 300;
     font-size: 47px;
     line-height: 81px;
-    color: $primary-color5;
+    color: white;
     text-align: center;
   }
 
   .horizontal-line {
     .line_horizontal-1 {
-      background-color: $primary-color5;
-      color: $primary-color5;
+      background-color: white;
+      color: white;
       position: absolute;
       width: 106.9%;
       height: 1px;
@@ -24,8 +24,8 @@
       border: 2px;
     }
     .line_horizontal-2 {
-      background-color: $primary-color5;
-      color: $primary-color5;
+      background-color: white;
+      color: white;
       position: absolute;
       width: 106.9%;
       height: 1px;
@@ -36,11 +36,13 @@
   }
   .container {
     max-width: 1200px;
-    width: 100%;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
     position: relative;
     .line_horizontal-3 {
-      background-color: $primary-color5;
-      color: $primary-color5;
+      background-color: white;
+      color: white;
       position: absolute;
       width: 100%;
       width: 102%;
@@ -52,8 +54,8 @@
 
     .vertical {
       .line_vertical-1 {
-        background-color: $primary-color5;
-        color: $primary-color5;
+        background-color: white;
+        color: white;
         -webkit-transform: rotate(90deg);
         position: absolute;
         width: 57.6%;
@@ -64,8 +66,8 @@
       }
 
       .line_vertical-2 {
-        background-color: $primary-color5;
-        color: $primary-color5;
+        background-color: white;
+        color: white;
         -webkit-transform: rotate(90deg);
         position: absolute;
         width: 57.6%;
@@ -75,8 +77,8 @@
         border: 2px;
       }
       .line_vertical-3 {
-        background-color: $primary-color5;
-        color: $primary-color5;
+        background-color: white;
+        color: white;
         -webkit-transform: rotate(90deg);
         position: absolute;
         width: 57.6%;
@@ -99,7 +101,7 @@
         line-height: 49px;
         display: flex;
         align-items: center;
-        color: $primary-color5;
+        color: white;
       }
 
       p {
@@ -107,7 +109,7 @@
         font-weight: normal;
         font-size: 20px;
         line-height: 32px;
-        color: $primary-color5;
+        color: white;
         margin-top: 24px;
       }
     }
