@@ -34,7 +34,7 @@ const HomePage = (props) => {
       filtered = props.users.filter(
         (user) =>
           user.name.toLowerCase().includes(text.toLowerCase()) ||
-          user.position.toLowerCase().includes(text.toLowerCase()) &&
+          user.position.toLowerCase().includes(text.toLowerCase()) ||
           user.title.toLowerCase().includes(text.toLowerCase())
       );
     } else {
@@ -50,8 +50,23 @@ const HomePage = (props) => {
   // =================SORT FUNCTION ====================
   function handleSort(sortOrder) {
     setSortOrder(sortOrder);
-    if (sortOrder.value) {
-      setUsers(_.orderBy(users, ["asc"], [sortOrder.value]));
+    const order = sortOrder.value;
+    if (order == 'asc') {
+      setUsers(
+        users.slice().sort((firstUser, secondUser) => {
+          if (firstUser.name < secondUser.name) return -1;
+          if (firstUser.name > secondUser.name) return 1;
+          return 0;
+        })
+      );
+    } else if (order == 'desc') {
+      setUsers(
+        users.slice().sort((firstUser, secondUser) => {
+          if (firstUser.name < secondUser.name) return 1;
+          if (firstUser.name > secondUser.name) return -1;
+          return 0;
+        })
+      );
     }
   }
 
