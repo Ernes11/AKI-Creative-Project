@@ -27,7 +27,7 @@ function Event() {
       })
     })
   }
-
+ 
   useEffect(()=>{
     fetchEvents()
     window.scrollTo(0, 0);
