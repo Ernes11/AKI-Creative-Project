@@ -4,7 +4,7 @@ function CreativeProject() {
 
 
     return(
-        <div className='creative_project_section'>
+        <div className='creative_project_section' id='project'>
             <div className='text_project_section'>
                 <h2>
                 Креативные проекты

@@ -4,7 +4,7 @@ function Utility(){
 
 
     return(
-        <div className='creative_utility_section'>
+        <div className='creative_utility_section' id='decorate'>
             <div className='text_utility_section'>
                 <h2>
                 Формальные полезности или Оформление
