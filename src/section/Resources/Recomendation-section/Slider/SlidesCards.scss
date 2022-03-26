@@ -1,0 +1,37 @@
+.slides_card {
+  background-color: black;
+  border: 0.758092px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 500px !important;
+  // text-align: center;
+
+  h2 {
+    margin-top: 54px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 13px;
+    line-height: 161%;
+    color: #ffffffcc;
+  }
+}
+.title_container {
+  width: 60%;
+  text-align: center;
+  min-height: 105px;
+  h2 {
+    color: white;
+  }
+}
+.body_container {
+  width: 55%;
+}
+
+.slides_card:not(first-child) {
+  margin-left: 30px;
+}
