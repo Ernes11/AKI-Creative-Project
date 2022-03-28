@@ -17,7 +17,7 @@ function Hero() {
           </div>
           <div className="main_text">
             <h1 className="main_title">Ассоциация Креативных Индустрий </h1>
-            <h4 className="main_subtitle">
+            <h4 className="main_subtitle">  
               Добро пожаловать на сайт Ассоциации Креативных Индустрий
             </h4>
 

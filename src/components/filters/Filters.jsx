@@ -5,8 +5,7 @@ const Filters = ({ handleSort, sortOrder }) => {
   const options = [
     { value: '', label: 'All Category' },
     { value: 'asc', label: 'A-Z' },
-    { value: 'desc', label: 'Z-A' },
-    // { value: 'position', label: 'All Position' }
+    { value: 'desc', label: 'Z-A' }
 
   ];
 

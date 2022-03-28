@@ -1,0 +1,42 @@
+.recomendation_header {
+  margin-top: 30px;
+  text-align: center;
+  h2 {
+    font-style: normal;
+    font-weight: lighter;
+    color: white;
+  }
+  p {
+    margin-top: 50px;
+    font-size: 28px;
+    color: #ffffffcc;
+    font-weight: 400;
+  }
+}
+.WAVES {
+  position: absolute;
+  z-index: -1;
+  top: 150%;
+  width: 100%;
+  height: 100%;
+}
+.eclipse {
+  z-index: -1;
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  border: none;
+  outline: none;
+  left: 0;
+  bottom: -1000;
+  background: radial-gradient(
+    110.29% 110.29% at 97.66% 31.26%,
+    rgba(233, 237, 237, 0.8) 0%,
+    rgba(252, 0, 252, 0.64) 20.11%,
+    rgba(76, 210, 178, 0.336) 44.03%,
+    rgba(11, 12, 11, 0.424) 74.02%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  opacity: 0.9;
+  filter: blur(143.294px);
+}
