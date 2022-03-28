@@ -39,15 +39,16 @@ function Navigation() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                {/* <NavLink className="nav-link" to="/resource">
+                <NavLink className="nav-link" to="/resource">
                 Ресурсы
-                </NavLink> */}
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">
-                  Контакты
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#footer">
+                  Контакты
+                </a>
+              </li>
+              
             </ul>
           </div>
           <select className="language">

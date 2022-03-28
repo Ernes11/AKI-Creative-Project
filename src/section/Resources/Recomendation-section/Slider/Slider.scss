@@ -1,7 +1,5 @@
-@import "../global.scss";
-
-.top-slider {
-  border-bottom: 1px solid #ffffff;
+.tops-slider {
+  //   border-bottom: 1px solid #ffffff;
   padding-bottom: 20px;
   max-width: 1200px;
   width: 100%;
@@ -43,16 +41,57 @@
   }
   .slick-arrow.slick-next::before {
     content: "\02C3";
-    font-size: 70px;
+    font-size: 100px;
     position: absolute;
-    right: 19rem;
+    right: 0;
     top: -2rem;
   }
   .slick-arrow.slick-prev::before {
     position: absolute;
     content: "\02C2";
-    font-size: 70px;
+    font-size: 100px;
     top: -2rem;
-    left: 19rem;
+    left: 0;
+  }
+}
+
+// .prev_block {
+//   position: absolute;
+// }
+.slick-list {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff !important;
+}
+.dots-pag {
+  margin-top: 50px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+}
+.slick-dots {
+  position: initial !important;
+  bottom: auto !important;
+  display: flex !important;
+  gap: 30px;
+  color: white;
+  justify-content: center;
+  font-size: 32px;
+  background: transparent;
+  font-weight: 400;
+}
+.slick-dots {
+  .slick-active {
+    div {
+      margin-top: 50px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid coral !important;
+    }
   }
 }
