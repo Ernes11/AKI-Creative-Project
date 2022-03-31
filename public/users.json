@@ -2,16 +2,16 @@
     {
       "id": 1,
       "photo": "../../images/cofounder.png",
-      "name": "Aleksei",
-      "title": "OsOO BBB",
+      "name": "Назгуль Конурбаева",
+      "title": "ОсОО БББ",
       "position": "Designer"
      
     },
     {
       "id": 2,
       "photo": "../../images/cofounder.png",
-      "name": "Marina",
-      "title": "OsOO BBB",
+      "name": "Бермет Акназарова",
+      "title": "ОсОО ААА",
       "position": "Designer"
      
     },

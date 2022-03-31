@@ -1,0 +1,29 @@
+.swiper {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: transparent;
+  padding-bottom: 40px;
+}
+
+.swiper-container {
+  max-width: 1200px;
+  width: 100%;
+}
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {
+  color: white;
+}
+
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after {
+  color: white;
+}
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  color: white;
+  padding-top: 40px;
+}
+.swiper-pagination-bullet-active {
+  background-color: white;
+}
