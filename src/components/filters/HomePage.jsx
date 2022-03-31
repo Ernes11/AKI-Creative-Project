@@ -1,21 +1,24 @@
-import React, { useState, useEffect, useRef } from "react";
-import _ from "lodash";
-import { connect } from "react-redux";
-import { loadUsers } from "../../actions/users";
-import UsersList from "./UsersList";
-import Header from "./Header";
-import Filters from "./Filters";
-import "../../sass/homepage.scss";
+
+import React, { useState, useEffect, useRef } from 'react';
+import _ from 'lodash';
+import { connect } from 'react-redux';
+import { loadUsers } from '../../actions/users';
+import UsersList from './UsersList';
+import Header from './Header';
+import Filters from './Filters';
 
 const HomePage = (props) => {
   const [users, setUsers] = useState(props.users);
-  const [sortOrder, setSortOrder] = useState("");
+  const [sortOrder, setSortOrder] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const inputRef = useRef();
 
+  // вызов api для получения списка пользователей
   useEffect(() => {
     setIsLoading(true);
     props.dispatch(loadUsers());
+
+    // инициализация функции отбоя для поиска после того, как пользователь перестанет набирать текст каждые полсекунды
     inputRef.current = _.debounce(onSearchText, 500);
   }, []);
 
@@ -26,28 +29,28 @@ const HomePage = (props) => {
     }
   }, [props.users]);
 
-  // ==================SEARCH FUNCTION=========================
 
+
+
+  // =============================SEARCH FUNCTION===================================
   function onSearchText(text, props) {
     let filtered;
     if (text) {
-      filtered = props.users.filter(
-        (user) =>
-          user.name.toLowerCase().includes(text.toLowerCase()) ||
-          user.position.toLowerCase().includes(text.toLowerCase()) ||
-          user.title.toLowerCase().includes(text.toLowerCase())
+      filtered = props.users.filter((user) =>
+        user.name.toLowerCase().includes(text.toLowerCase())
       );
     } else {
       filtered = props.users;
     }
     setUsers(filtered);
-    setSortOrder("");
+    setSortOrder('');
   }
 
   function handleSearch(event) {
     inputRef.current(event.target.value, props);
   }
-  // =================SORT FUNCTION ====================
+
+  // ===================SORT FUNCTION======================
   function handleSort(sortOrder) {
     setSortOrder(sortOrder);
     const order = sortOrder.value;
@@ -70,11 +73,9 @@ const HomePage = (props) => {
     }
   }
 
+
   return (
     <React.Fragment>
-      <div className="homepage">
-        <h1 className="homepage-title"> Члены Ассоциации</h1>
-      </div>
       <Header handleSearch={handleSearch} />
       <Filters handleSort={handleSort} sortOrder={sortOrder} />
       <UsersList users={users} isLoading={isLoading} />
@@ -83,7 +84,7 @@ const HomePage = (props) => {
 };
 
 const mapStateToProps = (state) => ({
-  users: state.users,
+  users: state.users
 });
 
 export default connect(mapStateToProps)(HomePage);

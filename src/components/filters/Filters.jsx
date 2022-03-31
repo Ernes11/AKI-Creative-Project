@@ -1,5 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
+import '../../sass/sort.scss'
 
 const Filters = ({ handleSort, sortOrder }) => {
   const options = [
