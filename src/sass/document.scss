@@ -1,0 +1,52 @@
+@import "../global.scss";
+
+.document {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+
+  .container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .document-2{
+      margin-top: 4rem;
+    }
+
+    button {
+      background: transparent;
+      border: none;
+      color: $primary-color6;
+      font-weight: bold;
+      font-size: 35px;
+      line-height: 48px;
+      text-decoration-line: underline;
+      padding: 15px;
+      transition: all 0.5 ease-in-out;
+
+      &:hover {
+        color: $primary-color5;
+        background-color: $primary-color6;
+      }
+    }
+
+    li {
+      margin-top: 30px;
+      list-style: none;
+
+      a {
+        color: $primary-color5;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        transition: all 0.5s ease;
+        padding: 5px 10px 5px 10px;
+
+        &:hover {
+          color: $primary-color;
+          background-color: $primary-color5;
+        }
+      }
+    }
+  }
+}
