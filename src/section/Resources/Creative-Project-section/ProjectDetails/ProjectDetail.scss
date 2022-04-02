@@ -1,0 +1,33 @@
+.details_headline {
+    text-align: center;
+    h1 {
+        color: white;
+        font-weight: lighter;
+    }
+    p{
+        color: white;
+    }
+}
+.details_img_wrapper {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    img {
+        max-width: 600px;
+        max-height: 390px;
+    }
+}
+.text_container {
+    margin-top: 70px;
+    h2 {
+        color: white;
+        font-weight: 700;
+
+    }
+    p {
+        color: white;
+        margin-top: 70px;
+    }
+    
+}

@@ -19,7 +19,8 @@
       top: 194%;
       left: 5%;
       background: transparent;
-      border: 1px solid linear-gradient(270deg, #9cd79a 0%, #78cf84 103.79%);
+      border: 1px solid  linear-gradient(270deg, #D79ACD 0%, #7884CF 103.79%);
+      ;
       padding: 1rem 2rem;
       border-radius: 10px;
       margin-left: 0rem;
@@ -105,11 +106,13 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 2rem;
+  padding-left: 10px;
 
   .user {
-    width: 18.2rem;
+    max-width: 300px;
     border: 1px solid white;
     background: #212121;
+    max-height: 400px;
 
     &__name {
       font-weight: 300;
