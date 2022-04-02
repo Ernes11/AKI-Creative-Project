@@ -11,12 +11,12 @@ import { AiFillInstagram } from "react-icons/ai";
 const CardSlider = (props) => {
   const slideLeft = () => {
     var slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft + 500;
+    slider.scrollLeft = slider.scrollLeft + 330;
   };
 
   const slideRight = () => {
     var slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft - 500;
+    slider.scrollLeft = slider.scrollLeft - 330;
   };
 
   return (
@@ -24,7 +24,7 @@ const CardSlider = (props) => {
       <MdOutlineArrowBackIos
         size={40}
         className="slider-icon left"
-        onClick={slideLeft}
+        onClick={slideRight}
       />
       <div id="slider">
         {props.slides.map((slide, index) => {
@@ -32,15 +32,9 @@ const CardSlider = (props) => {
             <div
               className="slider-card"
               key={index}
-              onClick={() => slide.clickEvent()}
             >
-              <div
-                className="slider-card-image"
-                style={{
-                  backgroundImage: `url(${slide.image})`,
-                  backgroundSize: "cover",
-                }}
-              ></div>
+              <div className="img_container_main">
+              <img className="slider-card-img" src={slide.photo} alt="" /></div>
               <p className="slider-card-title">{slide.title}</p>
               <p className="slider-card-description">{slide.description}</p>
               <ul className="social-icons">
@@ -56,7 +50,7 @@ const CardSlider = (props) => {
       <MdOutlineArrowForwardIos
         size={40}
         className="slider-icon right"
-        onClick={slideRight}
+        onClick={slideLeft}
       />
     </div>
   );

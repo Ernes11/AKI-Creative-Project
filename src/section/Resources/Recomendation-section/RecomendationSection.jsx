@@ -1,5 +1,6 @@
 import './RecomendationSection.scss'
-import Slider from "./Slider/Slider.jsx"
+import RecomendationSlider from './Recomendation-Slider/Slider'
+
 
 
 
@@ -15,7 +16,7 @@ function RecomendationSection(){
                 </p>
             </div>
             <div className='recomendation_slider'>
-                <Slider/>
+                <RecomendationSlider/>
                 <img className='WAVES' src={'/images/resourse-wavese.svg'} alt="2312" />
                 <img className="eclipse"  src={'/images/Ellipse27.svg'} alt="23213" />
             </div>

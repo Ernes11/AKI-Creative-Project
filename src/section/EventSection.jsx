@@ -24,7 +24,7 @@ export default function EventSection({oddClass, info, imageId, title}) {
     }
 
     useEffect(()=>{
-        axios.get('http://creative.kg/api/eventimages/')
+        axios.get('https://creative.kg/api/eventimages/')
         .then(res =>{
             getImages(res.data.results);
         })

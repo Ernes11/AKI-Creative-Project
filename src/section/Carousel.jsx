@@ -7,12 +7,13 @@ export default class CenterMode extends Component {
     const settings = {
       className: "center",
       infinite: true,
-      centerMode: false,
-      dots: true,
+      centerMode: true,
+      dots: false,
       autoplaySpeed: 2000,
-      centerPadding: "60px",
+      // centerPadding: "60px",
       slidesToShow: 3,
-      speed: 500,
+      speed: 800,
+  
     };
     return (
       <div className="top-slider">

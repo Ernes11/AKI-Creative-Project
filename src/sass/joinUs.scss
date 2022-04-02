@@ -31,7 +31,7 @@
     margin: 0;
   }
   input {
-    border: none;
+    border: none ;
     border-bottom: 1px solid white;
     color: white;
     background: none;
@@ -41,6 +41,10 @@
       color: white;
     }
   }
+  // .DayInput {
+  //   min-width: 500px !important;
+  //   border: none;
+  // }
 }
 .required::after {
   content: "*";

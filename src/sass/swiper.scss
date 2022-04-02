@@ -1,12 +1,12 @@
 .swiper {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: transparent;
   padding-bottom: 40px;
 }
 
 .swiper-container {
-  max-width: 1200px;
+  max-width: 81vw;
   width: 100%;
 }
 .swiper-button-next:after,

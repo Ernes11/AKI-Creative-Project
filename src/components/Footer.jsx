@@ -17,11 +17,12 @@ function Footer() {
               <li><Link to='/event'>Мероприятия</Link></li>
               <li><Link to='/membership'>Членство</Link></li>
               <li><Link to='/joinus'>Вступить в ассоциацию</Link></li>
+              <li><Link to='/resource'>Ресурсы </Link></li>
             </ul>
 
             <div className="footer-column">
               <ul className="footer-contact">
-                <li><Link to='/contact'>Контакты</Link></li>
+                <li>Контакты</li>
                 <li>Адрес: г. Бишкек,  ул. Исанова 105/3</li>
                 <li>
                   creative.kyrgyzstan@gmail.com 
