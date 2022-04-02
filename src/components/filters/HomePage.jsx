@@ -1,15 +1,14 @@
-
-import React, { useState, useEffect, useRef } from 'react';
-import _ from 'lodash';
-import { connect } from 'react-redux';
-import { loadUsers } from '../../actions/users';
-import UsersList from './UsersList';
-import Header from './Header';
-import Filters from './Filters';
+import React, { useState, useEffect, useRef } from "react";
+import _ from "lodash";
+import { connect } from "react-redux";
+import { loadUsers } from "../../actions/users";
+import UsersList from "./UsersList";
+import Header from "./Header";
+import Filters from "./Filters";
 
 const HomePage = (props) => {
   const [users, setUsers] = useState(props.users);
-  const [sortOrder, setSortOrder] = useState('');
+  const [sortOrder, setSortOrder] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const inputRef = useRef();
 
@@ -29,9 +28,6 @@ const HomePage = (props) => {
     }
   }, [props.users]);
 
-
-
-
   // =============================SEARCH FUNCTION===================================
   function onSearchText(text, props) {
     let filtered;
@@ -43,7 +39,7 @@ const HomePage = (props) => {
       filtered = props.users;
     }
     setUsers(filtered);
-    setSortOrder('');
+    setSortOrder("");
   }
 
   function handleSearch(event) {
@@ -54,7 +50,7 @@ const HomePage = (props) => {
   function handleSort(sortOrder) {
     setSortOrder(sortOrder);
     const order = sortOrder.value;
-    if (order == 'asc') {
+    if (order == "asc") {
       setUsers(
         users.slice().sort((firstUser, secondUser) => {
           if (firstUser.name < secondUser.name) return -1;
@@ -62,7 +58,7 @@ const HomePage = (props) => {
           return 0;
         })
       );
-    } else if (order == 'desc') {
+    } else if (order == "desc") {
       setUsers(
         users.slice().sort((firstUser, secondUser) => {
           if (firstUser.name < secondUser.name) return 1;
@@ -72,7 +68,6 @@ const HomePage = (props) => {
       );
     }
   }
-
 
   return (
     <React.Fragment>
@@ -84,7 +79,7 @@ const HomePage = (props) => {
 };
 
 const mapStateToProps = (state) => ({
-  users: state.users
+  users: state.users,
 });
 
 export default connect(mapStateToProps)(HomePage);

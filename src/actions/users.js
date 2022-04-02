@@ -21,7 +21,6 @@ export const loadUsers = () => {
     try {
       const users = await axios.get(`https://creative.kg/api/members/`);
       return dispatch(setUsers(users.data.results));
-
     } catch (error) {
       console.log('error:', error);
     }
