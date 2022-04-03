@@ -22,7 +22,7 @@ const Card = ({ item }) => {
               <div className="column" key={Val.id}>
                 <div className="card-img">
                   <img
-                    src="../../images/cofounder.png"
+                    src={Val.image}
                     alt={Val.title}
                     className="card-photo"
                   />
