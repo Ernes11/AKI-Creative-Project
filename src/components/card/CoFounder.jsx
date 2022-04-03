@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
 import axios from "axios";
-import data from "../card/data";
+// import data from "../card/data";
 import Card from "../card/Card";
 import '../../sass/cofounder.scss';
 
