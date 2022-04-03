@@ -1,60 +1,20 @@
-
-import CardSlider from '../card/CardSlider';
-
-
+import CardSlider from "../card/CardSlider";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 function CardItem() {
-  const sliderClick = (slider)=>{
+  const [Sliders, setSliders] = useState([]);
+  function getSliders() {
+    axios.get('https://creative.kg/api/members/').then((res) => {
+      setSliders(res.data.results);
+    });
   }
-
-  
-  const slides = [
-    {image:"../../images/cofounder.png",
-    title:"Александ Александров",
-    description:"ОсОО Кодифай",
-    clickEvent:sliderClick},
-
-    {image:"../../images/cofounder.png",
-    title:"Александ Александров",
-    description:"ОсОО Кодифай",
-    clickEvent:sliderClick},
-    {image:"../../images/cofounder.png",
-    title:"Александ Александров",
-    description:"ОсОО Кодифай",
-    clickEvent:sliderClick},
-    {image:"../../images/cofounder.png",
-    title:"Александ Александров",
-    description:"ОсОО Кодифай",
-    clickEvent:sliderClick},
-    {image:"../../images/cofounder.png",
-    title:"Александ Александров",
-    description:"ОсОО Кодифай",
-    clickEvent:sliderClick},
-    {image:"../../images/cofounder.png",
-    title:"Александ Александров",
-    description:"ОсОО Кодифай",
-    clickEvent:sliderClick},
-    {image:"../../images/cofounder.png",
-    title:"Александ Александров",
-    description:"ОсОО Кодифай",
-    clickEvent:sliderClick},
-    {image:"../../images/cofounder.png",
-    title:"Александ Александров",
-    description:"ОсОО Кодифай",
-    clickEvent:sliderClick},
-    {image:"../../images/cofounder.png",
-    title:"Александ Александров",
-    description:"ОсОО Кодифай",
-    clickEvent:sliderClick},
-    {image:"../../images/cofounder.png",
-    title:"Александ Александров",
-    description:"ОсОО Кодифай",
-    clickEvent:sliderClick},
-  ]
+  useEffect(() => {
+    getSliders();
+  }, []);
   return (
     <div id="body">
-      <CardSlider slides={slides}/>
+      <CardSlider slides={Sliders} />
     </div>
   );
 }
-
 export default CardItem;

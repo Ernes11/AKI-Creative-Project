@@ -1,5 +1,6 @@
 import './CreativeProject.scss'
-import ProjectSlider from "./CreativeProjectSlider/ProjectsSlider.jsx"
+import ProjectSlider from './CreativeProjectSlider/ProjectsSlider'
+
 function CreativeProject() {
 
 

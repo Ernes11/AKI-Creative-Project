@@ -8,7 +8,7 @@ import { AiFillInstagram } from "react-icons/ai";
 const UserItem = ({ id, photo, name, title, position }) => {
   return (
     <Card className="user">
-      <Card.Img variant="top" src={photo} className="user__image" alt={name} />
+      <Card.Img style={{maxHeight:'60%'}} variant="top" src={photo} className="user__image" alt={name} />
       <Card.Body>
         <Card.Title className="user__name">{name}</Card.Title>
         <Card.Text className="user__details">
