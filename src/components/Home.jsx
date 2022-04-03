@@ -6,8 +6,9 @@ import CardItem from "../components/card/CardItem";
 import CustomButton from "./button/CustomButton";
 import '../sass/home.scss'
 import { Link } from 'react-router-dom';
-
+import { FormattedMessage } from 'react-intl'
 function Home() {
+ 
 
   useEffect(() =>{
     window.scrollTo(0, 0);
@@ -27,7 +28,7 @@ function Home() {
             type="outlined"
             className="join_btn"
           >
-            Присоединиться
+            <FormattedMessage id="Join"/>
           </CustomButton>
         </Link>
       </div>

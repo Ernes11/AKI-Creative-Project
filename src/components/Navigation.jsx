@@ -52,9 +52,9 @@ function Navigation() {
             </ul>
           </div>
           <select className="language">
-            <option value="Russian">Рус</option>
-            <option value="English">Eng</option>
-            <option value="Kyrgyz">Кыр</option>
+            <option value="RU">Рус</option>
+            <option value="ENG">Eng</option>
+            <option value="KG">Кыр</option>
           </select>
         </div>
       </nav>
