@@ -2,7 +2,10 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "../sass/navigation.scss";
 
-function Navigation() {
+function Navigation({ setLang , lang }) {
+  const hangeChange = ({ target: { value } }) => {
+    setLang(value)
+  }
   return (
     <div className="navigation">
       <nav className="navbar navbar-expand navbar-dark">
@@ -51,10 +54,10 @@ function Navigation() {
               
             </ul>
           </div>
-          <select className="language">
-            <option value="RU">Рус</option>
-            <option value="ENG">Eng</option>
-            <option value="KG">Кыр</option>
+          <select onChange={hangeChange} value={lang} className="language">
+            <option value="RU-RU">Рус</option>
+            <option value="en-US">Eng</option>
+            <option value="KG-KG">Кыр</option>
           </select>
         </div>
       </nav>

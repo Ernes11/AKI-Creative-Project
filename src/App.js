@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
@@ -24,14 +24,15 @@ import { LOCALES } from "./i18n/locales";
 import { messages } from "./i18n/messages";
 
 export default function App() {
-    const locale = LOCALES.ENGLISH
-// const [lang,setLang] = useState(LOCALES.ENGLISH)
+    const [lang,setLang] = useState(LOCALES.ENGLISH)
+    const locale = lang
+    console.log(lang)
     return (
 <IntlProvider messages={messages[locale]}
       locale={locale}
       defaultLocale={LOCALES.KYRGYZSTAN}>
   
-    <Navigation />
+    <Navigation setLang={setLang} lang={lang} />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />

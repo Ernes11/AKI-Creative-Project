@@ -7,7 +7,7 @@ import CustomButton from "./button/CustomButton";
 import '../sass/home.scss'
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl'
-function Home() {
+function Home( ) {
  
 
   useEffect(() =>{
