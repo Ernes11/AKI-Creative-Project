@@ -7,7 +7,6 @@
   background-position-x: 115%;
 
   .container {
-    
     .steps-title {
       padding-top: 2rem;
       font-weight: 200;
@@ -45,9 +44,17 @@
           padding-top: 1rem;
           padding-bottom: 1rem;
 
+          &:hover {
+            color: #3774d0;
+            background-color: #d8d8d8;
+          }
+
           img {
             width: 35px;
             margin-right: 1rem;
+          }
+          img:hover{
+            color: #3774d0;
           }
         }
       }
