@@ -61,6 +61,13 @@ h1 {
   text-transform: uppercase;
 }
 
-// Report /////
+// Mobile /////
 
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content
+    }
+}
 

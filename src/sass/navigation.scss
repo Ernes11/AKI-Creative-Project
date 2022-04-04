@@ -14,18 +14,95 @@
 
       .navbar-nav {
         text-transform: uppercase;
-      }
-    }
 
-    select {
-      &.language {
-        background-color: $primary-color;
-        display: block;
-        margin-left: 10rem;
-        color: white;
+        @include mobile {
+          display: none;
+        }
+      }
+
+      .navbar-nav-mobile {
+        display: flex;
         text-transform: uppercase;
-        border: none;
-        outline: none;
+
+        @include mobile {
+          position: absolute;
+          display: block;
+          color: white;
+          background-color: rgb(58, 58, 58);
+          top: 79px;
+          transition: all 0.5s ease-out;
+          width: 140%;
+          z-index: 9999;
+          margin-top: 1rem;
+        }
+
+        .nav-item {
+          padding-top: 1rem;
+          border-bottom: 0.5px solid #050505;
+          box-sizing: border-box;
+        }
+
+        .nav-link {
+          color: white;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+
+          @include mobile {
+            padding-left: 7rem;
+          }
+        }
+      }
+
+      .left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .navbar-brand {
+          margin-right: 4rem;
+          @include mobile {
+            margin-right: 6rem;
+            margin-left: -3rem;
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        select {
+          &.language {
+            background-color: $primary-color;
+            display: block;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            color: white;
+            text-transform: uppercase;
+            border: none;
+            outline: none;
+
+            @include mobile {
+              margin-right: 0;
+            }
+          }
+        }
+        .mobile-menu-icon {
+          display: none;
+
+          @include mobile {
+            display: block;
+            position: absolute;
+            font-size: 30px;
+            color: white;
+            background-color: black;
+            border: none;
+            outline: none;
+            top: 20px;
+            right: 25px;
+          }
+        }
       }
     }
   }

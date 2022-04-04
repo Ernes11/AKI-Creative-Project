@@ -1,6 +1,7 @@
 import CardSlider from "../card/CardSlider";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+
 function CardItem() {
   const [Sliders, setSliders] = useState([]);
   function getSliders() {
