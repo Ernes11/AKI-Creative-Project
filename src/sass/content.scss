@@ -50,6 +50,7 @@
     }
 
     .line_horizontal-4 {
+      display: none;
       @include mobile {
         background-color: white;
         color: white;
@@ -62,6 +63,7 @@
       }
     }
     .line_horizontal-5 {
+      display: none;
       @include mobile {
         background-color: white;
         color: white;
