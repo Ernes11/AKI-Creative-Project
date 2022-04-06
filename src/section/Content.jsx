@@ -9,6 +9,9 @@ function Content() {
       <div className="horizontal-line">
         <hr className="line_horizontal-1" />
         <hr className="line_horizontal-2" />
+        <hr className="line_horizontal-4" />
+        <hr className="line_horizontal-5" />
+
       </div>
 
       <div class="container">

@@ -16,7 +16,7 @@ function Home() {
 
 
   return (
-    <div className="homePage-cointainer">
+    <div className="homePage-container">
       <Hero />
       <Info />
       <Content />

@@ -4,9 +4,7 @@
   text-align: center;
   margin-top: 6rem;
 
-  CustomButton {
-    background-color: transparent;
-    border-color: $primary-color5;
-    color: $primary-color5;
+  .customButton.customButtonoutlined.join_btn {
+    width: 220px;
   }
 }
