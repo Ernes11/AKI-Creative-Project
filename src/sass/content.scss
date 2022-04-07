@@ -1,9 +1,11 @@
 @import "../global.scss";
 
 .content {
-  margin-top: 525px;
+  margin-top: 100px;
   position: relative;
   width: 100%;
+
+  
 
   h2 {
     font-weight: 300;
@@ -13,7 +15,7 @@
     text-align: center;
 
     @include mobile {
-      margin-top: 2rem;
+      margin-top: 33rem;
       font-size: 25px;
       line-height: 37px;
     }
