@@ -16,6 +16,9 @@ function Content() {
 
       <div class="container">
         <hr class="line_horizontal-3" />
+        <div>
+          
+        </div>
 
         <div className="vertical">
           <hr className="line_vertical-1" />
