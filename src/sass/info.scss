@@ -62,9 +62,8 @@
           padding-bottom: 72px;
         }
 
-        .text{
-
-          @include mobile{
+        .text {
+          @include mobile {
             z-index: 9999;
             background-color: black;
             padding-bottom: 1rem;
