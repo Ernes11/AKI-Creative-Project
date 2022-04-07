@@ -5,7 +5,9 @@
   position: relative;
   width: 100%;
 
-  
+  @include mobile {
+    margin-bottom: 5rem;
+  }
 
   h2 {
     font-weight: 300;
@@ -25,83 +27,86 @@
     .line_horizontal-1 {
       background-color: white;
       color: white;
+      opacity: 2;
+      height: 2px;
       position: absolute;
       width: 106.9%;
-      height: 1px;
       left: -1.5%;
-      top: 92.8%;
+      top: 12rem;
       border: 2px;
 
       @include mobile {
-        top: 49.8%;
+        top: 6.1rem;
       }
     }
+
     .line_horizontal-2 {
-      background-color: white;
-      color: white;
-      position: absolute;
-      width: 106.9%;
-      height: 1px;
-      left: -1.5%;
-      top: 22.5%;
-      border: 2px;
+      display: none;
 
       @include mobile {
-        top: 9.5%;
+        background-color: white;
+        color: white;
+        opacity: 2;
+        height: 2px;
+        position: absolute;
+        width: 106.9%;
+        left: -1.5%;
+        top: 2%;
+        border: 2px;
+        top: 17rem;
       }
     }
-
+    .line_horizontal-3 {
+      display: none;
+      @include mobile {
+        background-color: white;
+        color: white;
+        opacity: 2;
+        height: 2px;
+        position: absolute;
+        width: 106.9%;
+        top: 27.9rem;
+        left: -1.5%;
+        border: 2px;
+      }
+    }
     .line_horizontal-4 {
       display: none;
       @include mobile {
         background-color: white;
         color: white;
+        opacity: 2;
+        height: 2px;
         position: absolute;
         width: 106.9%;
-        height: 1px;
         left: -1.5%;
-
-        top: 72.5%;
+        top: 40.1rem;
         border: 2px;
       }
     }
     .line_horizontal-5 {
-      display: none;
+      background-color: white;
+      color: white;
+      position: absolute;
+      width: 102%;
+      opacity: 2;
+      height: 2px;
+      left: -2%;
+      border: 2px;
+      top: 47rem;
+
       @include mobile {
-        background-color: white;
-        color: white;
-        position: absolute;
-        width: 106.9%;
-        height: 1px;
-        left: -1.5%;
-        top: 93.5%;
-        border: 2px;
+        top: 51rem;
       }
     }
   }
+
   .container {
     max-width: 1200px;
     text-align: center;
     width: 80%;
     margin: 0 auto;
     position: relative;
-    .line_horizontal-3 {
-      background-color: white;
-      color: white;
-      position: absolute;
-      width: 100%;
-      width: 102%;
-      height: 1px;
-      left: -2%;
-      top: 45%;
-      border: 2px;
-
-      @include mobile {
-        width: 155%;
-        left: -15%;
-        top: 16%;
-      }
-    }
 
     .vertical {
       .line_vertical-1 {
@@ -162,6 +167,14 @@
       row-gap: 100px;
       margin-top: 15%;
 
+      .line {
+        @include mobile {
+          border: 0.5px solid white;
+          padding-top: 1rem;
+          padding-left: 11px;
+        }
+      }
+
       @include mobile {
         grid-template-columns: auto;
         row-gap: 0px;
@@ -196,6 +209,7 @@
         text-align: left;
 
         @include mobile {
+          height: 96px;
           line-height: 20px;
         }
       }
