@@ -25,6 +25,10 @@
       padding: 15px;
       transition: all 0.5 ease-in-out;
 
+      @include mobile{
+        font-size: 27px;
+      }
+
       &:hover {
         color: black !important;
         background-color: white;
