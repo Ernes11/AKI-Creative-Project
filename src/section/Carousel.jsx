@@ -1,59 +1,58 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
 import "../sass/slider.scss";
+import { useState } from "react";
+import Slider from "react-slick";
+import CreativeProjects1 from "../assets/CreativeProjects1.png";
+import CreativeProjects2 from "../assets/CreativeProjects2.png";
+import CreativeSongs from "../assets/CreativeSongs.png";
+import CreativeBooks from "../assets/CreativeBooks.png";
+import CreativeFilm from "../assets/CreativeFilm.png";
 
-export default class CenterMode extends Component {
-  render() {
-    const settings = {
-      className: "center",
-      infinite: true,
-      centerMode: true,
-      dots: false,
-      autoplaySpeed: 2000,
-      // centerPadding: "60px",
-      slidesToShow: 3,
-      speed: 800,
-  
-    };
+import { MdOutlineKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
+
+const images = [CreativeProjects1, CreativeProjects2 , CreativeSongs, CreativeBooks, CreativeFilm];
+
+function Carousel() {
+  const NextArrow = ({ onClick }) => {
     return (
-      <div className="top-slider">
-        <div className="container">
-          <link
-            rel="stylesheet"
-            type="text/css"
-            charset="UTF-8"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-          />
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-          />
-
-          <Slider {...settings}>
-            <div>
-              <div className="slider-img">
-                <img src="../../images/slider.png" alt="" />
-              </div>
-            </div>
-            <div>
-              <div className="slider-img">
-                <img src="../../images/slider2.png" alt="" />
-              </div>
-            </div>
-            <div>
-              <div className="slider-img">
-                <img src="../../images/slider3.png" alt="" />
-              </div>
-            </div>
-            <div>
-              <div className="slider-img">
-                <img src="../../images/slider2.png" alt="" />
-              </div>
-            </div>
-          </Slider>
-        </div>
+      <div className="arrow next" onClick={onClick}>
+        <MdOutlineKeyboardArrowRight />
       </div>
     );
-  }
+  };
+
+  const PrevArrow = ({ onClick }) => {
+    return (
+      <div className="arrow prev" onClick={onClick}>
+        <MdKeyboardArrowLeft />
+      </div>
+    );
+  };
+
+  const [imageIndex, setImageIndex] = useState(0);
+
+  const settings = {
+    infinite: true,
+    lazyLoad: true,
+    speed: 300,
+    slidesToShow: 3,
+    centerMode: true,
+    centerPadding: 0,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    beforeChange: (current, next) => setImageIndex(next),
+  };
+
+  return (
+    <div className="Carousel">
+      <Slider {...settings}>
+        {images.map((img, idx) => (
+          <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
+            <img src={img} alt={img} />
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
 }
+
+export default Carousel;
