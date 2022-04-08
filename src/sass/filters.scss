@@ -26,6 +26,10 @@
       margin-left: 0rem;
       width: 40rem;
       color: white;
+
+      @include mobile{
+        width: 20rem;
+      }
     }
   }
 }
@@ -70,6 +74,10 @@
     -webkit-transition: all 100ms;
     transition: all 100ms;
     box-sizing: border-box;
+
+    @include mobile{
+      display: none;
+    }
 
     #placeholder {
       color: white;
