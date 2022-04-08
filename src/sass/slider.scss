@@ -52,13 +52,20 @@
 }
 
 .next {
-  right: 10%;
+  right: 28%;
   top: 33%;
   font-size: 3rem;
+  @include mobile{
+    right: 10%;
+  }
 }
 
 .prev {
-  left: 10%;
+  left: 16%;
   top: 33%;
   font-size: 3rem;
+
+  @include mobile{
+    left: 10%;
+  }
 }
