@@ -104,7 +104,7 @@
           .button_1 {
             margin-right: 20px;
             padding: 16px 28px;
-            width: 200px;
+            min-width: 200px;
             height: 50px;
             border-radius: 12px;
             color: $primary-color5;
@@ -126,7 +126,7 @@
 
           .button_2 {
             transition: all 0.5s;
-            width: 200px;
+            min-width: 200px;
 
             & span {
               cursor: pointer;

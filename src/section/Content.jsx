@@ -1,10 +1,11 @@
 import React from "react";
 import "../sass/content.scss";
+import { FormattedMessage } from 'react-intl';
 
 function Content() {
   return (
     <div className="content">
-      <h2>ПОЧЕМУ ЦЕННО БЫТЬ ЧЛЕНОМ АССОЦИАЦИИ?</h2>
+      <h2><FormattedMessage id="WhatValueAssocial"/></h2>
 
       <div className="horizontal-line">
         <hr className="line_horizontal-1" />

@@ -1,7 +1,7 @@
 import './CreativeProject.scss'
 import ProjectSlider from './CreativeProjectSlider/ProjectsSlider'
 
-function CreativeProject() {
+function CreativeProject({value}) {
 
 
     return(
@@ -15,7 +15,7 @@ function CreativeProject() {
                 </p>
             </div>
             <div className="CreativeSlider">
-                <ProjectSlider/>
+                <ProjectSlider value={value}/>
             </div>
         </div>
     )

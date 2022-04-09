@@ -3,12 +3,13 @@ import "../../sass/card.scss";
 import { FaFacebookSquare, FaTelegram } from "react-icons/fa";
 import { RiWhatsappFill } from "react-icons/ri";
 import { AiFillInstagram } from "react-icons/ai";
+import { FormattedMessage } from 'react-intl';
 
 const Card = ({ item }) => {
   return (
     <div className="card"  style={{ backgroundColor: "transparent"}}>
       <div className="container-card" >
-        <h1 className="top-title">учредители Ассоциации</h1>
+        <h1 className="top-title"><FormattedMessage id="AssociationFounders"/></h1>
         <hr className="line_horizontal-1" />
         <hr className="line_horizontal-2" />
         <hr className="line_horizontal-3" />

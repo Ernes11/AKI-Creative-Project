@@ -3,6 +3,7 @@ import CustomButton from "./button/CustomButton";
 import '../sass/event.scss';
 import EventSection from "../section/EventSection";
 import axios from "axios";
+import { FormattedMessage, injectIntl, useIntl } from 'react-intl';
 
 
 
@@ -32,6 +33,10 @@ function Event() {
     fetchEvents()
     window.scrollTo(0, 0);
   }, []);
+  const intl = useIntl();
+  const Past = intl.formatMessage({id: 'PastEvents'});
+  const Upcoming = intl.formatMessage({id: 'UpcomingEvents'})
+  console.log(Past)
 
   return (
       <main className="main-event">
@@ -43,7 +48,7 @@ function Event() {
               type={buttonStyle? "contained" : "outlined"}
               onClick = {() => {setButtonStyle(true); setEventPoint(3)}}
               >
-                Анонсы
+                <FormattedMessage id="Announcements"/>
               </CustomButton>
 
               <CustomButton
@@ -51,10 +56,10 @@ function Event() {
               type={buttonStyle? "outlined" : "contained"}
               onClick = {() => {setButtonStyle(false); setEventPoint(3)}}
               >
-                Прошедшие
+                <FormattedMessage id="PastEvents"/>
               </CustomButton>
             </div>
-            <h1>{`${buttonStyle? "предстоящие" : "прошедшие"} мероприятия`}</h1>
+            <h1>{buttonStyle? Upcoming : Past}</h1>
           </div>
         </section>
         <div className="event_cards_container">
@@ -77,14 +82,15 @@ function Event() {
         })}
         </div>
         {currentData().length > eventPoint?
-        <button className="lookMore" onClick={()=>setEventPoint(eventPoint + 4)}>Смотреть еще <i className="arrowDown"></i></button> 
+        <button className="lookMore" onClick={()=>setEventPoint(eventPoint + 4)}><FormattedMessage id="SeeMore"/> <i className="arrowDown"></i></button> 
         :
-        <p className="lookMore" >Больше мероприятий нет ...</p> 
+        <p className="lookMore" ><FormattedMessage id="NoMoreEvents"/></p> 
         }
         <div сlassName ='Event_Calendar_container' style={{width:'100%' , margin:'unset'}}>
-          <h2 style={{color:'white',marginLeft: '20%'}}>Выберите дату</h2>
+          <h2 style={{color:'white',marginLeft: '20%'}}><FormattedMessage id="СhooseTime"/></h2>
           <div className="Calendar">
-          <iframe src="https://calendar.google.com/calendar/embed?height=771&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FBishkek&title&hl=ru&showTitle=0&showNav=1&showCalendars=1&showTabs=1&showPrint=0&showTz=1&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4ua2cjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&src=cnUua2cjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%2333B679&color=%230B8043&color=%230B8043" style={{borderWidth : 0, width : '100%' , height : '100%' ,frameborder: 0  ,scrolling : "yes",borderRadius:'8px'}}></iframe>
+          <iframe src="https://calendar.google.com/calendar/embed?height=771&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FBishkek&showTitle=0&showPrint=0&showCalendars=0&src=a2djcmVhdGl2ZTNAZ21haWwuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679" style={{borderWidth : 0, width : '100%' , height : '100%' ,frameborder: 0  ,scrolling : "yes",borderRadius:'8px'}}></iframe>
+          {/* <iframe src="https://calendar.google.com/calendar/embed?height=771&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FBishkek&title&hl=ru&showTitle=0&showNav=1&showCalendars=1&showTabs=1&showPrint=0&showTz=1&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4ua2cjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&src=cnUua2cjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%2333B679&color=%230B8043&color=%230B8043" style={{borderWidth : 0, width : '100%' , height : '100%' ,frameborder: 0  ,scrolling : "yes",borderRadius:'8px'}}></iframe> */}
           </div> 
         </div>
       </main>

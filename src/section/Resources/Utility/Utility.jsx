@@ -1,6 +1,6 @@
 import './Utility.scss'
 import UtilitySlider from './UtilitySlider/UtilitySlider'
-function Utility(){
+function Utility({value}){
 
 
     return(
@@ -14,7 +14,7 @@ function Utility(){
                 </p>
             </div>
             <div className="UtilitySlider">
-                <UtilitySlider/>
+                <UtilitySlider value = {value}/>
             </div>
         </div>
     )

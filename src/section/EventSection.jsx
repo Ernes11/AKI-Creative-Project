@@ -5,6 +5,7 @@ import '../sass/eventSection.scss'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
+import { useIntl } from 'react-intl';
 
 
 export default function EventSection({oddClass, info, imageId, title}) {
@@ -29,7 +30,7 @@ export default function EventSection({oddClass, info, imageId, title}) {
             getImages(res.data.results);
         })
     }, [])
-
+    
     
 
     return (

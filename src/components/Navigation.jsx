@@ -1,11 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../sass/navigation.scss";
+import { FormattedMessage } from 'react-intl';
 
 function Navigation({ setLang , lang }) {
   const hangeChange = ({ target: { value } }) => {
     setLang(value)
   }
+  
   return (
     <div className="navigation">
       <nav className="navbar navbar-expand navbar-dark">
@@ -17,38 +19,38 @@ function Navigation({ setLang , lang }) {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <NavLink className="nav-link" to="/">
-                  Главная
+                <FormattedMessage id="Home"/>
                   <span className="sr-only">(current)</span>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/about">
-                  О нас
+                <FormattedMessage id="AboutUs"/>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/membership">
-                  Членство
+                <FormattedMessage id="Membership"/>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/event">
-                  Мероприятия
+                <FormattedMessage id="Events"/>
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/joinus">
-                  Присоединиться
-                </NavLink>
+                <a target="_blank" className="nav-link" href="https://forms.gle/tmSP19PLXCeFdWcJ8" rel="noreferrer">
+                <FormattedMessage id="Join"/>
+                </a>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/resource">
-                Ресурсы
+                <FormattedMessage id="Resource"/>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#footer">
-                  Контакты
+                <FormattedMessage id="Contacts"/>
                 </a>
               </li>
               

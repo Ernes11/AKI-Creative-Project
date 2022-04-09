@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import CustomButton from "../../../../components/button/CustomButton";
 import './SlidesCards.scss'
+import { FormattedMessage } from 'react-intl';
 
 export default function SlidesCard ({img,title,body ,id,type}) {
 
@@ -16,7 +17,7 @@ export default function SlidesCard ({img,title,body ,id,type}) {
                 <p>{body}</p>   
             </div>
             <div>
-               <Link to={`${type}/${id}`}> <CustomButton className='SlidersBTN' type='outlined'>ПОДРОБНЕЕ</CustomButton></Link>
+               <Link to={`${type}/${id}`}> <CustomButton className='SlidersBTN' type='outlined'><FormattedMessage id="More"/></CustomButton></Link>
             </div>
         </div>
     )
