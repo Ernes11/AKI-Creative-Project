@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "../sass/navigation.scss";
 
 function Navigation() {
+  const [isMobile, setIsMobile] = useState(false);
   return (
     <div className="navigation">
       <nav className="navbar navbar-expand navbar-dark">
         <div className="container">
-          <NavLink className="navbar-brand" to="/">
-            <img src="../../images/Top_logo.png" alt="" />
-          </NavLink>
-          <div>
-            <ul className="navbar-nav">
+          <div className="left">
+            <NavLink className="navbar-brand" to="/">
+              <img src="../../images/Top_logo.png" alt="" />
+            </NavLink>
+            <ul
+              className={isMobile ? "navbar-nav-mobile" : "navbar-nav"}
+              onClick={() => setIsMobile(false)}
+            >
               <li className="nav-item">
                 <NavLink className="nav-link" to="/">
                   Главная
@@ -40,7 +45,7 @@ function Navigation() {
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/resource">
-                Ресурсы
+                  Ресурсы
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -48,14 +53,22 @@ function Navigation() {
                   Контакты
                 </a>
               </li>
-              
             </ul>
           </div>
-          <select className="language">
-            <option value="RU">Рус</option>
-            <option value="ENG">Eng</option>
-            <option value="KG">Кыр</option>
-          </select>
+
+          <div className="right">
+            <select className="language">
+              <option value="RU">Рус</option>
+              <option value="ENG">Eng</option>
+              <option value="KG">Кыр</option>
+            </select>
+            <button
+              className="mobile-menu-icon"
+              onClick={() => setIsMobile(!isMobile)}
+            >
+              {isMobile ? <FaTimes /> : <FaBars />}
+            </button>
+          </div>
         </div>
       </nav>
     </div>

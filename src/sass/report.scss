@@ -17,6 +17,10 @@
       padding: 15px;
       transition: all 0.5 ease-in-out;
 
+      @include mobile{
+        font-size: 20px;
+      }
+
       &:hover{
         color: $primary-color5;
         background-color: $primary-color6;

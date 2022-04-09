@@ -28,6 +28,7 @@ $primary-color6: #3774d0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  
 }
 
 body {
@@ -61,6 +62,13 @@ h1 {
   text-transform: uppercase;
 }
 
-// Report /////
+// Mobile /////
 
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$width}){
+        @content
+    }
+}
 

@@ -24,7 +24,7 @@ function Hero() {
 
             <div className="buttons">
               <Link to='/joinus'>
-                <CustomButton type="contained"><FormattedMessage id="Join"/></CustomButton>
+                <CustomButton className="button_1" type="contained"><FormattedMessage id="Join"/></CustomButton>
               </Link>
               <Link to='/about'>
                 <CustomButton className="button_2"  type="outlined">
