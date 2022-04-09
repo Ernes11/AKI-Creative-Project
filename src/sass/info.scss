@@ -44,7 +44,9 @@
         padding-top: 72px;
         margin-right: -61px;
         padding-bottom: 72px;
-        overflow: hidden;
+        height: 368px;
+        overflow: inherit;
+        z-index: 9999;
 
         @include mobile {
           max-width: 678px;
@@ -63,6 +65,8 @@
         }
 
         .text {
+          background-color: #050505;
+
           @include mobile {
             z-index: 9999;
             background-color: black;
