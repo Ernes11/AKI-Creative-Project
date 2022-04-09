@@ -16,9 +16,10 @@ const Card = ({ item }) => {
         <hr className="line_horizontal-4" />
         <hr className="line_horizontal-5" />
         <hr className="line_horizontal-6" />
-
+      
         <div className="row-2">
           {item.map((Val) => {
+
             return (
               <div className="column" key={Val.id}>
                 <div className="card-img">
@@ -30,16 +31,18 @@ const Card = ({ item }) => {
                 </div>
                 <div className="card-body">
                   <div className="card-title">
-                    {Val.title} &nbsp;&nbsp;&nbsp;&nbsp;--&nbsp;&nbsp;
+                    
+                    <p className="founder_name">{Val.founder.submit.full_name}</p>
+                    <p className="founder_company">{Val.founder.submit.company_name}</p>
+
                   </div>
-                  <div className="card-text">{Val.desc}</div>
                 </div>
 
                 <ul className="social-icons">
-                  <FaFacebookSquare size={30} className="icons" />
-                  <FaTelegram size={30} className="icons" />
-                  <RiWhatsappFill size={32} className="icons" />
-                  <AiFillInstagram size={32} className="icons" />
+                  <a target="_blank" className="icons" href={Val.founder.submit.facebook ? `https://${Val.founder.submit.facebook}` : null}><FaFacebookSquare size={30}  /></a>
+                  <a target="_blank"  href={Val.founder.submit.telegram ? `https://${Val.founder.submit.telegram}` : null}><FaTelegram size={30} className="icons" /></a>
+                  <a target="_blank" href={Val.founder.submit.whatsapp ? `https://${Val.founder.submit.whatsapp}` : null}><RiWhatsappFill size={32} className="icons" /></a>
+                  <a target="_blank" href={Val.founder.submit.instagram}><AiFillInstagram size={32} className="icons" /></a>
                 </ul>
               </div>
             );

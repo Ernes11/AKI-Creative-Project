@@ -69,13 +69,14 @@
       display: inline-block;
       margin-left: 10px;
 
+
       @include mobile {
         width: 138px;
         height: 186px;
       }
 
       &-title {
-        margin: 5px 0px 5px 10px;
+        margin: 40px 0px 5px 10px;
         font-weight: 100;
         font-size: 24px;
         line-height: 24px;
@@ -84,10 +85,10 @@
       }
 
       &-description {
-        margin: 5px 0px 5px 10px;
-        opacity: 0.6;
-        font-weight: 100;
-        font-size: 20px;
+        margin: 5px 0px 5px 24px;
+        
+     
+        font-size: 24px;
         line-height: 24px;
         color: white;
       }
@@ -111,6 +112,7 @@
         .icons {
           margin-left: 10px;
           cursor: pointer;
+          
 
           @include mobile {
             margin-left: 0px;
@@ -153,10 +155,17 @@
     height: 100%;
     filter: grayscale(100%);
     object-fit: cover;
-  
+    &:hover {
+      filter: none;
+    }
   }
 }
 
 .img_container_main {
   height: 60%;
+}
+.slider-card-company {
+  margin-left: 24px;
+  color: white;
+  opacity: 0.6;
 }

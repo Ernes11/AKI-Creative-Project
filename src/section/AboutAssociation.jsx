@@ -10,8 +10,7 @@ function AboutAssociation() {
       <div className="container">
         <hr className="line_horizontal-1" />
         <hr className="line_horizontal-2" />
-        <hr className="line_vertical-1" />     
-      <h1 className="about-title">Об Ассоциации</h1>
+        <hr className="line_vertical-1" />    
       <div className="container">
         <hr className="line_horizontal-1" />
         <hr className="line_horizontal-2" />
