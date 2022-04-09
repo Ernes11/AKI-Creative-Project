@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 import "../sass/navigation.scss";
 import { FormattedMessage } from 'react-intl';
 
@@ -8,15 +9,19 @@ function Navigation({ setLang , lang }) {
     setLang(value)
   }
   
+  const [isMobile, setIsMobile] = useState(false);
   return (
     <div className="navigation">
       <nav className="navbar navbar-expand navbar-dark">
         <div className="container">
-          <NavLink className="navbar-brand" to="/">
-            <img src="../../images/Top_logo.png" alt="" />
-          </NavLink>
-          <div>
-            <ul className="navbar-nav">
+          <div className="left">
+            <NavLink className="navbar-brand" to="/">
+              <img src="../../images/Top_logo.png" alt="" />
+            </NavLink>
+            <ul
+              className={isMobile ? "navbar-nav-mobile" : "navbar-nav"}
+              onClick={() => setIsMobile(false)}
+            >
               <li className="nav-item">
                 <NavLink className="nav-link" to="/">
                 <FormattedMessage id="Home"/>
@@ -53,14 +58,22 @@ function Navigation({ setLang , lang }) {
                 <FormattedMessage id="Contacts"/>
                 </a>
               </li>
-              
             </ul>
           </div>
-          <select onChange={hangeChange} value={lang} className="language">
+
+          <div className="right">
+            <select onChange={hangeChange} value={lang} className="language">
             <option value="RU-RU">Рус</option>
             <option value="en-US">Eng</option>
             <option value="KG-KG">Кыр</option>
           </select>
+            <button
+              className="mobile-menu-icon"
+              onClick={() => setIsMobile(!isMobile)}
+            >
+              {isMobile ? <FaTimes /> : <FaBars />}
+            </button>
+          </div>
         </div>
       </nav>
     </div>

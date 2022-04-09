@@ -16,7 +16,7 @@ function Home( { value } ) {
 
 
   return (
-    <div className="homePage-cointainer">
+    <div className="homePage-container">
       <Hero />
       <Info value={value} />
       <Content />

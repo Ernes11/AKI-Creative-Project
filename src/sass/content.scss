@@ -1,7 +1,13 @@
+@import "../global.scss";
+
 .content {
-  margin-top: 72px;
+  margin-top: 100px;
   position: relative;
   width: 100%;
+
+  @include mobile {
+    margin-bottom: 5rem;
+  }
 
   h2 {
     font-weight: 300;
@@ -9,47 +15,98 @@
     line-height: 81px;
     color: white;
     text-align: center;
+
+    @include mobile {
+      margin-top: 33rem;
+      font-size: 25px;
+      line-height: 37px;
+    }
   }
 
   .horizontal-line {
     .line_horizontal-1 {
       background-color: white;
       color: white;
+      opacity: 2;
+      height: 2px;
       position: absolute;
       width: 106.9%;
-      height: 1px;
       left: -1.5%;
-      top: 92.8%;
+      top: 12rem;
       border: 2px;
+
+      @include mobile {
+        top: 6.1rem;
+      }
     }
+
     .line_horizontal-2 {
+      display: none;
+
+      @include mobile {
+        background-color: white;
+        color: white;
+        opacity: 2;
+        height: 2px;
+        position: absolute;
+        width: 106.9%;
+        left: -1.5%;
+        top: 2%;
+        border: 2px;
+        top: 17rem;
+      }
+    }
+    .line_horizontal-3 {
+      display: none;
+      @include mobile {
+        background-color: white;
+        color: white;
+        opacity: 2;
+        height: 2px;
+        position: absolute;
+        width: 106.9%;
+        top: 27.9rem;
+        left: -1.5%;
+        border: 2px;
+      }
+    }
+    .line_horizontal-4 {
+      display: none;
+      @include mobile {
+        background-color: white;
+        color: white;
+        opacity: 2;
+        height: 2px;
+        position: absolute;
+        width: 106.9%;
+        left: -1.5%;
+        top: 40.1rem;
+        border: 2px;
+      }
+    }
+    .line_horizontal-5 {
       background-color: white;
       color: white;
       position: absolute;
-      width: 106.9%;
-      height: 1px;
-      left: -1.5%;
-      top: 22.5%;
+      width: 102%;
+      opacity: 2;
+      height: 2px;
+      left: -2%;
       border: 2px;
+      top: 47rem;
+
+      @include mobile {
+        top: 51rem;
+      }
     }
   }
+
   .container {
     max-width: 1200px;
     text-align: center;
     width: 80%;
     margin: 0 auto;
     position: relative;
-    .line_horizontal-3 {
-      background-color: white;
-      color: white;
-      position: absolute;
-      width: 100%;
-      width: 102%;
-      height: 1px;
-      left: -2%;
-      top: 45%;
-      border: 2px;
-    }
 
     .vertical {
       .line_vertical-1 {
@@ -62,6 +119,10 @@
         left: 21.5%;
         top: 39.6%;
         border: 2px;
+
+        @include mobile {
+          display: none;
+        }
       }
 
       .line_vertical-2 {
@@ -74,6 +135,12 @@
         left: -28.8%;
         top: 40%;
         border: 2px;
+
+        @include mobile {
+          width: 229.6%;
+          left: -116.6%;
+          top: 43.8%;
+        }
       }
       .line_vertical-3 {
         background-color: white;
@@ -85,6 +152,12 @@
         left: 73.4%;
         top: 39.6%;
         border: 2px;
+
+        @include mobile {
+          width: 229.6%;
+          left: -13.6%;
+          top: 43.8%;
+        }
       }
     }
     .content_info {
@@ -94,6 +167,19 @@
       row-gap: 100px;
       margin-top: 15%;
 
+      .line {
+        @include mobile {
+          border: 0.5px solid white;
+          padding-top: 1rem;
+          padding-left: 11px;
+        }
+      }
+
+      @include mobile {
+        grid-template-columns: auto;
+        row-gap: 0px;
+      }
+
       h3 {
         font-weight: 200;
         font-size: 25px;
@@ -102,16 +188,30 @@
         align-items: center;
         color: white;
         text-align: left;
+
+        @include mobile {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 22px;
+          align-items: center;
+          color: white;
+          text-align: left;
+        }
       }
 
       p {
         height: 120px;
-        font-weight: normal;
+        font-weight: 200;
         font-size: 14px;
         line-height: 24px;
         color: white;
         margin-top: 22px;
         text-align: left;
+
+        @include mobile {
+          height: 96px;
+          line-height: 20px;
+        }
       }
     }
   }

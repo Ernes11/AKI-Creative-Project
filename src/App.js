@@ -3,20 +3,20 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {
-
   Navigation,
   Footer,
   Home,
   About,
   Event,
   JoinUs,
-  Membership
+  Membership,
 } from "./components";
 
-import Resource from './components/Resource';
-import ProjectDetails from './section/Resources/Creative-Project-section/ProjectDetails/ProjectDetails';
+import Resource from "./components/Resource";
+import ProjectDetails from "./section/Resources/Creative-Project-section/ProjectDetails/ProjectDetails";
 import RecommendationDetails from "./section/Resources/Recomendation-section/RecomendationDetails/RecomendationDetails";
 import UtilityDetails from "./section/Resources/Utility/UtilityDetails/UtilityDetails";
 import { IntlProvider } from "react-intl";
@@ -25,6 +25,7 @@ import { messages } from "./i18n/messages";
 
 export default function App() {
     const [lang,setLang] = useState(LOCALES.RUSSIAN)
+    const[menuOpen, setMenuOpen] = useState(false)
     const locale = lang
     console.log(lang)
     return (
@@ -32,7 +33,7 @@ export default function App() {
       locale={locale}
       defaultLocale={LOCALES.KYRGYZSTAN}>
   
-    <Navigation setLang={setLang} lang={lang} />
+    <Navigation menuOpen= {menuOpen} setMenuOpen = {setMenuOpen} setLang={setLang} lang={lang} />
     <Routes>
       <Route path="/" element={<Home value={lang} />} />
       <Route path="/about" element={<About />} />

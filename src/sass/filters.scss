@@ -26,6 +26,10 @@
       margin-left: 0rem;
       width: 40rem;
       color: white;
+
+      @include mobile{
+        width: 20rem;
+      }
     }
   }
 }
@@ -71,6 +75,10 @@
     transition: all 100ms;
     box-sizing: border-box;
 
+    @include mobile{
+      display: none;
+    }
+
     #placeholder {
       color: white;
     }
@@ -107,12 +115,19 @@
   justify-content: center;
   margin-top: 2rem;
   padding-left: 10px;
+  @include mobile{
+    margin-top: 4rem;
+  }
 
   .user {
     max-width: 300px;
     border: 1px solid white;
     background: #212121;
     max-height: 400px;
+
+    @include mobile{
+      max-height: 210px;
+    }
 
     &__name {
       font-weight: 300;
@@ -160,12 +175,22 @@
         padding-right: 13px;
       }
       .social-icons {
-        margin-left: -11px;
+        margin-left: -37px;
         padding-top: 5px;
         color: rgba(255, 255, 255, 0.541);
+        @include mobile {
+          
+          display: inline-flex;
+        }
 
         .icons {
           margin-left: 10px;
+
+          @include mobile {
+            margin-left: 0px;
+            margin-right: 4px;
+            height: 22px;
+          }
         }
       }
     }

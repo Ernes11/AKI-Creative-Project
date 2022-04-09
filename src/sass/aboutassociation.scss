@@ -1,5 +1,11 @@
+@import "../global.scss";
+
 .aboutassociation {
   width: 100%;
+
+  @include mobile{
+    margin-bottom: 20rem;
+  }
   .about-title {
     text-align: center;
     font-weight: 300;
@@ -8,6 +14,11 @@
     color: white;
     margin-bottom: 2rem;
     margin-top: 72px;
+
+    @include mobile {
+      font-size: 26px;
+      margin-bottom: 4rem;
+    }
   }
   .container {
     width: 100%;
@@ -23,6 +34,9 @@
       left: 1.9%;
       top: 72.9%;
       border: 2px;
+      @include mobile {
+        display: none;
+      }
     }
     .line_horizontal-2 {
       background-color: white;
@@ -33,6 +47,14 @@
       left: 1.9%;
       top: 47.7%;
       border: 2px;
+
+      @include mobile {
+        top: 45rem;
+        width: 118%;
+        height: 2px;
+        left: -7.1%;
+        opacity: 2;
+      }
     }
     .line_vertical-1 {
       background-color: white;
@@ -44,12 +66,22 @@
       left: 34.9%;
       top: 67.5%;
       border: 2px;
+
+      @include mobile {
+        display: none;
+      }
     }
 
     .about-row {
       display: inline-grid;
       grid-template-columns: auto auto auto;
       border: 1px solid white;
+
+      @include mobile {
+        display: grid;
+        grid-template-columns: auto;
+        border: none;
+      }
 
       // display: inline-flex;
       // text-align: left;
@@ -58,10 +90,22 @@
         border-left: 1px solid white;
         border-top: 1px solid white;
         border-bottom: 1px solid white;
+        @include mobile {
+          border: none;
+        }
         .column-1-img1 {
           img {
             border: 1px solid white;
             width: 94%;
+
+            @include mobile {
+              border-bottom: 1px solid white;
+              border-top: 1px solid white;
+              width: 110%;
+              position: absolute;
+              top: -3rem;
+              left: -1rem;
+            }
           }
         }
 
@@ -70,6 +114,14 @@
             border: 1px solid white;
             width: 31rem;
             margin-right: 2rem;
+
+            @include mobile {
+              border-bottom: 1px solid white;
+              border-top: 1px solid white;
+              position: absolute;
+              top: 33rem;
+              left: -1rem;
+            }
           }
         }
 
@@ -78,8 +130,14 @@
           font-weight: normal;
           font-size: 14px;
           line-height: 32px;
-          width: 91%;
           color: white;
+
+          @include mobile {
+            line-height: 21px;
+            position: absolute;
+            top: 27rem;
+            left: 0.7rem;
+          }
         }
       }
 
@@ -87,18 +145,42 @@
         border-right: 1px solid white;
         border-top: 1px solid white;
         border-bottom: 1px solid white;
+
+        @include mobile {
+          border: none;
+        }
         .about-desc-2 {
           margin-top: 2rem;
           font-size: 14px;
           width: 58%;
           margin-right: 42rem;
           color: white;
+
+          @include mobile {
+            margin-top: 9rem;
+            margin-right: 30rem;
+          }
         }
 
         .column-2-img {
           img {
             width: 46%;
             margin-top: 4rem;
+
+            @include mobile {
+              width: 114%;
+              border-bottom: 1px solid white;
+              border-top: 1px solid white;
+              padding-bottom: 12px;
+              padding-top: 7px;
+              position: absolute;
+              left: -1.3rem;
+              top: 16rem;
+              margin-right: -9rem;
+              padding-right: 38px;
+              padding-left: 38px;
+              box-sizing: border-box;
+            }
           }
         }
 
@@ -108,6 +190,12 @@
           margin-right: 25rem;
           margin-top: 2rem;
           color: white;
+
+          @include mobile {
+            width: 100%;
+            position: absolute;
+            top: 38rem;
+          }
         }
       }
     }
@@ -124,198 +212,9 @@
         rgba(255, 0, 255, 0.15) 1.4%,
         rgba(255, 0, 255, 0) 99.1%
       );
+      @include mobile {
+        display: none;
+      }
     }
   }
 }
-
-// .aboutassociation {
-//   width: 100%;
-
-//   .container {
-//     position: relative;
-//     text-align: center;
-//     width: 80%;
-//     margin: 0 auto;
-
-//     .about-title {
-//       text-align: center;
-//       font-weight: 300;
-//       font-size: 40px;
-//       line-height: 81px;
-//       color: white;
-//       margin-bottom: 12rem;
-//       margin-top: 72px;
-//     }
-
-//     .line_horizontal-1 {
-//       background-color: white;
-//       color: white;
-//       position: absolute;
-//       width: 160.9%;
-//       height: 1px;
-//       left: -29.5%;
-//       top: 91.8%;
-//       border: 2px;
-//     }
-//     .line_horizontal-2 {
-//       background-color: white;
-//       color: white;
-//       position: absolute;
-//       width: 160.9%;
-//       height: 1px;
-//       left: -29.5%;
-//       top: 19.2%;
-//       border: 2px;
-//     }
-//     .line_horizontal-3 {
-//       background-color: white;
-//       color: white;
-//       position: absolute;
-//       width: 160.9%;
-//       height: 1px;
-//       left: -29.5%;
-//       top: 62%;
-//       border: 2px;
-//     }
-//     .line_horizontal-4 {
-//       background-color: white;
-//       color: white;
-//       position: absolute;
-//       width: 110.9%;
-//       height: 1px;
-//       left: -10.5%;
-//       top: 110.6%;
-//       border: 2px;
-//     }
-
-//     .line_vertical-1 {
-//       background-color: white;
-//       color: white;
-//       -webkit-transform: rotate(90deg);
-//       position: absolute;
-//       width: 22.9%;
-//       height: 1px;
-//       left: -10.1%;
-//       top: 70.2%;
-//       border: 2px;
-//     }
-//     .line_vertical-2 {
-//       background-color: white;
-//       color: white;
-//       -webkit-transform: rotate(90deg);
-//       position: absolute;
-//       width: 22.9%;
-//       height: 1px;
-//       left: 30.8%;
-//       top: 70.2%;
-//       border: 2px;
-//     }
-//     .line_vertical-3 {
-//       background-color: white;
-//       color: white;
-//       -webkit-transform: rotate(90deg);
-//       position: absolute;
-//       width: 39.5%;
-//       height: 1px;
-//       left: 68.8%;
-//       top: 65.1%;
-//       border: 2px;
-//     }
-
-//     .about-row {
-//       display: flex;
-//       align-items: center;
-//       justify-content: center;
-
-//       .about-column-1 {
-//         position: relative;
-//         .column-1-img1 {
-//           img {
-//             max-width: 490px;
-//             position: absolute;
-//             top: -62%;
-//             left: -36%;
-//             border: 1px solid white;
-//           }
-//         }
-//         .about-desc {
-//           text-align: left;
-//           max-width: 518px;
-//           width: 100%;
-//           font-weight: normal;
-//           font-size: 14px;
-//           line-height: 32px;
-//           color: white;
-//           // padding-left: 10px;
-//           // margin-top: 44px;
-//           // margin-bottom: 80px;
-//         }
-//         .column-1-img2 {
-//           img {
-//             width: 490px;
-//             position: absolute;
-//             top: 89%;
-//             left: -36%;
-//             border: 1px solid white;
-//           }
-//         }
-//       }
-
-//       .about-column-2 {
-//         position: relative;
-//         .about-desc-2 {
-//           text-align: left;
-//           max-width: 542px;
-//           width: 100%;
-//           font-weight: normal;
-//           font-size: 14px;
-//           line-height: 32px;
-//           color: white;
-//           // padding-left: 10px;
-//           // position: absolute;
-//           // top: -271%;
-//           // left: 0%;
-//         }
-
-//         .column-2-img {
-//           position: relative;
-//           img {
-//             width: 68%;
-//             padding-left: 5px;
-//           }
-//         }
-
-//         .buttom-text {
-//           .buttom-desc {
-//             text-align: left;
-//             max-width: 542px;
-//             width: 100%;
-//             font-weight: normal;
-//             font-size: 16px;
-//             line-height: 32px;
-//             color: white;
-//             // padding-left: 32px;
-//             // position: absolute;
-//             top: 10rem;
-//           }
-//         }
-//       }
-//     }
-//     .box {
-//       position: absolute;
-//       left: 101.5%;
-//       top: 22.4%;
-//       width: 142px;
-//       height: 476.5px;
-//       box-sizing: border-box;
-//       border-left: 1px solid white;
-//       border-right: 1px solid white;
-
-//       background: linear-gradient(
-//         91.36deg,
-//         rgba(255, 0, 255, 0.15) 1.4%,
-//         rgba(255, 0, 255, 0) 99.1%
-//       );
-//     }
-//   }
-// }

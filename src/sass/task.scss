@@ -1,3 +1,5 @@
+@import "../global.scss";
+
 .task {
   width: 100%;
   .container {
@@ -13,6 +15,12 @@
       margin-top: 72px;
       margin-bottom: 72px;
       color: white;
+
+      @include mobile {
+        margin-top: 19rem;
+        font-size: 26px;
+        line-height: 36px;
+      }
     }
 
     .task-text {
@@ -69,6 +77,9 @@
         left: -12.5%;
         top: 33.9%;
         border: 2px;
+        @include mobile {
+          display: none;
+        }
       }
 
       .line_vertical-2 {
@@ -81,6 +92,10 @@
         left: 79.5%;
         top: 33.9%;
         border: 2px;
+
+        @include mobile {
+          display: none;
+        }
       }
       .task-desc {
         max-width: 1100px;
@@ -90,6 +105,11 @@
         line-height: 29px;
         padding-bottom: 70px;
         color: white;
+
+        @include mobile {
+          font-size: 14px;
+          line-height: 15px;
+        }
       }
     }
   }
