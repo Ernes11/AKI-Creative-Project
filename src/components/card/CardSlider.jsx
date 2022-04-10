@@ -41,7 +41,6 @@ const CardSlider = (props) => {
               <ul className="social-icons">
                    <a className="icons" href={slide.submit.facebook}><FaFacebookSquare size={30}  /></a>
                   <a href={slide.submit.telegram}><FaTelegram size={30} className="icons" /></a>
-                  <a href={slide.submit.whatsapp}><RiWhatsappFill size={32} className="icons" /></a>
                   <a href={slide.submit.instagram}><AiFillInstagram size={32} className="icons" /></a>
               </ul>
             </div>

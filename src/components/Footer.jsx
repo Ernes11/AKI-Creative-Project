@@ -34,7 +34,6 @@ function Footer() {
               <ul className="social-icons">
                 <FaFacebookSquare size={30} className="icons" />
                 <FaTelegram size={30} className="icons" />
-                <RiWhatsappFill size={32} className="icons" />
                 <AiFillInstagram size={32} className="icons" />
               </ul>
             </div>
