@@ -33,7 +33,7 @@ const HomePage = (props) => {
     let filtered;
     if (text) {
       filtered = props.users.filter((user) =>
-        user.name.toLowerCase().includes(text.toLowerCase())
+        user.submit.full_name.toLowerCase().includes(text.toLowerCase())
       );
     } else {
       filtered = props.users;
@@ -53,16 +53,16 @@ const HomePage = (props) => {
     if (order == "asc") {
       setUsers(
         users.slice().sort((firstUser, secondUser) => {
-          if (firstUser.name < secondUser.name) return -1;
-          if (firstUser.name > secondUser.name) return 1;
+          if (firstUser.submit.full_name < secondUser.submit.full_name) return -1;
+          if (firstUser.submit.full_name > secondUser.submit.full_name) return 1;
           return 0;
         })
       );
     } else if (order == "desc") {
       setUsers(
         users.slice().sort((firstUser, secondUser) => {
-          if (firstUser.name < secondUser.name) return 1;
-          if (firstUser.name > secondUser.name) return -1;
+          if (firstUser.submit.full_name < secondUser.submit.full_name) return 1;
+          if (firstUser.submit.full_name > secondUser.submit.full_name) return -1;
           return 0;
         })
       );

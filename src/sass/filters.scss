@@ -156,7 +156,7 @@
         font-weight: 300;
         font-size: 20px;
         line-height: 24px;
-        opacity: 0.6;
+        // opacity: 0.6;
         padding: 0;
         margin: 0;
         color: white;
@@ -164,7 +164,8 @@
       }
       .position {
         position: absolute;
-        top: -121%;
+        top: -252%;
+        min-width: 100px;
         left: 64%;
         box-sizing: border-box;
         background: white;
