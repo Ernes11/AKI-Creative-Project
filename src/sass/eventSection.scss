@@ -8,6 +8,10 @@
   // grid-auto-flow: dense;
   column-gap: 20px;
 
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
   .main-event__info {
     width: 100%;
 
@@ -36,6 +40,10 @@
       text-align: start;
       font-size: 16px;
       line-height: unset;
+
+      @include mobile {
+        font-size: 14px;
+      }
     }
     h4 {
       font-size: 28px;
@@ -46,6 +54,10 @@
       overflow: hidden;
       -webkit-box-orient: vertical;
       margin-bottom: 15px;
+
+      @include mobile {
+        font-size: 19px;
+      }
     }
     button {
       font-size: 18px;
@@ -53,6 +65,10 @@
       max-width: 200px;
       margin-top: 5px;
       padding: 2px;
+
+      @include mobile {
+        margin-bottom: 1rem;
+      }
     }
   }
   .fullHeight {
@@ -112,6 +128,11 @@
   .main-event__info {
     grid-column-start: 2;
     grid-row-start: 1;
+
+    @include mobile {
+      grid-column-start: 1;
+      grid-row-start: none;
+    }
   }
   .main-event__image-album {
     grid-column-start: 1;
@@ -121,8 +142,8 @@
 .carousel-root {
   ul {
     li {
-      padding-right: unset !important; 
-      transform: unset !important; 
+      padding-right: unset !important;
+      transform: unset !important;
       transition: initial !important;
       opacity: 1 !important;
     }

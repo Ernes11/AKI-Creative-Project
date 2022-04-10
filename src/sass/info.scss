@@ -153,6 +153,9 @@
         padding-top: 6px;
         margin-left: 51%;
         padding-bottom: 28px;
+        height: 164px;
+        overflow: inherit;
+        z-index: 9999;
 
         @include mobile {
           width: 100%;
