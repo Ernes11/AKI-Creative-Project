@@ -6,12 +6,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-height: 500px !important;
-  max-height: 500px !important;
-  // text-align: center;
+  height: 500px;
+  text-align: center;
 
   h2 {
-    margin-top: 54px;
+    // margin-top: 54px;
     font-size: 18px;
     font-weight: bold;
   }
@@ -24,7 +23,7 @@
 .title_container {
   width: 60%;
   text-align: center;
-  min-height: 105px;
+  // min-height: 105px;
   
   h2 {
     color: white;
@@ -32,7 +31,7 @@
 }
 .body_container {
   width: 55%;
-  height: 40%;
+  // height: 40%;
   p {
     -ms-text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
@@ -51,4 +50,7 @@
 
 .slides_card:not(first-child) {
   margin-left: 30px;
+}
+.slides_img {
+  
 }
