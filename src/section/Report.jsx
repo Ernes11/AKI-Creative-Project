@@ -23,7 +23,7 @@ function Report() {
          <ul>
            {reports.map (report => (
              <li>
-               <a target="_blank" href={report.report_text}>{report.name}</a>
+               <a target="_blank" href={report.report_text}>{report.report_text}</a>
              </li>
            ))}
           </ul> 
