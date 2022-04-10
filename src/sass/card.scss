@@ -143,7 +143,6 @@
         }
 
         .social-icons {
-          
           color: rgba(255, 255, 255, 0.541);
           a:not([href]) {
             cursor: default !important;
@@ -154,11 +153,12 @@
 
           .icons {
             margin-right: 10px;
-            
+
             @include mobile {
               margin-left: 0px;
               margin-right: 4px;
               height: 22px;
+              margin-top: -4rem;
             }
           }
         }
@@ -171,37 +171,38 @@
     }
   }
 }
-.card-img { 
+.card-img {
   height: 60%;
-    img {
-      width: 100%;
-      height: 100%;
-      filter: grayscale(100%);
-      object-fit: cover;
-     &:hover {
-       filter: none;
-     }
+  img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    object-fit: cover;
+    &:hover {
+      filter: none;
     }
-  
-
+  }
 }
-.card-body { 
+.card-body {
   margin: 0;
   width: auto !important;
   padding: unset !important;
   display: flex;
   flex-direction: column;
-  height: 100px!important;
-  
-
+  height: 100px !important;
 }
 .founder_name {
   color: white;
   margin-top: 40px;
   margin-bottom: unset;
+
+  @include mobile {
+    margin-top: 5px;
+  }
 }
 .founder_company {
   color: white;
   opacity: 0.6;
   margin-top: 5px;
+  text-align: left;
 }

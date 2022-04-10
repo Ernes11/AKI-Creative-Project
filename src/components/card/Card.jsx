@@ -39,7 +39,7 @@ const Card = ({ item }) => {
                 </div>
 
                 <div className="social-icons">
-                  <a target="_blank" className="icons" href={Val.founder.submit.facebook}><FaFacebookSquare size={30}  /></a>
+                  <a target="_blank" className="icons" href={Val.founder.submit.facebook}><FaFacebookSquare size={30} className="icons" /></a>
                   <a target="_blank"  href={Val.founder.submit.telegram}><FaTelegram size={30} className="icons" /></a>
                   <a target="_blank" href={Val.founder.submit.whatsapp ? `https://${Val.founder.submit.whatsapp}` : null}><RiWhatsappFill size={32} className="icons" /></a>
                   <a target="_blank" href={Val.founder.submit.instagram}><AiFillInstagram size={32} className="icons" /></a>
