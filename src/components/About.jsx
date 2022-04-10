@@ -15,7 +15,7 @@ function About({value}) {
     <>
       <div className="container">
         <Carousel />
-        <AboutAssociation />
+        <AboutAssociation value={value} />
         <CoFounder />
         <Task value={value} />
         <Report />

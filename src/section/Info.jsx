@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../sass/info.scss";
 import axios from "axios";
-function ReadMore({ children }) {
+ function ReadMore({ children }) {
   const text = children;
   const [isReadMore, setIsReadMore] = useState(true);
   const toggleReadMore = () => {

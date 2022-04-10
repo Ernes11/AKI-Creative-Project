@@ -15,10 +15,10 @@ const UserItem = ({ user }) => {
           {/* <span>{title}</span> */}
           <span className="position">{user.submit.position}</span>
           <ul className="social-icons">
-            <FaFacebookSquare size={30} className="icons" />
-            <FaTelegram size={30} className="icons" />
-            <RiWhatsappFill size={32} className="icons" />
-            <AiFillInstagram size={32} className="icons" />
+          <a className="icons" href={user.submit.facebook}><FaFacebookSquare size={30}  /></a>
+           <a href={user.submit.telegram}><FaTelegram size={30} className="icons" /></a>
+          <a href={user.submit.whatsapp}><RiWhatsappFill size={32} className="icons" /></a>
+          <a href={user.submit.instagram}><AiFillInstagram size={32} className="icons" /></a>
           </ul> 
         </Card.Text>
       </Card.Body>
