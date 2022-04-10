@@ -7,7 +7,7 @@ import { FormattedMessage, injectIntl, useIntl } from 'react-intl';
 
 
 
-function Event() {
+function Event({value}) {
   const [buttonStyle, setButtonStyle] = useState(true);
   const [eventPoint, setEventPoint] = useState(3);
   const [eventsFuture, setEventsFuture ] = useState([]);
@@ -74,7 +74,7 @@ function Event() {
               key={'eventsection'+event.id}
               info={event.text}
               imageId={event.id}
-              title={event.name}
+              title={value === 'RU-RU' ? event.name : (value == 'en-US' ? event.name_en : event.name_kg)}
               />
             )
           }

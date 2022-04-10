@@ -36,8 +36,8 @@ export default function App() {
     <Navigation menuOpen= {menuOpen} setMenuOpen = {setMenuOpen} setLang={setLang} lang={lang} />
     <Routes>
       <Route path="/" element={<Home value={lang} />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/event" element={<Event />} />
+      <Route path="/about" element={<About value = {lang} />} />
+      <Route path="/event" element={<Event value={lang} />} />
       <Route path="/membership" element={<Membership />} />
       <Route path="/resource" element={<Resource value = {lang}/>} />
       <Route path="/resource/creativeprojects/:Id" element ={<ProjectDetails value = {lang}/>}/>
