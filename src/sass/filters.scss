@@ -115,6 +115,9 @@
   margin-top: 2rem;
   padding-left: 10px;
   @include mobile {
+    // display: grid;
+    // grid-auto-columns: auto auto auto auto;
+    // gap: 10px;
     margin-top: 4rem;
   }
 
@@ -129,12 +132,20 @@
     }
 
     &__name {
-      font-weight: 300;
+      font-weight: 200;
       font-size: 22px;
       line-height: 24px;
       color: #fff;
       letter-spacing: 1px;
       margin-top: 2rem;
+
+      @include mobile {
+        font-weight: 200;
+        font-size: 13px;
+        line-height: 15px;
+        margin-top: 0rem;
+        padding-top: 1rem;
+      }
     }
 
     &__image {
@@ -143,8 +154,8 @@
       border: none;
       margin-bottom: 2rem;
 
-      img{
-        @include mobile{
+      img {
+        @include mobile {
           max-height: 100%;
         }
       }
@@ -152,7 +163,7 @@
 
     .card-body {
       margin-left: 0;
-      margin-top: -30px;
+      margin-top: -2rem;
     }
     &__details {
       position: relative;
@@ -182,6 +193,7 @@
         padding-right: 13px;
 
         @include mobile {
+          top: -3.5rem;
           left: 0rem;
           font-size: 13px;
         }
@@ -192,6 +204,7 @@
         padding-top: 5px;
         color: rgba(255, 255, 255, 0.541);
         @include mobile {
+          margin-top: -1rem;
           display: inline-flex;
         }
 
@@ -200,7 +213,7 @@
 
           @include mobile {
             margin-left: 0px;
-            margin-right: 4px;
+            margin-right: 0px;
             height: 22px;
           }
         }
