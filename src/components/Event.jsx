@@ -3,7 +3,7 @@ import CustomButton from "./button/CustomButton";
 import '../sass/event.scss';
 import EventSection from "../section/EventSection";
 import axios from "axios";
-import { FormattedMessage, injectIntl, useIntl } from 'react-intl';
+import { FormattedMessage,  useIntl } from 'react-intl';
 
 
 
@@ -72,9 +72,9 @@ function Event({value}) {
               <EventSection
               oddClass = {odd}
               key={'eventsection'+event.id}
-              info={value === 'RU-RU' ? event.text : (value == 'en-US' ? event.text_en : event.text_kg)}
+              info={value === 'RU-RU' ? event.text : (value === 'en-US' ? event.text_en : event.text_kg)}
               imageId={event.id}
-              title={value === 'RU-RU' ? event.name : (value == 'en-US' ? event.name_en : event.name_kg)}
+              title={value === 'RU-RU' ? event.name : (value === 'en-US' ? event.name_en : event.name_kg)}
               />
             )
           }
@@ -89,7 +89,7 @@ function Event({value}) {
         <div сlassName ='Event_Calendar_container' style={{width:'100%' , margin:'unset'}}>
           <h2 style={{color:'white',marginLeft: '20%'}}><FormattedMessage id="СhooseTime"/></h2>
           <div className="Calendar">
-          <iframe src="https://calendar.google.com/calendar/embed?height=771&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FBishkek&showTitle=0&showPrint=0&showCalendars=0&src=a2djcmVhdGl2ZTNAZ21haWwuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679" style={{borderWidth : 0, width : '100%' , height : '100%' ,frameborder: 0  ,scrolling : "yes",borderRadius:'8px'}}></iframe>
+          <iframe title="s" src="https://calendar.google.com/calendar/embed?height=771&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FBishkek&showTitle=0&showPrint=0&showCalendars=0&src=a2djcmVhdGl2ZTNAZ21haWwuY29t&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679" style={{borderWidth : 0, width : '100%' , height : '100%' ,frameborder: 0  ,scrolling : "yes",borderRadius:'8px'}}></iframe>
           {/* <iframe src="https://calendar.google.com/calendar/embed?height=771&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FBishkek&title&hl=ru&showTitle=0&showNav=1&showCalendars=1&showTabs=1&showPrint=0&showTz=1&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4ua2cjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&src=cnUua2cjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%2333B679&color=%230B8043&color=%230B8043" style={{borderWidth : 0, width : '100%' , height : '100%' ,frameborder: 0  ,scrolling : "yes",borderRadius:'8px'}}></iframe> */}
           </div> 
         </div>
