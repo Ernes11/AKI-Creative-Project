@@ -62,7 +62,7 @@ console.log (images[0])
     <div className="Carousel">
       <Slider {...settings}>
       {images[0].map((img, idx) => (
-          <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
+          <div key={`img${idx}`} className={idx === imageIndex ? "slide activeSlide" : "slide"}>
             <img src={img} alt={img} />
           </div>
         ))}

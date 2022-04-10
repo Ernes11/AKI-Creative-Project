@@ -1,11 +1,22 @@
 import './RecomendationSection.scss'
 import RecomendationSlider from './Recomendation-Slider/Slider'
 import { FormattedMessage } from 'react-intl'
+import { useEffect, useState } from 'react'
+import   axios from 'axios';
 
 
 
 
-function RecomendationSection({value}){    
+function RecomendationSection({value}){  
+    const [headText,setHeadText] = useState({})
+    
+    function FetchHeadText() { axios.get('https://creative.kg/api/headertext/1')
+    .then(res =>{
+        setHeadText(res.data)
+    })}
+    useEffect (()=> {
+      FetchHeadText()
+    },[])
     return(
         <div>
             <div className="recomendation_header" id='recomendation'>
@@ -13,7 +24,8 @@ function RecomendationSection({value}){
                  <FormattedMessage id='Recommendation'/>
                 </h2>
                 <p> 
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                {value === 'RU-RU' ? headText.text  
+                  : (value === 'en-US'? headText.text_en  : headText.text_kg  )}
                 </p>
             </div>
             <div className='recomendation_slider'>

@@ -21,42 +21,37 @@
       font-size: 35px;
       line-height: 48px;
       text-decoration-line: underline;
-      border-radius: 10px;
       padding: 15px;
       transition: all 0.5 ease-in-out;
 
       @include mobile{
-        font-size: 27px;
+        font-size: 20px;
       }
 
-      &:hover {
-        color: black !important;
-        background-color: white;
-        a {
-        color: black !important;
-        background-color: white;
-        text-decoration: none !important;
-      }
-        
+      &:hover{
+        color: $primary-color5;
+        background-color: $primary-color6;
       }
     }
 
-    li {
+    li{
       margin-top: 30px;
       list-style: none;
 
-      a {
+      a{
         color: $primary-color5;
         font-weight: 400;
         font-size: 24px;
         line-height: 29px;
         transition: all 0.5s ease;
         padding: 5px 10px 5px 10px;
+        
 
-        // &:hover {
-        //   color: black !important;
-        //   background-color: white;
-        // }
+        &:hover{
+          color: $primary-color;
+          background-color: $primary-color5;
+
+        }
       }
     }
   }
