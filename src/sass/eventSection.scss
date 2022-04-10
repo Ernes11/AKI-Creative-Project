@@ -40,6 +40,10 @@
       text-align: start;
       font-size: 16px;
       line-height: unset;
+
+      @include mobile {
+        font-size: 14px;
+      }
     }
     h4 {
       font-size: 28px;
@@ -50,6 +54,10 @@
       overflow: hidden;
       -webkit-box-orient: vertical;
       margin-bottom: 15px;
+
+      @include mobile {
+        font-size: 19px;
+      }
     }
     button {
       font-size: 18px;
@@ -57,6 +65,10 @@
       max-width: 200px;
       margin-top: 5px;
       padding: 2px;
+
+      @include mobile {
+        margin-bottom: 1rem;
+      }
     }
   }
   .fullHeight {
