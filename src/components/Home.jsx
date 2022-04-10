@@ -19,7 +19,7 @@ function Home( { value } ) {
     <div className="homePage-container">
       <Hero />
       <Info value={value} />
-      <Content />
+      <Content value={value} />
       <CardItem />
 
       <div className="join_btn container">

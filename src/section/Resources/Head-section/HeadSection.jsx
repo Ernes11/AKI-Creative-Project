@@ -16,7 +16,7 @@ function HeadSection () {
                 <a href="#all"><button className="navigation_button"><FormattedMessage id='AllResource'/></button></a>
                 <a href="#recomendation"><button className="navigation_button"><FormattedMessage id='Recommendation'/></button></a>
                 <a href="#project"><button className="navigation_button"><FormattedMessage id='Project'/></button></a>
-                <a href="#decorate"><button className="navigation_button">Оформление</button></a>
+                <a href="#decorate"><button className="navigation_button"><FormattedMessage id='GoodTo'/></button></a>
             </div>
             
         </div>

@@ -39,7 +39,9 @@ export const messages = {
     Step5 : 'Step 5: Welcome to ACI! ',
     Charter : 'Charter',
     CreativeProjects : 'Creative Projects',
-    Policy : 'Accounting policy'
+    Policy : 'Accounting policy',
+    GoodToKnow : 'Good to know for creators',
+    GoodTo : 'Useful' 
 
 
   },
@@ -71,7 +73,7 @@ export const messages = {
     СhooseTime : 'Выберите дату',
     AllResource : 'Все',
     Recommendation : 'Рекоммендации',
-    Project : 'Проэкты',
+    Project : 'Проекты',
     JoinACI: 'Вступить в АКИ',
     NoMoreEvents : 'Больше мероприятий нет ...',
     Step1 :'Шаг 1: Заполните форму',
@@ -82,6 +84,8 @@ export const messages = {
     Charter : 'Устав',
     CreativeProjects : 'Креативные проекты',
     Policy : 'Учётная политика',
+    GoodToKnow : 'Полезно знать креативщикам', 
+    GoodTo : 'Полезно'
 
   },
   [LOCALES.KYRGYZSTAN]: {
@@ -122,6 +126,8 @@ export const messages = {
     Step5 : '5-кадам: КИАга кош келиңиз!',
     Charter : 'Устав',
     CreativeProjects : 'Креативдүү долбоорлор',
-    Policy : 'Эсеп саясаты'
+    Policy : 'Эсеп саясаты',
+    GoodToKnow : 'Жаратмандарга пайдалуу маалымат', 
+    GoodTo : 'Пайдалуу'
   },
 }

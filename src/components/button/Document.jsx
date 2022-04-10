@@ -5,29 +5,52 @@ import { FormattedMessage } from 'react-intl';
 import axios from "axios";
 
 function Document() {
-  const [show, setShow] = useState(true);
-  const [open, setOpen] = useState(true);
+  const [show, setShow] = useState(false);
+  const [open, setOpen] = useState(false);
   const [Charter, setCharter] = useState([])
   const [Policy, setPolicy] = useState([])
-  function getCharter() { axios.get('https://creative.kg/api/reports/')
+  function getCharter() { axios.get('https://creative.kg/api/documents/')
       .then(res =>{
         setCharter (res.data.results)
       })}
+      function getPolicy() { axios.get('https://creative.kg/api/documentspol/')
+      .then(res =>{
+        setPolicy (res.data.results)
+      })}
     useEffect(() => {
       getCharter();
+      getPolicy()
     }, []);
 
   return (
     <div className="document">
       <div className="container">
-        <button className="doc_btn"><a href="https://media-exp1.licdn.com/dms/document/C4E1FAQFQ9ItYx9rnpQ/feedshare-document-pdf-analyzed/0/1646181887861?e=1646467200&v=beta&t=ZEI32qsBZau8FcVbSyevBCnJaTQTYSQcYd9HzytatZA">
-              <FormattedMessage id="Charter"/>
-            </a></button>
+        <button onClick={() => setShow(!show)} className="doc_btn">
+        <FormattedMessage id="Charter"/>
+            </button>
+            {show ? (
+         <ul>
+           {Charter.map (chart => (
+             <li key={chart.id}>
+               <a target="_blank" href={chart.rule_doc}>{chart.rule_doc}</a>
+             </li>
+           ))}
+          </ul> 
+        ) : null}
 
         <div className="document-2">
-          <button className="doc_btn"><a href="https://media-exp1.licdn.com/dms/document/C4E1FAQFQ9ItYx9rnpQ/feedshare-document-pdf-analyzed/0/1646181887861?e=1646467200&v=beta&t=ZEI32qsBZau8FcVbSyevBCnJaTQTYSQcYd9HzytatZA">
-                <FormattedMessage id="Policy"/>
-              </a></button>
+        <button onClick={() => setOpen(!open)} className="doc_btn">
+        <FormattedMessage id="Policy"/>
+            </button>
+            {open ? (
+         <ul>
+           {Policy.map (Pol => (
+             <li key={Pol.id}>
+               <a target="_blank" href={Pol.politic_doc}>{Pol.politic_doc}</a>
+             </li>
+           ))}
+          </ul> 
+        ) : null}
           
         </div>
       </div>

@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../sass/content.scss";
 import { FormattedMessage } from 'react-intl';
+import axios from "axios";
 
-function Content() {
+function Content({value}) {
+  const [advantage,setAdvantage] = useState([])
+  function getAdvantage() { axios.get('https://creative.kg/api/advantages/')
+      .then(res =>{
+        setAdvantage (res.data.results)
+      })}
+    useEffect(() => {
+      getAdvantage();
+    }, []);
+    console.log (advantage)
   return (
     <div className="content">
       <h2><FormattedMessage id="WhatValueAssocial"/></h2>
@@ -25,34 +35,12 @@ function Content() {
           <hr className="line_vertical-3" /> */}
         </div>
         <div className="content_info">
-          <div className="line">
-            <h3>Нетворкинг</h3>
-            <p>
-              Высокий уровень вовлечения представителей целевой аудитории
-              является четким доказательством простого факта: .
-            </p>
+          {advantage.map (adv => (
+          <div className="line" key={adv.id}>
+           <h3>{value == 'RU-RU' ? adv.subtitle : (value == 'en-US' ? adv.subtitle_en : adv.subtitle_kg )}</h3>
+           <p>{value == 'RU-RU' ? adv.text : (value == 'en-US' ? adv.text_en : adv.text_kg )}</p>
           </div>
-          <div className="line">
-            <h3>Целевые мероприятия</h3>
-            <p>
-              Высокий уровень вовлечения представителей целевой аудитории
-              является четким доказательством простого факта: .
-            </p>
-          </div>
-          <div className="line">
-            <h3>Продвижение интересов и инфраструкуры</h3>
-            <p>
-              Высокий уровень вовлечения представителей целевой аудитории
-              является четким доказательством простого факта: .
-            </p>
-          </div>
-          <div className="line">
-            <h3>Развитие бренда</h3>
-            <p>
-              Высокий уровень вовлечения представителей целевой аудитории
-              является четким доказательством простого факта: .
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </div>
