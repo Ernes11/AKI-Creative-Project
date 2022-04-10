@@ -1,3 +1,5 @@
+@import '../global.scss';
+
 .main-event {
   section {
     width: 100%;
@@ -22,6 +24,15 @@
     button {
       width: 30%;
       margin: 50px 0;
+
+      @include mobile{
+        width: 41%;
+      }
+
+      .customButton.customButtoncontained.undefined{
+        font-size: 12px;
+        padding: 6px 0px;
+      }
     }
   }
 

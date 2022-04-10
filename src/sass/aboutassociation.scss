@@ -63,7 +63,7 @@
       position: absolute;
       width: 22.9%;
       height: 1px;
-      left: 34.9%;
+      left: 35.4%;
       top: 67.5%;
       border: 2px;
 
@@ -101,10 +101,10 @@
             @include mobile {
               border-bottom: 1px solid white;
               border-top: 1px solid white;
-              width: 110%;
+              width: 118%;
               position: absolute;
-              top: -3rem;
-              left: -1rem;
+              top: -4rem;
+              left: -2rem;
             }
           }
         }
@@ -120,13 +120,13 @@
               border-top: 1px solid white;
               position: absolute;
               top: 33rem;
-              left: -1rem;
+              left: -2rem;
             }
           }
         }
 
         .about-desc {
-          width: 100%;
+          width: 92%;
           font-weight: normal;
           font-size: 14px;
           line-height: 32px;
@@ -135,7 +135,7 @@
           @include mobile {
             line-height: 21px;
             position: absolute;
-            top: 27rem;
+            top: 26rem;
             left: 0.7rem;
           }
         }

@@ -1,4 +1,4 @@
-@import "../global.scss";
+
 
 .resources_title_container {
   display: flex;
@@ -14,7 +14,13 @@
   align-self: center;
   font-weight: 300;
   font-size: 64px;
+
+ 
+
 }
+
+
+
 
 .navigation_button {
   padding-top: 6px;
@@ -29,6 +35,7 @@
 .button_container {
   display: flex;
   gap: 30px;
+ 
 }
 .img_container {
   display: flex;
