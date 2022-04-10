@@ -72,7 +72,7 @@ function Event({value}) {
               <EventSection
               oddClass = {odd}
               key={'eventsection'+event.id}
-              info={event.text}
+              info={value === 'RU-RU' ? event.text : (value == 'en-US' ? event.text_en : event.text_kg)}
               imageId={event.id}
               title={value === 'RU-RU' ? event.name : (value == 'en-US' ? event.name_en : event.name_kg)}
               />
