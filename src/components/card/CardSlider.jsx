@@ -39,9 +39,9 @@ const CardSlider = (props) => {
               <p className="slider-card-description">{slide.submit.full_name}</p>
               <p className="slider-card-company">{slide.submit.company_name}</p>
               <ul className="social-icons">
-                   <a className="icons" href={slide.submit.facebook}><FaFacebookSquare size={30} className="icons" /></a>
-                  <a href={slide.submit.telegram}><FaTelegram size={30} className="icons" /></a>
-                  <a href={slide.submit.instagram}><AiFillInstagram size={32} className="icons" /></a>
+                  <a target="_blank" rel="noreferrer" href={slide.submit.facebook}><FaFacebookSquare size={30} className="icons" /></a>
+                  <a  target="_blank" rel="noreferrer"href={slide.submit.telegram}><FaTelegram size={30} className="icons" /></a>
+                  <a  target="_blank" rel="noreferrer"href={slide.submit.instagram}><AiFillInstagram size={32} className="icons" /></a>
               </ul>
             </div>
           );

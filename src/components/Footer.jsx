@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaFacebookSquare, FaTelegram } from "react-icons/fa";
 import { RiWhatsappFill } from "react-icons/ri";
 import { AiFillInstagram } from "react-icons/ai";
 import "../sass/footer.scss";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from 'react-intl';
+import axios from "axios";
 
 function Footer() {
+  const [FooterInfo,setFooterInfo] = useState([])
+    function FetchFooterInfo() { axios.get('https://creative.kg/api/footer/')
+    .then(res =>{
+      setFooterInfo(res.data.results)
+    })}
+    useEffect (()=> {
+      FetchFooterInfo()
+    },[])
   return (
+    
     <div className="footer" id="footer">
-      <footer className="footer-fixed">
+      {FooterInfo.map (foot => (
+        <footer className="footer-fixed">
         <div className="container">
           <div className="footer-row">
             <ul className="footer-links">
@@ -24,17 +35,17 @@ function Footer() {
 
             <div className="footer-column">
               <ul className="footer-contact">
-                <li><FormattedMessage id="Contacts"/></li>
-                <li>Адрес: г. Бишкек,  ул. Исанова 105/3</li>
+                <li><FormattedMessage id="Contacts"/> : {foot.whatsapp}</li>
+                <li>{foot.company_name}</li>
                 <li>
-                  creative.kyrgyzstan@gmail.com 
+                  {foot.company_email}
                 </li>
               </ul>
 
               <ul className="social-icons">
-                <FaFacebookSquare size={30} className="icons" />
-                <FaTelegram size={30} className="icons" />
-                <AiFillInstagram size={32} className="icons" />
+                <a target="_blank" rel="noreferrer" href={foot.facebook}> <FaFacebookSquare size={30} className="icons" /></a>
+                <a target="_blank" rel="noreferrer" href={foot.telegram}><FaTelegram size={30} className="icons" /></a>
+                <a target="_blank" rel="noreferrer" href={foot.instagram }><AiFillInstagram size={32} className="icons" /></a>
               </ul>
             </div>
             <div className="footer-logo">
@@ -51,6 +62,8 @@ function Footer() {
           </p>
         </div>
       </footer>
+      ))}
+      
     </div>
   );
 }
