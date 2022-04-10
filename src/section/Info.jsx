@@ -7,8 +7,10 @@ function ReadMore({ children }) {
   const toggleReadMore = () => {
     setIsReadMore(!isReadMore);
   };
+  
   return (
     <>
+    {text.length > 150 ? 
       <p
         className="text"
       >
@@ -16,7 +18,7 @@ function ReadMore({ children }) {
         <span onClick={toggleReadMore} className="read-or-hide">
           {isReadMore ? "...Подробнее" : "   Скрыть"}
         </span>
-      </p>
+      </p> : text}
     </>
   );
 }
@@ -40,6 +42,7 @@ function Info({value}) {
         <img src={MainInfo[0].picture} alt="" />
 
           <p className="aki-desc">
+            
             <ReadMore>
             {MainInfo[0].description ? (value === 'RU-RU' ? MainInfo[0].description: (value === 'en-US'? MainInfo[0].description_en : MainInfo[0].description_kg)) : 'Loading...'} 
             </ReadMore>
@@ -52,7 +55,9 @@ function Info({value}) {
           <hr />
 
           <p className="aki-desc-2">
+          <ReadMore>
           {MainInfo[1] ? (value === 'RU-RU' ? MainInfo[1].description: (value === 'en-US'? MainInfo[1].description_en : MainInfo[1].description_kg)) : 'Loading...'}
+          </ReadMore>
           </p>
         </div>
         <div className="box"></div>
