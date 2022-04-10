@@ -1,4 +1,4 @@
-@import '../global.scss';
+@import "../global.scss";
 
 .main-event {
   section {
@@ -25,13 +25,15 @@
       width: 30%;
       margin: 50px 0;
 
-      @include mobile{
+      @include mobile {
         width: 41%;
       }
 
-      .customButton.customButtoncontained.undefined{
-        font-size: 12px;
-        padding: 6px 0px;
+      .customButton {
+        @include mobile {
+          font-size: 12px;
+          padding: 6px 0px;
+        }
       }
     }
   }
@@ -73,15 +75,13 @@
   }
 }
 .Calendar {
-  width:60%;
+  width: 60%;
   height: 400px;
   margin-top: 60px;
- 
-
 }
 .Event_Calendar_container {
   text-align: center !important;
-  h2{
+  h2 {
     color: white !important;
   }
   div {
