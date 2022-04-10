@@ -103,6 +103,9 @@
         margin-top: 20px;
         margin-bottom: 20px;
         color: rgba(255, 255, 255, 0.541);
+        a:not([href]) {
+          cursor:default !important;
+        }
         
 
         @include mobile {
@@ -111,7 +114,7 @@
 
         .icons {
           margin-left: 10px;
-          cursor: pointer;
+          
           
 
           @include mobile {

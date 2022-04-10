@@ -38,12 +38,12 @@ const Card = ({ item }) => {
                   </div>
                 </div>
 
-                <ul className="social-icons">
-                  <a target="_blank" className="icons" href={Val.founder.submit.facebook ? `https://${Val.founder.submit.facebook}` : null}><FaFacebookSquare size={30}  /></a>
-                  <a target="_blank"  href={Val.founder.submit.telegram ? `https://${Val.founder.submit.telegram}` : null}><FaTelegram size={30} className="icons" /></a>
+                <div className="social-icons">
+                  <a target="_blank" className="icons" href={Val.founder.submit.facebook}><FaFacebookSquare size={30}  /></a>
+                  <a target="_blank"  href={Val.founder.submit.telegram}><FaTelegram size={30} className="icons" /></a>
                   <a target="_blank" href={Val.founder.submit.whatsapp ? `https://${Val.founder.submit.whatsapp}` : null}><RiWhatsappFill size={32} className="icons" /></a>
                   <a target="_blank" href={Val.founder.submit.instagram}><AiFillInstagram size={32} className="icons" /></a>
-                </ul>
+                </div>
               </div>
             );
           })}
