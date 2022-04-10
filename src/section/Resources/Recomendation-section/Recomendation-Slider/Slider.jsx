@@ -4,46 +4,8 @@ import './Slider.scss'
 import SlidesCard from "./SlidesCard";
 import axios from "axios";
 
-export default function RecomendationSlider() {
+export default function RecomendationSlider( {value}) {
 
-    // const recomendationInfo = [
-    //     {
-    //         id:1 ,
-    //         img : '/images/CreativeFilm.png',
-    //         title: 'Фильмы, развивающие креативность ',
-    //         body: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.  '
-    //     },
-    //     {
-    //         id:2 ,
-    //         img : '/images/CreativeBooks.png',
-    //         title: 'Книги, развивающие креативность ',
-    //         body: 'Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.'
-    //     },
-    //     {
-    //         id:3 ,
-    //         img : '/images/CreativeSongs.png',
-    //         title: 'Nemo enim ipsam ',
-    //         body: 'Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.'
-    //     },
-    //     {
-    //         id:4 ,
-    //         img : '/images/CreativeFilm.png',
-    //         title: 'Фильмы, развивающие креативность ',
-    //         body: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.  '
-    //     },
-    //     {
-    //         id:5 ,
-    //         img : '/images/CreativeBooks.png',
-    //         title: 'Книги, развивающие креативность ',
-    //         body: 'Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.'
-    //     },
-    //     {
-    //         id:6 ,
-    //         img : '/images/CreativeSongs.png',
-    //         title: 'Nemo enim ipsam ',
-    //         body: 'Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.'
-    //     },
-    // ]
     const [RecomendationInfo,setRecomendationInfo] = useState([])
     function FetchProject() { axios.get('https://creative.kg/api/recommendations/')
     .then(res =>{
@@ -78,7 +40,13 @@ export default function RecomendationSlider() {
           <Slider slidesToScroll={3} customPaging={(i)=><div className="dots-pag">{i+1}</div>} dotsClass="slick-dots" {...settings}>
            
             {RecomendationInfo.map ((info) => (
-                <SlidesCard  key={info.id} title={info.name} type={'recommendations'} id={info.id} body={info.text} img={info.image}/>
+                <SlidesCard key={info.id} title={value === 'RU-RU' ? info.name
+                : (value === 'en-US'? info.name_en : info.name_kg )}
+                   id={info.id}
+                  body={value === 'RU-RU' ? info.description
+                  : (value === 'en-US'? info.description_en : info.description_kg )}
+                   img={info.image} type={'recommendations'}/>
+                   
                 ))}
             
           </Slider>

@@ -118,3 +118,13 @@
     grid-row-start: 1;
   }
 }
+.carousel-root {
+  ul {
+    li {
+      padding-right: unset !important; 
+      transform: unset !important; 
+      transition: initial !important;
+      opacity: 1 !important;
+    }
+  }
+}

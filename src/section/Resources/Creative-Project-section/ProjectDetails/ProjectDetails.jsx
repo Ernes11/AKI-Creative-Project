@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom"
 import  "../../Head-section/headSection.scss"
 import axios from "axios"
 import './ProjectDetail.scss'
-function ProjectDetails(){
+import { FormattedMessage } from 'react-intl';
+function ProjectDetails({value}){
 
     const { Id } = useParams()
     console.log(Id)
@@ -24,18 +25,20 @@ function ProjectDetails(){
             </div>
             
             <div className="resources_title_container"> 
-            <h3 className="resourcesTitle">РЕСУРСЫ</h3>
+            <h3 className="resourcesTitle"><FormattedMessage id="Resource"/></h3>
             </div>
             <div className="details_headline">
-            <h1>{details.name}</h1>
-            <p>{details.text}</p>
+            <h1>{value === 'RU-RU' ? details.name
+                  : (value === 'en-US'? details.name_en : details.name_kg )}</h1>
+            <p> {value === 'RU-RU' ? details.description
+                  : (value === 'en-US'? details.description_en : details.description_kg )}</p>
             </div>
             <div className="details_img_wrapper">
               <img src={details.image} alt="" />
             </div>
             <div className="text_container container">
-              <h2>Название подтемы</h2>
-              <p>{details.text_full}</p>
+            <div dangerouslySetInnerHTML={{ __html: value === 'RU-RU' ? details.text
+                  : (value === 'en-US'? details.text_en : details.text_kg )} } />
             </div>
         </div>
     )

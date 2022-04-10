@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
@@ -24,40 +24,30 @@ import { LOCALES } from "./i18n/locales";
 import { messages } from "./i18n/messages";
 
 export default function App() {
-  const locale = LOCALES.ENGLISH;
-  // const [lang,setLang] = useState(LOCALES.ENGLISH)
-  const[menuOpen, setMenuOpen] = useState(false)
-  
-  
-  return (
-    <IntlProvider
-      messages={messages[locale]}
+    const [lang,setLang] = useState(LOCALES.RUSSIAN)
+    const[menuOpen, setMenuOpen] = useState(false)
+    const locale = lang
+    console.log(lang)
+    return (
+<IntlProvider messages={messages[locale]}
       locale={locale}
-      defaultLocale={LOCALES.KYRGYZSTAN}
-    >
-      <Navigation menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/event" element={<Event />} />
-        <Route path="/joinUs" element={<JoinUs />} />
-        <Route path="/membership" element={<Membership />} />
-        <Route path="/resource" element={<Resource />} />
-        <Route
-          path="/resource/creativeprojects/:Id"
-          element={<ProjectDetails />}
-        />
-        <Route
-          path="/resource/recommendations/:Id"
-          element={<RecommendationDetails />}
-        />
-        <Route path="/resource/utility/:Id" element={<UtilityDetails />} />
-        <Route path="/resource/creativeprojects" element={<Resource />} />
-        <Route path="/resource/recommendations" element={<Resource />} />
-        <Route path="/resource/utility" element={<Resource />} />
-      </Routes>
-      <Footer />
-    </IntlProvider>
-  );
+      defaultLocale={LOCALES.KYRGYZSTAN}>
+  
+    <Navigation menuOpen= {menuOpen} setMenuOpen = {setMenuOpen} setLang={setLang} lang={lang} />
+    <Routes>
+      <Route path="/" element={<Home value={lang} />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/event" element={<Event />} />
+      <Route path="/membership" element={<Membership />} />
+      <Route path="/resource" element={<Resource value = {lang}/>} />
+      <Route path="/resource/creativeprojects/:Id" element ={<ProjectDetails value = {lang}/>}/>
+      <Route path="/resource/recommendations/:Id"element={<RecommendationDetails value = {lang}/>}/>
+      <Route path="/resource/utility/:Id" element={<UtilityDetails value = {lang}/>}/>
+      <Route path="/resource/creativeprojects" element={<Resource value = {lang}/>} />
+      <Route path="/resource/recommendations"element={<Resource value = {lang}/>} />
+      <Route path="/resource/utility" element={<Resource value = {lang}/>} />
+    </Routes>
+    <Footer />
+</IntlProvider>
+    ) 
 }
