@@ -14,7 +14,7 @@ const UsersList = ({ users, isLoading }) => {
     slides.push(
       <SwiperSlide className="swiper" key={`slide-${i}`}>
         {users.map((user, index) => (
-          <UserItem key={index} {...user} />
+          <UserItem key={index} user={user} />
         ))}
       </SwiperSlide>
     );
