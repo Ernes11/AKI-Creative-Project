@@ -1,15 +1,25 @@
+@import "../../../global.scss";
+
 .text_project_section {
-    margin-top: 15%;
-    text-align: center;
-    h2 {
-      color: white;
-      font-weight: lighter;
-      font-size: 40px;
-    }
-    p {
-      color: #ffffffcc;
-  
-      margin-top: 56px;
-      font-size: 28px;
+  margin-top: 15%;
+  text-align: center;
+  h2 {
+    color: white;
+    font-weight: lighter;
+    font-size: 40px;
+
+    @include mobile {
+      font-size: 26px;
     }
   }
+  p {
+    color: #ffffffcc;
+    margin-top: 56px;
+    font-size: 28px;
+
+    @include mobile {
+      margin-top: 17px;
+      font-size: 15px;
+    }
+  }
+}
