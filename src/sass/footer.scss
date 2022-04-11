@@ -1,7 +1,6 @@
 @import "../global.scss";
 
 .footer {
-  
   .container {
     max-width: 1200px;
     width: 100%;
@@ -40,9 +39,9 @@
         margin-top: 80px;
 
         @include mobile {
-          max-width: 140px;
+          max-width: 185px;
           width: 100%;
-          line-height: 12px;
+          line-height: 17px;
           margin-left: -2rem;
         }
 
