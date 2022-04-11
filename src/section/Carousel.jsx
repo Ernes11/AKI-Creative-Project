@@ -1,11 +1,6 @@
 import "../sass/slider.scss";
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
-import CreativeProjects1 from "../assets/CreativeProjects1.png";
-import CreativeProjects2 from "../assets/CreativeProjects2.png";
-import CreativeSongs from "../assets/CreativeSongs.png";
-import CreativeBooks from "../assets/CreativeBooks.png";
-import CreativeFilm from "../assets/CreativeFilm.png";
 
 import { MdOutlineKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
 import axios from "axios";
@@ -13,8 +8,6 @@ import axios from "axios";
 
 
 function Carousel() {
-  const images2 = [CreativeProjects1, CreativeProjects2 , CreativeSongs, CreativeBooks, CreativeFilm];
-  console.log (images2)
   const [data,setData] = useState([])
   const fetchPictures = () => { axios.get('https://creative.kg/api/aboutpictures/')
   .then(res =>{
