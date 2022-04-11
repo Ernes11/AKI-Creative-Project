@@ -1,12 +1,13 @@
 @import "../global.scss";
 
 #main-slider-container {
-  max-width: 86vw;
+  max-width: 1200px;
   width: 100%;
   height: 100%;
   position: relative;
   display: flex;
   align-items: center;
+  margin-top: 4rem;
 
   .slider-icon.left {
     border-radius: 100%;
@@ -69,7 +70,6 @@
       display: inline-block;
       margin-left: 10px;
 
-
       @include mobile {
         width: 138px;
         height: 186px;
@@ -86,16 +86,33 @@
 
       &-description {
         margin: 5px 0px 5px 24px;
-        
-     
         font-size: 24px;
         line-height: 24px;
         color: white;
+
+        @include mobile {
+          font-size: 12px;
+          line-height: 8px;
+          margin-left: 1rem;
+        }
       }
       & :hover {
         img {
           filter: none;
         }
+      }
+      .position {
+        position: absolute;
+        top: -6rem;
+        /* min-width: 100px; */
+        left: -3rem;
+        box-sizing: border-box;
+        background: white;
+        color: black;
+        padding-right: -1px;
+        display: inline-block;
+        padding-left: 13px;
+        padding-right: 13px;
       }
 
       .social-icons {
@@ -103,9 +120,8 @@
         margin-bottom: 20px;
         color: rgba(255, 255, 255, 0.541);
         a:not([href]) {
-          cursor:default !important;
+          cursor: default !important;
         }
-        
 
         @include mobile {
           margin-left: -25px;
@@ -113,12 +129,11 @@
 
         .icons {
           margin-left: 10px;
-          
-          
 
           @include mobile {
             margin-left: 0px;
-            height: 22px;
+            height: 18px;
+            margin-top: -3rem;
           }
         }
       }
@@ -126,11 +141,12 @@
   }
 }
 .pagination {
-  display: none;
+  display: none !important;
   padding-left: 0;
   list-style: none;
 
   @include mobile {
+    display: flex !important;
     margin-top: 2rem;
     position: absolute;
     left: 8rem;
@@ -147,7 +163,7 @@
     }
   }
 
-  .next.disabled{
+  .next.disabled {
     font-size: 1rem;
   }
 }
@@ -170,4 +186,9 @@
   margin-left: 24px;
   color: white;
   opacity: 0.6;
+
+  @include mobile {
+    margin-left: 15px;
+    font-size: 11px;
+  }
 }

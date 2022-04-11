@@ -9,6 +9,12 @@ SwiperCore.use([Navigation, Pagination]);
 
 const UsersList = ({ users, isLoading }) => {
   const slides = [];
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  };
 
   for (let i = 0; i < 5; i += 1) {
     slides.push(
@@ -27,11 +33,12 @@ const UsersList = ({ users, isLoading }) => {
       ) : (
         <React.Fragment>
           <Swiper
+            pagination={pagination}
+            modules={[Pagination]}
             tag="section"
             id="main"
             wrapperTag="ul"
             navigation
-            pagination
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
           >

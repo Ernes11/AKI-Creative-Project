@@ -24,7 +24,7 @@ function Hero() {
 
             <div className="buttons">
               <a target="_blank" href="https://forms.gle/tmSP19PLXCeFdWcJ8" rel="noreferrer">
-                <CustomButton type="contained"><FormattedMessage id="Join"/></CustomButton>
+                <CustomButton type="contained" className="button_1"><FormattedMessage id="Join"/></CustomButton>
               </a>
               <Link to='/about'>
                 <CustomButton className="button_2"  type="outlined">

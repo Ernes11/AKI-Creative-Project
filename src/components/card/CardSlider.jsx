@@ -34,10 +34,13 @@ const CardSlider = (props) => {
               key={index}
             >
               <div className="img_container_main">
-              <img className="slider-card-img" src={slide.photo} alt="" /></div>
+              <img className="slider-card-img" src={slide.photo} alt="" />
+              
+              </div>
               <p className="slider-card-title">{slide.title}</p>
               <p className="slider-card-description">{slide.submit.full_name}</p>
               <p className="slider-card-company">{slide.submit.company_name}</p>
+              {/* <span className="position">{slide.submit.position}</span> */}
               <ul className="social-icons">
                   <a target="_blank" rel="noreferrer" href={slide.submit.facebook}><FaFacebookSquare size={30} className="icons" /></a>
                   <a  target="_blank" rel="noreferrer"href={slide.submit.telegram}><FaTelegram size={30} className="icons" /></a>
