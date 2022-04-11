@@ -13,6 +13,7 @@ const UserItem = ({ user }) => {
         <Card.Title className="user__name">{user.submit.full_name}</Card.Title>
         <Card.Text className="user__details">
           <span className="position">{user.submit.position}</span>
+          <p className='slider-card-company' >{user.submit.company_name}</p>
           <ul className="social-icons">
           <a className="icons" target="_blank" rel="noreferrer" href={user.submit.facebook}><FaFacebookSquare size={30}  /></a>
            <a target="_blank" rel="noreferrer" href={user.submit.telegram}><FaTelegram size={30} className="icons" /></a>
