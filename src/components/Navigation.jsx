@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../sass/navigation.scss";
+import { FormattedMessage } from 'react-intl';
 
-function Navigation() {
+function Navigation({ setLang , lang }) {
+  const hangeChange = ({ target: { value } }) => {
+    setLang(value)
+  }
+  
   const [isMobile, setIsMobile] = useState(false);
   return (
     <div className="navigation">
@@ -19,49 +24,49 @@ function Navigation() {
             >
               <li className="nav-item">
                 <NavLink className="nav-link" to="/">
-                  Главная
+                <FormattedMessage id="Home"/>
                   <span className="sr-only">(current)</span>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/about">
-                  О нас
+                <FormattedMessage id="AboutUs"/>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/membership">
-                  Членство
+                <FormattedMessage id="Membership"/>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/event">
-                  Мероприятия
+                <FormattedMessage id="Events"/>
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/joinus">
-                  Присоединиться
-                </NavLink>
+                <a target="_blank" className="nav-link" href="https://forms.gle/tmSP19PLXCeFdWcJ8" rel="noreferrer">
+                <FormattedMessage id="Join"/>
+                </a>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/resource">
-                  Ресурсы
+                <FormattedMessage id="Resource"/>
                 </NavLink>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#footer">
-                  Контакты
+                <FormattedMessage id="Contacts"/>
                 </a>
               </li>
             </ul>
           </div>
 
           <div className="right">
-            <select className="language">
-              <option value="RU">Рус</option>
-              <option value="ENG">Eng</option>
-              <option value="KG">Кыр</option>
-            </select>
+            <select onChange={hangeChange} value={lang} className="language">
+            <option value="RU-RU">Рус</option>
+            <option value="en-US">Eng</option>
+            <option value="KG-KG">Кыр</option>
+          </select>
             <button
               className="mobile-menu-icon"
               onClick={() => setIsMobile(!isMobile)}

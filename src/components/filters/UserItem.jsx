@@ -5,21 +5,19 @@ import { RiWhatsappFill } from "react-icons/ri";
 import { AiFillInstagram } from "react-icons/ai";
 
 
-const UserItem = ({ id, photo, name, title, position }) => {
+const UserItem = ({ user }) => {
   return (
     <Card className="user">
-      <Card.Img style={{maxHeight:'60%'}} variant="top" src={photo} className="user__image" alt={name} />
+      <Card.Img style={{height:'60%'}} variant="top" src={user.photo} className="user__image" alt={user.submit.full_name} />
       <Card.Body>
-        <Card.Title className="user__name">{name}</Card.Title>
+        <Card.Title className="user__name">{user.submit.full_name}</Card.Title>
         <Card.Text className="user__details">
-          <span>{title}</span>
-          <span className="position">{position}</span>
+          <span className="position">{user.submit.position}</span>
           <ul className="social-icons">
-            <FaFacebookSquare size={30} className="icons" />
-            <FaTelegram size={30} className="icons" />
-            <RiWhatsappFill size={32} className="icons" />
-            <AiFillInstagram size={32} className="icons" />
-          </ul>
+          <a className="icons" target="_blank" rel="noreferrer" href={user.submit.facebook}><FaFacebookSquare size={30}  /></a>
+           <a target="_blank" rel="noreferrer" href={user.submit.telegram}><FaTelegram size={30} className="icons" /></a>
+          <a target="_blank" rel="noreferrer" href={user.submit.instagram}><AiFillInstagram size={32} className="icons" /></a>
+          </ul> 
         </Card.Text>
       </Card.Body>
     </Card>

@@ -1,3 +1,5 @@
+@import "../../../global.scss";
+
 .resources_title_container {
   display: flex;
   flex-direction: column;
@@ -5,6 +7,10 @@
   justify-content: center;
   margin: auto;
   height: 40vh;
+
+  @include mobile {
+    height: 19vh;
+  }
 }
 .resourcesTitle {
   color: white;
@@ -12,6 +18,10 @@
   align-self: center;
   font-weight: 300;
   font-size: 64px;
+
+  @include mobile {
+    font-size: 36px;
+  }
 }
 
 .navigation_button {
@@ -27,6 +37,16 @@
 .button_container {
   display: flex;
   gap: 30px;
+
+  @include mobile {
+    gap: 10px;
+  }
+
+  a {
+    @include mobile {
+      font-size: 11px;
+    }
+  }
 }
 .img_container {
   display: flex;

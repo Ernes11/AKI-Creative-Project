@@ -6,7 +6,7 @@ import Task from "../section/Task";
 import Report from "../section/Report";
 import '../../src/global.scss'
 
-function About() {
+function About({value}) {
 
   useEffect(() =>{
     window.scrollTo(0, 0);
@@ -15,9 +15,9 @@ function About() {
     <>
       <div className="container">
         <Carousel />
-        <AboutAssociation />
+        <AboutAssociation value={value} />
         <CoFounder />
-        <Task />
+        <Task value={value} />
         <Report />
       </div>
     </>

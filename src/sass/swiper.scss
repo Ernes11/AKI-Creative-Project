@@ -1,18 +1,19 @@
 @import "../global.scss";
 
-
 .swiper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: transparent;
   padding-bottom: 40px;
 
-  @include mobile{
-    grid-template-columns:auto auto;
-    row-gap: 5px;
-    column-gap: 5px;
+  @include mobile {
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px;
+    grid-template-rows: 196px 196px;
+    gap:10px;
+    
+    column-gap: 10px;
   }
-
 }
 
 .swiper-container {

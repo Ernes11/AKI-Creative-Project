@@ -19,16 +19,16 @@ function Hero() {
           <div className="main_text">
             <h1 className="main_title"><FormattedMessage id="Association"/> </h1>
             <h4 className="main_subtitle">  
-              Добро пожаловать на сайт Ассоциации Креативных Индустрий
+              <FormattedMessage id="WelcomeAssociation"/>
             </h4>
 
             <div className="buttons">
-              <Link to='/joinus'>
-                <CustomButton className="button_1" type="contained"><FormattedMessage id="Join"/></CustomButton>
-              </Link>
+              <a target="_blank" href="https://forms.gle/tmSP19PLXCeFdWcJ8" rel="noreferrer">
+                <CustomButton type="contained"><FormattedMessage id="Join"/></CustomButton>
+              </a>
               <Link to='/about'>
                 <CustomButton className="button_2"  type="outlined">
-                <span>ПОДРОБНЕЕ</span>
+                <span><FormattedMessage id="More"/></span>
                 </CustomButton>
               </Link>
             </div>

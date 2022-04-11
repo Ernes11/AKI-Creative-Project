@@ -5,7 +5,7 @@ import HeadSection from "../section/Resources/Head-section/HeadSection";
 import RecomendationSection from './../section/Resources/Recomendation-section/RecomendationSection';
 import Utility from './../section/Resources/Utility/Utility';
 
-function Resource( ) {
+function Resource( {value} ) {
 
     useEffect(()=> {
         window.scrollTo(0,0)
@@ -15,9 +15,9 @@ function Resource( ) {
         <div className="resources">
         <div className="container">
             <HeadSection/>
-            <RecomendationSection/>
-            <CreativeProject/>
-            <Utility/>
+            <RecomendationSection value ={value}/>
+            <CreativeProject value={value}/>
+            <Utility value ={value}/>
         </div>
       </div>
     )

@@ -1,4 +1,5 @@
  import './headSection.scss'
+import { FormattedMessage } from 'react-intl';
 function HeadSection () {
 
     return(
@@ -9,13 +10,13 @@ function HeadSection () {
             </div>
             
             <div className="resources_title_container"> 
-            <h3 className="resourcesTitle">РЕСУРСЫ</h3>
+            <h3 className="resourcesTitle"><FormattedMessage id = 'Resource'/></h3>
             </div>
             <div className="button_container">
-                <a href="#all"><button className="navigation_button">Все</button></a>
-                <a href="#recomendation"><button className="navigation_button">Рекоммендации</button></a>
-                <a href="#project"><button className="navigation_button">Проекты</button></a>
-                <a href="#decorate"><button className="navigation_button">Оформление</button></a>
+                <a href="#all"><button className="navigation_button"><FormattedMessage id='AllResource'/></button></a>
+                <a href="#recomendation"><button className="navigation_button"><FormattedMessage id='Recommendation'/></button></a>
+                <a href="#project"><button className="navigation_button"><FormattedMessage id='Project'/></button></a>
+                <a href="#decorate"><button className="navigation_button"><FormattedMessage id='GoodTo'/></button></a>
             </div>
             
         </div>

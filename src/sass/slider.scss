@@ -15,12 +15,12 @@
 }
 
 .slide img {
-  width: 25rem;
+  width: 18rem;
   margin: 0 auto;
 }
 
 .slide {
-  padding-right: 110rem;
+  padding-right: 280rem;
   transform: scale(0.2);
   transition: transform 700ms;
   opacity: 0.5;
@@ -33,6 +33,7 @@
 .activeSlide {
   transform: scale(1.1);
   opacity: 2;
+  
 }
 
 .arrow {

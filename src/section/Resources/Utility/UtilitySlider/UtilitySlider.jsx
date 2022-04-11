@@ -5,46 +5,9 @@ import SlidesCard from '../../Recomendation-section/Recomendation-Slider/SlidesC
 import axios from "axios";
 
 
-export default function UtilitySlider() {
+export default function UtilitySlider({value}) {
   
-    // const UtilityInfo = [
-    //     {
-    //         id:1 ,
-    //         img : '/images/UtilityFees.png',
-    //         title: 'Информация о налогообложении',
-    //         body: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.'
-    //     },
-    //     {
-    //         id:2 ,
-    //         img : '/images/UtilityDecoration.png',
-    //         title: 'Юридические оформления',
-    //         body: 'Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.'
-    //     },
-    //     {
-    //         id:3 ,
-    //         img : '/images/UtilityWhiteBooks.png',
-    //         title: 'Nemo enim ipsam ',
-    //         body: 'Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.'
-    //     },
-    //     {
-    //         id:4 ,
-    //         img : '/images/UtilityFees.png',
-    //         title: 'Информация о налогообложении',
-    //         body: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.  '
-    //     },
-    //     {
-    //         id:5 ,
-    //         img : '/images/UtilityDecoration.png',
-    //         title: 'Юридические оформления',
-    //         body: 'Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.'
-    //     },
-    //     {
-    //         id:6 ,
-    //         img : '/images/UtilityWhiteBooks.png',
-    //         title: 'Nemo enim ipsam ',
-    //         body: 'Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.'
-    //     },
-    // ]
+  
     const [UtilityInfo,setUtilityInfo] = useState([])
     function FetchUtility() { axios.get('https://creative.kg/api/formals/')
     .then(res =>{
@@ -79,7 +42,12 @@ export default function UtilitySlider() {
           <Slider slidesToScroll={3} customPaging={(i)=><div className="dots-pag">{i+1}</div>} dotsClass="slick-dots" {...settings}>
            
             {UtilityInfo.map ((info) => (
-                <SlidesCard key={info.id} type={'utility'} id={info.id} title={info.name} body={info.text} img={info.image}/>
+                <SlidesCard key={info.id} title={value === 'RU-RU' ? info.name
+                : (value === 'en-US'? info.name_en : info.name_kg )}
+                   id={info.id}
+                  body={value === 'RU-RU' ? info.description
+                  : (value === 'en-US'? info.description_en : info.description_kg )}
+                   img={info.image} type={'utility'}/>
                 ))}
             
           </Slider>

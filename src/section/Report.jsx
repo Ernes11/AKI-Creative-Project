@@ -1,17 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
+import { FormattedMessage } from "react-intl";
 import "../sass/report.scss";
+import  axios  from 'axios';
+
 
 function Report() {
-  const [show, setShow] = useState(true);
+  const [reports,setReports] = useState([])
+  const [show, setShow] = useState(false);
+  function getReports() { axios.get('https://creative.kg/api/reports/')
+    .then(res =>{
+      setReports(res.data.results)
+    })}
+  useEffect(() => {
+    getReports();
+  }, []);
   return (
     <div className="report">
       <div className="container">
-        <button onClick={() => setShow(!show)}>ОТЧЁТЫ</button>
+        <button onClick={() => setShow(!show)}><FormattedMessage id="Reports"/></button>
         {show ? (
-          <li>
-            <a href="https://media-exp1.licdn.com/dms/document/C4E1FAQFQ9ItYx9rnpQ/feedshare-document-pdf-analyzed/0/1646181887861?e=1646467200&v=beta&t=ZEI32qsBZau8FcVbSyevBCnJaTQTYSQcYd9HzytatZA">Нажмите сюда </a>
-          </li>   
+         <ul>
+           {reports.map (report => (
+             <li>
+               <a target="_blank" href={report.report_text}>{report.report_text}</a>
+             </li>
+           ))}
+          </ul> 
         ) : null}
       </div>
     </div>
