@@ -19,14 +19,29 @@
   max-width: 81vw;
   width: 100%;
 }
+
+.swiper-container-rtl .swiper-button-prev {
+  right: 10px;
+  left: auto;
+}
 .swiper-button-next:after,
 .swiper-container-rtl .swiper-button-prev:after {
   color: white;
+
+  @include mobile {
+    font-size: 20px;
+    font-weight: 900;
+  }
 }
 
 .swiper-button-prev:after,
 .swiper-container-rtl .swiper-button-next:after {
   color: white;
+
+  @include mobile {
+    font-size: 20px;
+    font-weight: 900;
+  }
 }
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
