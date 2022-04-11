@@ -141,11 +141,12 @@
   }
 }
 .pagination {
-  display: none;
+  display: none !important;
   padding-left: 0;
   list-style: none;
 
   @include mobile {
+    display: flex !important;
     margin-top: 2rem;
     position: absolute;
     left: 8rem;

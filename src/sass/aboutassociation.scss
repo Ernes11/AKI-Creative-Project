@@ -130,6 +130,8 @@
           font-weight: normal;
           font-size: 14px;
           line-height: 32px;
+          height: 103px;
+          overflow: inherit;
           color: white;
 
           @include mobile {
