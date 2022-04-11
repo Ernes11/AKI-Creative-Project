@@ -10,8 +10,7 @@
     display: grid;
     grid-template-columns: 150px 150px 150px 150px;
     grid-template-rows: 196px 196px;
-    gap:10px;
-    
+    gap: 10px;
     column-gap: 10px;
   }
 }
@@ -34,7 +33,17 @@
 .swiper-container-horizontal > .swiper-pagination-bullets {
   color: white;
   padding-top: 40px;
+  bottom: 0px;
 }
+
 .swiper-pagination-bullet-active {
-  background-color: white;
+  background-color: transparent;
+}
+
+.swiper-pagination-bullet {
+  width: 21px;
+  height: 27px;
+  border-radius: 1%;
+  box-sizing: border-box;
+  border: 1px solid white;
 }
