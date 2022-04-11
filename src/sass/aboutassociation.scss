@@ -3,7 +3,7 @@
 .aboutassociation {
   width: 100%;
 
-  @include mobile{
+  @include mobile {
     margin-bottom: 26rem;
   }
   .about-title {
@@ -154,6 +154,8 @@
           font-size: 14px;
           width: 58%;
           margin-right: 42rem;
+          overflow: inherit;
+          height: 124px;
           color: white;
 
           @include mobile {
