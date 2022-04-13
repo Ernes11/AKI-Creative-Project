@@ -60,6 +60,9 @@
     height: 80%;
     left: 20%;
     bottom: 28%;
+    @include mobile {
+      display: none;
+    }
   }
   .eclipse {
     width: 30%;
@@ -78,6 +81,9 @@
     );
     opacity: 0.9;
     filter: blur(143.294px);
+    @include mobile {
+      display: none;
+    }
   }
 }
 .header_container {

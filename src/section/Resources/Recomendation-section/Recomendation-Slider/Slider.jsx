@@ -28,10 +28,8 @@ export default function RecomendationSlider( {value}) {
       dots: true,
       autoplaySpeed: 2000,
       slidesToShow: 2,
-      verticalSwiping: true,
       speed: 500,
-      vertical : true,
-      slidesToScroll : 1
+      slidesToScroll : 2
     }
     return (
       <div className="tops-slider">
@@ -76,7 +74,7 @@ export default function RecomendationSlider( {value}) {
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
           />
         <div className="prev_block"/> 
-          <Slider slidesToScroll={3}  {...settingsMobile}>
+          <Slider customPaging={(i)=><div className="dots-pag">{i+1}</div>} dotsClass="slick-dots"  {...settingsMobile}>
            
             {RecomendationInfo.map ((info) => (
                 <SlidesCard key={info.id} title={value === 'RU-RU' ? info.name
