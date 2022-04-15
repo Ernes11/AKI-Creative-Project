@@ -7,15 +7,15 @@ import store from "../../src/store/store";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../sass/filters.scss";
 
-function Membership() {
+function Membership({value}) {
   return (
     <>
       <Provider store={store}>
-        <div className="container">
+        
           <Steps />
           <HomePage />
-          <Document />
-        </div>
+          <Document value={value} />
+        
       </Provider>
     </>
   );

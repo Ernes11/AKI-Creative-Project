@@ -18,7 +18,7 @@ function About({value}) {
         <AboutAssociation value={value} />
         <CoFounder />
         <Task value={value} />
-        <Report />
+        <Report value={value} />
       </div>
     </>
   );

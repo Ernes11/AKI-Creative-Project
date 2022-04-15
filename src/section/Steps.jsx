@@ -18,12 +18,12 @@ function Steps() {
               <FormattedMessage id="Step1"/>
             </a>
 
-            <button disabled className="steps-row-text">
+            <button disabled className="steps-row-text" style={{paddingRight: '10px'}}>
               <img src="../../images/stepsarrow.png" alt="" />
               <FormattedMessage id="Step2"/>
             </button>
 
-            <button disabled className="steps-row-text">
+            <button disabled className="steps-row-text" style={{paddingRight: '10px'}}>
               <img src="../../images/stepsarrow.png" alt="" />
               <FormattedMessage id="Step3"/>
             </button>

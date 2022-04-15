@@ -1,53 +1,82 @@
+
 import React from "react";
-import UserItem from "./UserItem";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination } from "swiper";
-import "swiper/swiper-bundle.css";
-import "../../sass/swiper.scss";
+import MainSlider from "react-slick";
+import CardForSlider from "../card/CardForSlider";
+import './User-Slider.scss'
 
-SwiperCore.use([Navigation, Pagination]);
+const CardSlider = ({slides}) => {
 
-const UsersList = ({ users, isLoading }) => {
-  const slides = [];
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
+  const settings = {
+    className: "center",  
+    infinite:  false, 
+    dots: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 4,
+    speed: 500,
+    slidesToScroll: 4,
+    rows: 2,
   };
-
-  for (let i = 0; i < 5; i += 1) {
-    slides.push(
-      <SwiperSlide className="swiper" key={`slide-${i}`}>
-        {users.map((user, index) => (
-          <UserItem key={index} user={user} />
-        ))}
-      </SwiperSlide>
-    );
+  const settingsMobile = {
+    infinite:  false, 
+    dots: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 2,
+    speed: 500,
+    slidesToScroll : 2,
+    rows: 2,
+  
+      
+    
   }
-
   return (
-    <div className="users-list">
-      {isLoading ? (
-        <p className="loading">Loading...</p>
-      ) : (
-        <React.Fragment>
-          <Swiper
-            pagination={pagination}
-            modules={[Pagination]}
-            tag="section"
-            id="main"
-            wrapperTag="ul"
-            navigation
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
-          >
-            {slides}
-          </Swiper>
-        </React.Fragment>
-      )}
+    <div className="about-slider">
+
+    <div className="tops-slider">
+      <div className="WebVersion">
+        
+      <link
+            rel="stylesheet"
+            type="text/css"
+            charset="UTF-8"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+          />
+       <div className="about-card">
+        <MainSlider  customPaging={(i)=><div className="dots-pag">{i+1}</div>} dotsClass="slick-dots" {...settings}>
+
+      
+          {slides.map ((info,index) => (
+               <CardForSlider key={index} img ={info.photo}
+                name = {info.submit.full_name}
+                company={info.submit.company_name}
+                facebook={info.submit.facebook}
+                inst={info.submit.instagram}
+                telegram={info.submit.telegram}
+                position={info.submit.position}/>
+              ))}
+          
+        </MainSlider>
+      </div>
+      </div>
+      <div className="containerMobile">
+        <MainSlider customPaging={(i)=><div className="dots-pag">{i+1}</div>} dotsClass="slick-dots"  {...settingsMobile}>
+            {slides.map ((info,index) => (
+               <CardForSlider key={index} img ={info.photo}
+                name = {info.submit.full_name}
+                company={info.submit.company_name}
+                facebook={info.submit.facebook}
+                inst={info.submit.instagram}
+                telegram={info.submit.telegram}
+                position={info.submit.position}/>
+              ))}
+        </MainSlider>
+      </div>    
+    </div>
     </div>
   );
 };
-
-export default UsersList;
+export default CardSlider;

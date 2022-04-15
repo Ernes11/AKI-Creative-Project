@@ -14,7 +14,7 @@
   text-align: center;
 
   @include mobile {
-    height: 13rem;
+    height: 14rem;
     width: 9rem;
   }
   h2 {
@@ -45,6 +45,9 @@
 .title_container {
   width: 100%;
   text-align: center;
+  @include mobile {
+    margin-top: 20px;
+  }
  
 
   h2 {
@@ -75,7 +78,6 @@
   margin-right: 0;
 
   @include mobile{
-    margin-left: 10px;
-    // margin-top: 10px;
+    margin-left: 0;
   }
 }

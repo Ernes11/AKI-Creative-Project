@@ -34,7 +34,7 @@ export default function UtilitySlider({value}) {
     }
     return (
       <div className="tops-slider">
-        <div className="container">
+        <div className="WebVersion">
           <link
             rel="stylesheet"
             type="text/css"

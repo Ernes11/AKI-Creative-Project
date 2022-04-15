@@ -8,7 +8,7 @@ export default function SlidesCard ({img,title,body ,id,type}) {
     return(
         <div className="slides_card">
             <div style={{width:'100%' , height:'50%'}}>
-                <img  style={{width:'100%', height:'100%'}} src={img} alt="" />
+                <img  style={{width:'100%', height:'100%',aspectRatio: '3 / 4', objectFit: 'cover'}} src={img} alt="" />
             </div>
             <div className="title_container">
                 <h2>{title}</h2>

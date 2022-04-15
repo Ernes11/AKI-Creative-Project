@@ -5,6 +5,9 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: 115%;
+  @include mobile {
+    background: none;
+  }
 
   .container {
     .steps-title {
@@ -23,7 +26,7 @@
     }
 
     .steps-main {
-      margin-top: 4rem;
+      margin-top: 20px;
       position: relative;
 
       .steps-images {
@@ -39,7 +42,8 @@
         display: grid;
         grid-row-gap: 16px;
         width: 51%;
-        margin-right: 32rem;
+        margin-right: 40rem;
+        
 
         .steps-row-text {
           color: white;
@@ -49,18 +53,31 @@
           font-size: 16px;
           line-height: 16px;
           text-align: left;
-          padding-left: 0.5rem;
+          padding-left: 1rem;
+          border: 1px solid white;
           padding-top: 1rem;
           padding-bottom: 1rem;
           cursor: unset;
-          border: none;
+          white-space: nowrap;
+          z-index: 2;
+          // border: none;
+         
           
 
           @include mobile {
-            padding-right: 0rem;
+            color: white;
+            border-radius: 3.5px;
+            background-color: #302f2f;
+            font-weight: 200;
             font-size: 10px;
-            height: 16vw;
-            justify-content: center;
+            line-height: 10px;
+            text-align: left;
+            padding-left: 1rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            // max-width: 200px;
+            z-index: 2;
+            
             white-space: nowrap;
           }
 
@@ -87,7 +104,12 @@
   text-align: left;
   padding-left: 1rem;
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1rem; 
+  border: 1px solid white;
+   @include mobile {
+    font-size: 10px;
+    line-height: 10px;
+   }
 
   &:hover {
     color: #3774d0;
@@ -96,6 +118,9 @@
   img {
     width: 35px;
     margin-right: 1rem;
+    @include mobile {
+      width: 25px;
+    }
   }
   img:hover{
     color: #3774d0;

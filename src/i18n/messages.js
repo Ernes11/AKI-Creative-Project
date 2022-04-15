@@ -2,7 +2,7 @@ import { LOCALES } from './locales'
 
 export const messages = {
   [LOCALES.ENGLISH]: {
-    Association: 'Association of Creative Industries (ACI)',
+    Association: 'Association of Creative Industries',
     Join: 'Join',
     More: 'More',
     Home: 'Home',
@@ -41,12 +41,13 @@ export const messages = {
     CreativeProjects : 'Creative Projects',
     Policy : 'Accounting policy',
     GoodToKnow : 'Good to know for creators',
-    GoodTo : 'Useful' 
+    GoodTo : 'Useful' ,
+    MembersOfACI : 'Members of ACI'
 
 
   },
   [LOCALES.RUSSIAN]: {
-    Association: 'Ассоциация креативных индустрий (АКИ) ',
+    Association: 'Ассоциация креативных индустрий',
     Join: 'Присоединиться',
     More: 'Подробнее',
     Home : 'Главная',
@@ -85,11 +86,12 @@ export const messages = {
     CreativeProjects : 'Креативные проекты',
     Policy : 'Учётная политика',
     GoodToKnow : 'Полезно знать креативщикам', 
-    GoodTo : 'Полезно'
+    GoodTo : 'Полезно',
+    MembersOfACI : 'Члены АКИ'
 
   },
   [LOCALES.KYRGYZSTAN]: {
-    Association: 'Креативдүү индустриялар ассоциациясы (КИА)',
+    Association: 'Креативдүү индустриялар ассоциациясы',
     Join:  'Кошулуу',
     More: 'Толугураак маалымат',
     Home: 'Башкы бет',
@@ -128,6 +130,7 @@ export const messages = {
     CreativeProjects : 'Креативдүү долбоорлор',
     Policy : 'Эсеп саясаты',
     GoodToKnow : 'Жаратмандарга пайдалуу маалымат', 
-    GoodTo : 'Пайдалуу'
+    GoodTo : 'Пайдалуу',
+    MembersOfACI : 'КИА мүчөлөрү'
   },
 }

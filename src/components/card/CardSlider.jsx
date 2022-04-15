@@ -1,60 +1,77 @@
+
 import React from "react";
-import "../../sass/card_slider.scss";
-import {
-  MdOutlineArrowBackIos,
-  MdOutlineArrowForwardIos,
-} from "react-icons/md";
-import { FaFacebookSquare, FaTelegram } from "react-icons/fa";
-import { RiWhatsappFill } from "react-icons/ri";
-import { AiFillInstagram } from "react-icons/ai";
+import "./MainSlider.scss";
+import MainSlider from "react-slick";
+import CardForSlider from "./CardForSlider";
 
-const CardSlider = (props) => {
-  const slideLeft = () => {
-    var slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft + 330;
+const CardSlider = ({slides}) => {
+
+  const settings = {
+    className: "center",  
+    infinite:  false, 
+    dots: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 4,
+    speed: 500,
+    slidesToScroll: 4
   };
-
-  const slideRight = () => {
-    var slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft - 330;
-  };
-
+  const settingsMobile = {
+    infinite:  false, 
+    dots: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 2,
+    speed: 500,
+    slidesToScroll : 2,
+    rows:2,
+    
+  }
   return (
-    <div id="main-slider-container">
-      <MdOutlineArrowBackIos
-        size={40}
-        className="slider-icon left"
-        onClick={slideRight}
-      />
-      <div id="slider">
-        {props.slides.map((slide, index) => {
-          return (
-            <div
-              className="slider-card"
-              key={index}
-            >
-              <div className="img_container_main">
-              <img className="slider-card-img" src={slide.photo} alt="" />
-              
-              </div>
-              <p className="slider-card-title">{slide.title}</p>
-              <p className="slider-card-description">{slide.submit.full_name}</p>
-              <p className="slider-card-company">{slide.submit.company_name}</p>
-              {/* <span className="position">{slide.submit.position}</span> */}
-              <ul className="social-icons">
-                  <a target="_blank" rel="noreferrer" href={slide.submit.facebook}><FaFacebookSquare size={30} className="icons" /></a>
-                  <a  target="_blank" rel="noreferrer"href={slide.submit.telegram}><FaTelegram size={30} className="icons" /></a>
-                  <a  target="_blank" rel="noreferrer"href={slide.submit.instagram}><AiFillInstagram size={32} className="icons" /></a>
-              </ul>
-            </div>
-          );
-        })}
+    <div className="main-slider">
+      <div className="slider-line"/>
+    <div className="tops-slider">
+      <div className="WebVersion">
+        
+      <link
+            rel="stylesheet"
+            type="text/css"
+            charset="UTF-8"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+          />
+
+        <MainSlider  customPaging={(i)=><div className="dots-pag">{i+1}</div>} dotsClass="slick-dots" {...settings}>
+         
+          {slides.map ((info,index) => (
+               <CardForSlider key={index} img ={info.photo}
+                name = {info.submit.full_name}
+                company={info.submit.company_name}
+                facebook={info.submit.facebook}
+                inst={info.submit.instagram}
+                telegram={info.submit.telegram}
+                position={info.submit.position}/>
+              ))}
+          
+        </MainSlider>
+      
       </div>
-      <MdOutlineArrowForwardIos
-        size={40}
-        className="slider-icon right"
-        onClick={slideLeft}
-      />
+      <div className="containerMobile">
+        <MainSlider customPaging={(i)=><div className="dots-pag">{i+1}</div>} dotsClass="slick-dots"  {...settingsMobile}>
+            {slides.map ((info,index) => (
+               <CardForSlider key={index} img ={info.photo}
+                name = {info.submit.full_name}
+                company={info.submit.company_name}
+                facebook={info.submit.facebook}
+                inst={info.submit.instagram}
+                telegram={info.submit.telegram}
+                position={info.submit.position}/>
+              ))}
+        </MainSlider>
+      </div>    
+    </div>
     </div>
   );
 };

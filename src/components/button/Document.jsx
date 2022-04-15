@@ -4,7 +4,7 @@ import "../../sass/document.scss";
 import { FormattedMessage } from 'react-intl';
 import axios from "axios";
 
-function Document() {
+function Document({value}) {
   const [show, setShow] = useState(false);
   const [open, setOpen] = useState(false);
   const [Charter, setCharter] = useState([])
@@ -31,8 +31,8 @@ function Document() {
             {show ? (
          <ul>
            {Charter.map (chart => (
-             <li key={chart.id}>
-               <a target="_blank" href={chart.rule_doc}>{chart.rule_doc}</a>
+             <li  key={chart.id}>
+               <a target="_blank" href={chart.rule_doc}>{value === 'RU-RU' ? chart.name : (value === 'en-US' ? chart.name_en : chart.name_kg)}</a>
              </li>
            ))}
           </ul> 
@@ -46,7 +46,7 @@ function Document() {
          <ul>
            {Policy.map (Pol => (
              <li key={Pol.id}>
-               <a target="_blank" href={Pol.politic_doc}>{Pol.politic_doc}</a>
+               <a target="_blank" href={Pol.politic_doc}>{value === 'RU-RU' ? Pol.name : (value === 'en-US' ? Pol.name_en : Pol.name_kg)}</a>
              </li>
            ))}
           </ul> 
