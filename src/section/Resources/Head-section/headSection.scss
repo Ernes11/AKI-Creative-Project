@@ -88,4 +88,7 @@
 }
 .header_container {
   overflow: hidden;
+  @include mobile {
+    margin-top: 50px;
+  }
 }

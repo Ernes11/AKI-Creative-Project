@@ -5,7 +5,7 @@ import "../sass/report.scss";
 import  axios  from 'axios';
 
 
-function Report() {
+function Report({value}) {
   const [reports,setReports] = useState([])
   const [show, setShow] = useState(false);
   function getReports() { axios.get('https://creative.kg/api/reports/')
@@ -23,7 +23,7 @@ function Report() {
          <ul>
            {reports.map (report => (
              <li>
-               <a target="_blank" href={report.report_text}>{report.report_text}</a>
+               <a target="_blank" href={report.report_text}>{value === 'RU-RU' ? report.name : (value === 'en-US' ? report.name_en : report.name_kg)}</a>
              </li>
            ))}
           </ul> 

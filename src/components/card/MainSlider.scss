@@ -1,4 +1,4 @@
-@import "../../../../global.scss";
+@import "../../global.scss";
 
 
 .tops-slider {
@@ -9,9 +9,9 @@
 
   .WebVersion {
     max-width: 1400px;
-    margin: 0 ;
+    margin: 0 auto;
     width: 100% ;
-    margin-top: 50px;
+    margin-top: 100px;
     @include mobile{
       display: none;
     }
@@ -20,11 +20,10 @@
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
-    margin-top: 25px;
+    margin-top: 100px;
     display: none;
     @include mobile{
       display: block;
-      width: calc(18rem + 25px) !important;
     }
   }
   .slider-img img {
@@ -55,29 +54,27 @@
 
   .slick-arrow.slick-prev btn {
     height: 100px;
-    
+    display: none !important;
   }
   .slick-arrow.slick-next::before {
-    content: "\02C3";
+    
     font-size: 100px;
     position: absolute;
-    right: 0;
+    right: -100px;
     top: -2rem;
     @include mobile{
     // display: none;
-    font-size: 50px;
       
     }
   }
   .slick-arrow.slick-prev::before {
     position: absolute;
-    content: "\02C2";
+
     font-size: 100px;
     top: -2rem;
     left: 0;
     @include mobile{
     //  display: none;
-    font-size: 50px;
       
     }
   }
@@ -85,13 +82,10 @@
 
 
 .slick-list {
-  
+  border-top: unset;
+  border-bottom: unset !important;
   img {
     object-fit: cover;
-  }
-  @include mobile {
-   
-    
   }
 }
 .dots-pag {
@@ -103,8 +97,8 @@
   justify-content: center;
   border: 1px solid white;
   @include mobile{
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     margin-top: 25px; 
     }
 }
@@ -119,15 +113,10 @@
   background: transparent;
   font-weight: 400;
   @include mobile{
-    width: 20px;
-    height: 20px;
-    font-size: 11px;  
+    width: 25px;
+    height: 25px;
+    font-size: 16px;  
     gap: 5px;
-    }
-    li {
-      @include mobile {
-        margin: 0 !important;
-      }
     }
 }
 .slick-dots {
@@ -141,10 +130,9 @@
       justify-content: center;
       border: 3px solid coral !important;
       @include mobile{
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
         margin-top: 25px; 
-        border: 1px solid coral !important;
           
         }
       
@@ -152,10 +140,38 @@
 
   }
 }
+.main-slider {
+  .main_position {
+    top :unset !important
+  }
+  .slick-slide {
+    @include mobile{
+      display: flex !important;
+      flex-direction: column !important;
+    }
+    
+    
+  }
+  .tops-slider {
+  .containerMobile {
+    width: 18rem !important;
+  }}
+}
 .slick-slide {
   @include mobile{
     display: flex !important;
   }
   
 }
-
+.slick-next {
+  right: -75px !important;
+  @include mobile {
+    right: -45px !important;
+  }
+}
+.slick-prev {
+  left: -75px !important;
+  @include mobile {
+    left: -45px !important;
+  }
+}

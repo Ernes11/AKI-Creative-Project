@@ -3,10 +3,6 @@ import RecomendationSlider from './Recomendation-Slider/Slider'
 import { FormattedMessage } from 'react-intl'
 import { useEffect, useState } from 'react'
 import   axios from 'axios';
-
-
-
-
 function RecomendationSection({value}){  
     const [headText,setHeadText] = useState({})
     

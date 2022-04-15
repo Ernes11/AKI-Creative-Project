@@ -4,7 +4,6 @@ import "../../sass/sort.scss";
 
 const Filters = ({ handleSort, sortOrder }) => {
   const options = [
-    { value: "", label: "All Category" },
     { value: "asc", label: "А-Я" },
     { value: "desc", label: "Я-А" },
   ];

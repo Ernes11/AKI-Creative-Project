@@ -1,0 +1,20 @@
+ @import '../../global.scss' ;
+
+  .about-slider {
+    .main_position {
+      top :unset !important
+    }
+    .slick-slide {
+      @include mobile{
+        display: flex !important;
+        flex-direction: column !important;
+      }
+      
+      
+    }
+    .tops-slider {
+    .containerMobile {
+      width: 18rem !important;
+    }}
+    
+}

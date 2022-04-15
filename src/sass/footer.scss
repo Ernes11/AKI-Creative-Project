@@ -1,6 +1,8 @@
 @import "../global.scss";
 
 .footer {
+  margin: unset;
+  background-color: #050505;
   .container {
     max-width: 1200px;
     width: 100%;
@@ -78,9 +80,16 @@
           }
         }
         .social-icons {
+          margin-bottom: unset;
+          width: unset;
+          margin-left: unset;
+          color: unset;
+                
           .icons {
             margin-right: 10px;
             color: $primary-color5;
+            width: initial;
+            height: initial;
           }
         }
       }
@@ -102,6 +111,7 @@
     }
 
     .footer-copyright {
+      width: 100%;
       margin-top: 40px;
       margin-bottom: 0;
       text-align: center;
@@ -109,6 +119,7 @@
       font-size: 15px !important;
       line-height: 22px;
       color: $primary-color5;
+      background-color: #0F0F0F;
     }
   }
 }

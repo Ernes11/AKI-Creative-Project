@@ -35,7 +35,7 @@ export default function App() {
       <Route path="/" element={<Home value={lang} />} />
       <Route path="/about" element={<About value = {lang} />} />
       <Route path="/event" element={<Event value={lang} />} />
-      <Route path="/membership" element={<Membership />} />
+      <Route path="/membership" element={<Membership value={lang} />} />
       <Route path="/resource" element={<Resource value = {lang}/>} />
       <Route path="/resource/creativeprojects/:Id" element ={<ProjectDetails value = {lang}/>}/>
       <Route path="/resource/recommendations/:Id"element={<RecommendationDetails value = {lang}/>}/>

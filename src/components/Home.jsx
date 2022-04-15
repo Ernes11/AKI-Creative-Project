@@ -5,7 +5,6 @@ import Content from "../section/Content";
 import CardItem from "../components/card/CardItem";
 import CustomButton from "./button/CustomButton";
 import '../sass/home.scss'
-import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl'
 function Home( { value } ) {
  
@@ -13,13 +12,14 @@ function Home( { value } ) {
   useEffect(() =>{
     window.scrollTo(0, 0);
   },[])
-
-
   return (
     <div className="homePage-container">
       <Hero />
       <Info value={value} />
       <Content value={value} />
+      <div className="MemberOfACI">
+        <h2><FormattedMessage id="MembersOfACI"/></h2>
+      </div>
       <CardItem />
 
       <div className="join_btn container">

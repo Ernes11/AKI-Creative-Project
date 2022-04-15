@@ -3,8 +3,6 @@ import Slider from "react-slick";
 import SlidesCard from "../../Recomendation-section/Recomendation-Slider/SlidesCard";
 import '../../Recomendation-section/Recomendation-Slider/Slider.scss'
 import axios from "axios";
-
-
 export default function ProjectSlider({value}) {
   
     const [slides,setSlides] = useState([])
@@ -33,7 +31,7 @@ export default function ProjectSlider({value}) {
     }
     return (
       <div className="tops-slider">
-        <div className="container">
+        <div className="WebVersion">
           <link
             rel="stylesheet"
             type="text/css"

@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import './Slider.scss'
 import SlidesCard from "./SlidesCard";
@@ -21,7 +21,6 @@ export default function RecomendationSlider( {value}) {
       autoplaySpeed: 2000,
       slidesToShow: 3,
       speed: 500,
-      // vertical : true
     };
     const settingsMobile = {
       infinite:  false, 
@@ -33,19 +32,10 @@ export default function RecomendationSlider( {value}) {
     }
     return (
       <div className="tops-slider">
-        <div className="container">
-          <link
-            rel="stylesheet"
-            type="text/css"
-            charset="UTF-8"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-          />
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-          />
-        <div className="prev_block"/> 
+        <div  className="slider-line"/>
+        <div className="WebVersion">
+         
+  
           <Slider slidesToScroll={3} customPaging={(i)=><div className="dots-pag">{i+1}</div>} dotsClass="slick-dots" {...settings}>
            
             {RecomendationInfo.map ((info) => (
@@ -59,21 +49,12 @@ export default function RecomendationSlider( {value}) {
                 ))}
             
           </Slider>
-          <div className="after_block"/>
+
         </div>
+        
         <div className="containerMobile">
-          <link
-            rel="stylesheet"
-            type="text/css"
-            charset="UTF-8"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-          />
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-          />
-        <div className="prev_block"/> 
+          
+
           <Slider customPaging={(i)=><div className="dots-pag">{i+1}</div>} dotsClass="slick-dots"  {...settingsMobile}>
            
             {RecomendationInfo.map ((info) => (
@@ -87,7 +68,7 @@ export default function RecomendationSlider( {value}) {
                 ))}
             
           </Slider>
-          <div className="after_block"/>
+
         </div>
         
       </div>

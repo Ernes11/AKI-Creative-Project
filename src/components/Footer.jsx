@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { FaFacebookSquare, FaTelegram } from "react-icons/fa";
-import { RiWhatsappFill } from "react-icons/ri";
 import { AiFillInstagram } from "react-icons/ai";
 import "../sass/footer.scss";
 import { Link } from "react-router-dom";
@@ -57,10 +56,11 @@ function Footer() {
             </div>
           </div>
 
-          <p className="footer-copyright">
+          
+        </div>
+        <p className="footer-copyright">
             Copyright &copy; Aki Creative Website 2022
           </p>
-        </div>
       </footer>
       ))}
       

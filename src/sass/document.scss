@@ -1,8 +1,11 @@
 @import "../global.scss";
 
 .document {
-  margin-top: 3rem;
-  margin-bottom: 5rem;
+  margin-top: 200px;
+  @include mobile {
+    margin-top: 100px;
+  }
+  
 
   .container {
     justify-content: center;
@@ -11,6 +14,9 @@
 
     .document-2{
       margin-top: 4rem;
+      @include mobile {
+        margin-top: 20px;
+      }
     }
 
     button {
@@ -20,23 +26,34 @@
       font-weight: bold;
       font-size: 35px;
       line-height: 48px;
+      
       text-decoration-line: underline;
       padding: 15px;
       transition: all 0.5 ease-in-out;
 
       @include mobile{
         font-size: 20px;
+        padding: 8px;
       }
 
       &:hover{
         color: $primary-color5;
         background-color: $primary-color6;
+        @include mobile {
+          color: white;
+          background: transparent;
+        }
       }
     }
 
     li{
+      text-align: center;
       margin-top: 30px;
-      list-style: none;
+      // list-style: none;
+      @include mobile {
+        margin-top: 10px;
+      }
+      
 
       a{
         color: $primary-color5;
@@ -45,6 +62,11 @@
         line-height: 29px;
         transition: all 0.5s ease;
         padding: 5px 10px 5px 10px;
+        @include mobile {
+
+          font-size: 20px;
+          line-height: 12px;
+        }
         
 
         &:hover{
@@ -52,6 +74,7 @@
           background-color: $primary-color5;
 
         }
+        
       }
     }
   }
