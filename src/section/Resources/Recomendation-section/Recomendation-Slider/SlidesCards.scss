@@ -23,7 +23,7 @@
     font-weight: bold;
 
     @include mobile{
-      font-size: 12px;
+      font-size: 9px;
     }
   }
   p {
@@ -32,13 +32,16 @@
     color: #ffffffcc;
 
     @include mobile{
-      font-size: 11px;
+      font-size: 7px;
     }
   }
 
   .SlidersBTN {
     @include mobile {
       font-size: 11px;
+      height: 30px;
+      display: flex;
+      align-items: center;
     }
   }
 }

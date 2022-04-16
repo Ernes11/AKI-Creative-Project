@@ -39,26 +39,24 @@ function Info({value}) {
     <div className="info">
     <div class="container">
       <div className="aki-row-1">
-        <img src={MainInfo[0].picture} alt="" />
-
-          <p className="aki-desc">
-            
-            <ReadMore>
-            {MainInfo[0].description ? (value === 'RU-RU' ? MainInfo[0].description: (value === 'en-US'? MainInfo[0].description_en : MainInfo[0].description_kg)) : 'Loading...'} 
-            </ReadMore>
+          <div className="aki_img">
+              <img src={MainInfo[0].picture} alt="" />
+           </div>
+           <div className="aki-desc">
+          <p >
+            {MainInfo[0].description ? (value === 'RU-RU' ? MainInfo[0].description: (value === 'en-US'? MainInfo[0].description_en :  MainInfo[0].description_kg )) : 'Loading...'} 
           </p>
-          <hr class="line_horizontal-1" />
-          <hr class="line_vertical-1" />
+          </div>
         </div>
         <div className="aki-row-2">
+          <div className="aki-img-2">
           {MainInfo[1]  ? <img src={MainInfo[1].picture} alt="" /> : null}
-          <hr />
-
-          <p className="aki-desc-2">
-          <ReadMore>
+          </div>
+          <div className="aki-desc-2">
+          <p >
           {MainInfo[1] ? (value === 'RU-RU' ? MainInfo[1].description: (value === 'en-US'? MainInfo[1].description_en : MainInfo[1].description_kg)) : 'Loading...'}
-          </ReadMore>
           </p>
+          </div>
         </div>
         <div className="box"></div>
       </div>
