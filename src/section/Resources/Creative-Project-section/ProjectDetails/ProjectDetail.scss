@@ -1,8 +1,13 @@
+@import '../../../../global.scss';
+
 .details_headline {
     text-align: center;
     h1 {
         color: white;
         font-weight: lighter;
+        @include mobile {
+            font-size: 20px;
+        }
     }
     p{
         color: white;
@@ -16,6 +21,11 @@
     img {
         max-width: 600px;
         max-height: 390px;
+        @include mobile {
+            max-width: 300px;
+            max-height: 190px;
+        }
+
     }
 }
 .text_container {
@@ -28,10 +38,24 @@
     h3 {
         color: white;
         font-weight: 700;
+        @include mobile {
+            font-size:20px;
+            font-weight: 350;
+        }
     }
     p {
         color: white;
         margin-top: 70px;
+        @include mobile {
+            margin-top: 35px;
+            font-size: 16px;
+        }
+    }
+    iframe {
+        @include mobile {
+            max-width: 70vw;
+            max-height: 220px;
+        }
     }
     
 }
