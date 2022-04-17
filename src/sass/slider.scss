@@ -4,37 +4,65 @@
 
 
 .container{
-  max-width: 1400px;
-  width: 100%;
+  
 }
-
+.about-mobile {
+  display: none ; 
+  @include mobile {
+    display: block;
+  }
+}
+.about-Web {
+  display: block;
+  @include mobile {
+    display: none;
+  }
+}
 .Carousel {
-  width: 100%;
-  margin: 0 auto;
-  // height: 570px;
-}
-
-.slide img {
-  width: 18rem;
-  margin: 0 auto;
-}
-
-.slide {
-  padding-right: 280rem;
-  transform: scale(0.2);
-  transition: transform 700ms;
-  opacity: 0.5;
-
-  @include mobile{
-    padding-right: 198rem;
+  // width: 80vw;
+  
+  margin: 0;
+  margin-top: 100px;
+  @include mobile {
+    margin-top: 50px;
   }
 }
 
-.activeSlide {
-  transform: scale(1.1);
-  opacity: 2;
-  
+.slide {
+  padding-top: 20px;
+  height: 336px;
+  width: 302px;
+  padding: 32px;
+  opacity: 0.5;
+
+
+  margin: unset;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+   
+  }
 }
+.activeSlide   {
+  padding-top: 0;
+  width: 670px ;
+  height: 350px;
+  margin: unset;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    border-radius: 13.2484px;
+    z-index: 2 !important;
+    
+
+  }
+}
+
+
+
 
 .arrow {
   color: white;
@@ -57,16 +85,20 @@
   top: 33%;
   font-size: 3rem;
   @include mobile{
-    right: 10%;
+    right: 0%;
   }
 }
 
 .prev {
-  left: 16%;
+  left: 28%;
   top: 33%;
   font-size: 3rem;
 
   @include mobile{
-    left: 10%;
+    left: 0%;
   }
+}
+.mobile-slides-about img {
+  height: 300px;
+  width: 347px;
 }

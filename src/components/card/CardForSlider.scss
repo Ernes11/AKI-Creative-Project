@@ -83,7 +83,7 @@
     filter: grayscale(100%);
     transition: all 0.3s;
     aspect-ratio: 3 / 4;
-    object-fit: cover;
+    object-fit: unset;
     &:hover {
       filter: none;
     }
@@ -148,3 +148,8 @@
     }
    }
  }
+.founder_position_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

@@ -16,13 +16,15 @@
       font-weight: 300;
       font-size: 40px;
       line-height: 81px;
-      margin-top: 142px;
+      margin-top: 192px;
       margin-bottom: 72px;
       color: white;
 
       @include mobile {
         font-size: 26px;
         line-height: 36px;
+        margin-top: 24px;
+        margin-bottom: 24px;
       }
     }
     .line_horizontal-1 {
@@ -32,7 +34,7 @@
       width: 100%;
       height: 1px;
       left: 46.4%;
-      top: 20.6%;
+      top: 23.4%;
       border: 2px;
       @include mobile {
         display: none;
@@ -45,7 +47,7 @@
       width: 100%;
       height: 1px;
       left: 46.4%;
-      top: 46.6%;
+      top: 48.6%;
       border: 2px;
       @include mobile {
         display: none;
@@ -58,7 +60,7 @@
       width: 100%;
       height: 1px;
       left: 46.4%;
-      top: 72.9%;
+      top: 73.8%;
       border: 2px;
       @include mobile {
         display: none;
@@ -71,7 +73,7 @@
       width: 100%;
       height: 1px;
       left: -77%;
-      top: 20.5%;
+      top: 23.4%;
       border: 2px;
       @include mobile {
         display: none;
@@ -84,7 +86,7 @@
       width: 100%;
       height: 1px;
       left: -77%;
-      top: 46.8%;
+      top: 48.6%;
       border: 2px;
       @include mobile {
         display: none;
@@ -97,7 +99,7 @@
       width: 100%;
       height: 1px;
       left: -77%;
-      top: 72.9%;
+      top: 73.8%;
       border: 2px;
       @include mobile {
         display: none;
@@ -118,10 +120,13 @@
       .column {
         display: block;
         border: solid 1px;
-        width: 282px;
-        height: 356px;
+        // width: 282px;
+        // height: 356px;
         color: rgba(255, 255, 255, 0.541);
-        background-color: rgba(37, 37, 37, 0.6);
+        background-color: black;
+        @include mobile {
+          border: 1px solid rgba(255, 255, 255, 0.541) ;
+        }
         &:nth-child(5n - 1) {
           grid-column: 2;
 
@@ -145,13 +150,17 @@
           }
         }
 
-        .card-photo {
-          width: 280px;
-
+        
+        .card-title {
+          margin: 0;
+          padding-left: 24px;
           @include mobile {
-            width: 250px;
-            height: 185px;
-            object-fit: cover;
+            margin-top: 20px;
+          }
+          p {
+            text-align: left;
+            
+
           }
         }
 
@@ -160,19 +169,27 @@
           a:not([href]) {
             cursor: default !important;
           }
-          @include mobile {
-            margin-left: -27px;
-          }
+          text-align: left;
+          padding-left: 24px;
+          display: flex;
+              gap: 17px;
+              @include mobile {
+                gap: 5px;
+              }
 
           .icons {
-            margin-right: 10px;
+      
+            width: 30px;
+            height: 30px;
 
             @include mobile {
               margin-left: 0px;
               margin-right: 4px;
-              height: 28px;
-              margin-top: -4rem;
+             width: 20px;
+             height: 20px;
+              margin-top: -2rem;
             }
+           
           }
         }
 
@@ -186,14 +203,11 @@
 }
 .card-img {
   height: 60%;
-  img {
+  width: 100%;
+  .card-photo {
     width: 100%;
     height: 100%;
-    filter: grayscale(100%);
     object-fit: cover;
-    &:hover {
-      filter: none;
-    }
   }
 }
 .card-body {
@@ -218,4 +232,28 @@
   opacity: 0.6;
   margin-top: 5px;
   text-align: left;
+}
+.founder_position {
+  position: absolute;
+  padding-top: 2px;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-bottom: 2px;
+  background: white;
+  
+  p {
+   color: black;
+   font-size: 16px;
+   margin: 0;
+  }
+  @include mobile {
+   padding-top: 1px;
+   padding-right: 8px;
+   padding-left: 8px;
+   padding-bottom: 1px;
+   
+   p {
+     font-size: 11px;
+   }
+  }
 }

@@ -25,6 +25,13 @@ const Card = ({ item }) => {
               <div className="column" key={Val.id}>
                 <div className="card-img">
                   <img src={Val.image} alt={Val.title} className="card-photo" />
+                  <div className="founder_position_container">
+                    <div className="founder_position">
+                     <p>
+                     {Val.founder.submit.position}
+                    </p>
+                    </div>
+                </div>
                 </div>
                 <div className="card-body">
                   <div className="card-title">

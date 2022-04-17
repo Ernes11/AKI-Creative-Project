@@ -1,216 +1,185 @@
 @import "../global.scss";
 
-.aboutassociation {
+.about-info {
+  display: flex;
+  max-width: 1200px;
   width: 100%;
+  height: 500px;
 
   @include mobile {
-    margin-bottom: 26rem;
-  }
-  .about-title {
-    text-align: center;
-    font-weight: 300;
-    font-size: 40px;
-    line-height: 81px;
-    color: white;
-    margin-bottom: 2rem;
-    margin-top: 72px;
-
-    @include mobile {
-      font-size: 26px;
-      margin-bottom: 4rem;
-    }
+    border: none;
+    height: auto;
   }
   .container {
-    width: 100%;
-    margin: 0 auto;
+    max-width: 1200px;
+    width: 100% !important;
     position: relative;
-
-    .line_horizontal-1 {
-      background-color: white;
-      color: white;
-      position: absolute;
-      width: 90%;
-      height: 1px;
-      left: 1.9%;
-      top: 72.9%;
-      border: 2px;
+    margin: 0;
+    padding: 0;
+    .about-row-1 {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      width: 100%;
+      height: 60%;
+      border: 1px solid #C4C4C4;
       @include mobile {
-        display: none;
-      }
-    }
-    .line_horizontal-2 {
-      background-color: white;
-      color: white;
-      position: absolute;
-      width: 90%;
-      height: 1px;
-      left: 1.9%;
-      top: 47.7%;
-      border: 2px;
-
-      @include mobile {
-        top: 45rem;
-        width: 118%;
-        height: 2px;
-        left: -7.1%;
-        opacity: 2;
-      }
-    }
-    .line_vertical-1 {
-      background-color: white;
-      color: white;
-      -webkit-transform: rotate(90deg);
-      position: absolute;
-      width: 22.9%;
-      height: 1px;
-      left: 35.4%;
-      top: 67.5%;
-      border: 2px;
-
-      @include mobile {
-        display: none;
-      }
-    }
-
-    .about-row {
-      display: inline-grid;
-      grid-template-columns: auto auto auto;
-      border: 1px solid white;
-
-      @include mobile {
-        display: grid;
-        grid-template-columns: auto;
+        flex-direction: column;
         border: none;
+        height: auto;
       }
-
-      // display: inline-flex;
-      // text-align: left;
-
-      .about-column-1 {
-        border-left: 1px solid white;
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
-        @include mobile {
-          border: none;
-        }
-        .column-1-img1 {
-          img {
-            border: 1px solid white;
-            width: 94%;
-
-            @include mobile {
-              border-bottom: 1px solid white;
-              border-top: 1px solid white;
-              width: 118%;
-              position: absolute;
-              top: -4rem;
-              left: -2rem;
-            }
-          }
-        }
-
-        .column-1-img2 {
-          img {
-            border: 1px solid white;
-            width: 31rem;
-            margin-right: 2rem;
-
-            @include mobile {
-              border-bottom: 1px solid white;
-              border-top: 1px solid white;
-              position: absolute;
-              top: 33rem;
-              left: -2rem;
-            }
-          }
-        }
-
-        .about-desc {
-          width: 92%;
-          font-weight: normal;
-          font-size: 14px;
-          line-height: 32px;
-          height: 103px;
-          overflow: inherit;
-          color: white;
-
-          @include mobile {
-            line-height: 21px;
-            position: absolute;
-            top: 26rem;
-            left: 0.7rem;
-          }
-        }
+   .about_img {
+       width: 50%;
+       height: 100%;
+       @include mobile {
+        width: 100%;
       }
-
-      .about-column-2 {
-        border-right: 1px solid white;
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
+       
+      img {
+         width: 100%;
+         height: 100%;
+      }}
+      .about-desc {
+        color: white;
+        width: 50%;
+        height: 100%;
+        padding-left: 36px;
+        padding-right: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid #C4C4C4;
+        p {
+          margin-bottom: 0;
+        }
 
         @include mobile {
-          border: none;
+         width: 100%;
+         border-left: none;
+         padding: 12px;
+         border-top: 1px solid #C4C4C4;
+         border-bottom: 1px solid #C4C4C4;
+         font-size: 12px
         }
-        .about-desc-2 {
-          margin-top: 2rem;
-          font-size: 14px;
-          width: 58%;
-          margin-right: 42rem;
-          overflow: inherit;
-          height: 124px;
-          color: white;
 
+    
+      }
+
+    }
+
+    .about-row-2 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 40%;
+      border: 1px solid #C4C4C4;
+      border-top: 0;
+      @include mobile {
+        flex-direction: column-reverse;
+        border: none;
+        height: auto;
+        
+      }
+      .about-img-2 {
+        width: 50%;
+        height: 100%;
+        @include mobile {
+         width: 100%;
+        }
+        img {
+          width: 100%;
+          height: 100%;
           @include mobile {
-            margin-top: 9rem;
-            margin-right: 30rem;
+            height: 120px;
           }
         }
+        
 
-        .column-2-img {
-          img {
-            width: 46%;
-            margin-top: 4rem;
+        
+      }
 
-            @include mobile {
-              width: 114%;
-              border-bottom: 1px solid white;
-              border-top: 1px solid white;
-              padding-bottom: 12px;
-              padding-top: 7px;
-              position: absolute;
-              left: -1.3rem;
-              top: 16rem;
-              margin-right: -9rem;
-              padding-right: 38px;
-              padding-left: 38px;
-              box-sizing: border-box;
-            }
-          }
+      .about-desc-2 {
+        color: white;
+        width: 50%;
+        height: 100%;
+        padding-left: 36px;
+        padding-right: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        p {
+          margin-bottom: 0;
         }
 
-        .buttom-desc {
-          width: 50%;
-          font-size: 14px;
-          margin-right: 25rem;
-          margin-top: 2rem;
-          color: white;
-
-          @include mobile {
-            width: 100%;
-            position: absolute;
-            top: 38rem;
-          }
+        @include mobile {
+         width: 100%;
+         border-left: none;
+         padding: 12px;
+         border-top: 1px solid #C4C4C4;
+         border-bottom: 1px solid #C4C4C4;
+         font-size: 12px
         }
+
       }
     }
+    .about-row-3 {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      width: 100%;
+      height: 30%;
+      border: 1px solid #C4C4C4;
+      @include mobile {
+        flex-direction: column;
+        border: none;
+        height: auto;
+      }
+   .about-img-3 {
+       width: 50%;
+       height: 100%;
+       @include mobile {
+        width: 100%;
+      }
+       
+      img {
+         width: 100%;
+         height: 100%;
+      }}
+      .about-desc-3 {
+        color: white;
+        width: 50%;
+        height: 100%;
+        padding:34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid #C4C4C4;
+        p {
+          margin-bottom: 0;
+        }
+
+        @include mobile {
+         width: 100%;
+         border-left: none;
+         padding: 12px;
+         border-top: 1px solid #C4C4C4;
+         border-bottom: 1px solid #C4C4C4;
+         font-size: 12px
+        }}
+      }
+
     .box {
       position: absolute;
-      left: 92%;
+      left: 100%;
       top: 0%;
       width: 142px;
-      height: 447.9px;
+      height: 130%;
       box-sizing: border-box;
-      border: 1px solid white;
+      border-right: 1px solid #C4C4C4;
+      border-top: 1px solid #C4C4C4;
+      border-bottom: 1px solid #C4C4C4;
       background: linear-gradient(
         91.36deg,
         rgba(255, 0, 255, 0.15) 1.4%,
@@ -218,7 +187,29 @@
       );
       @include mobile {
         display: none;
-      }
+      } 
     }
+  }
+}
+.aboutAssociation-text {
+  width: 100% !important;
+  
+  color: white;
+  text-align: center;
+  border-top: 1px solid white ;
+  border-bottom: 1px solid white;
+  margin-top: 100px;
+  @include mobile {
+    border-top: 0px;
+    margin-top: 20px;
+  }
+  h2 {
+    font-size: 67px;
+  font-weight: lighter;
+  padding-top: 72px;
+  padding-bottom: 72px;
+  @include mobile {
+    font-size: 33px;
+  }
   }
 }

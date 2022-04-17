@@ -79,7 +79,7 @@ export default function ProjectSlider({value}) {
                    id={info.id}
                   body={value === 'RU-RU' ? info.description
                   : (value === 'en-US'? info.description_en : info.description_kg )}
-                   img={info.image} type={'recommendations'}/>
+                   img={info.image} type={'creativeprojects'}/>
                    
                 ))}
             

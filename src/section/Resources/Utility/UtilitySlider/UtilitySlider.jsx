@@ -55,7 +55,7 @@ export default function UtilitySlider({value}) {
                    id={info.id}
                   body={value === 'RU-RU' ? info.description
                   : (value === 'en-US'? info.description_en : info.description_kg )}
-                   img={info.image} type={'utility'}/>
+                   img={info.image} type='utility'/>
                 ))}
             
           </Slider>
@@ -82,7 +82,7 @@ export default function UtilitySlider({value}) {
                    id={info.id}
                   body={value === 'RU-RU' ? info.description
                   : (value === 'en-US'? info.description_en : info.description_kg )}
-                   img={info.image} type={'recommendations'}/>
+                   img={info.image} type={'utility'}/>
                    
                 ))}
             

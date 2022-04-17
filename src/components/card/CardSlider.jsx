@@ -9,7 +9,7 @@ const CardSlider = ({slides}) => {
   const settings = {
     className: "center",  
     infinite:  false, 
-    dots: true,
+    dots: false,
     autoplaySpeed: 2000,
     slidesToShow: 4,
     speed: 500,
@@ -17,7 +17,7 @@ const CardSlider = ({slides}) => {
   };
   const settingsMobile = {
     infinite:  false, 
-    dots: true,
+    dots: false,
     autoplaySpeed: 2000,
     slidesToShow: 2,
     speed: 500,
@@ -43,7 +43,7 @@ const CardSlider = ({slides}) => {
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
           />
 
-        <MainSlider  customPaging={(i)=><div className="dots-pag">{i+1}</div>} dotsClass="slick-dots" {...settings}>
+        <MainSlider {...settings}>
          
           {slides.map ((info,index) => (
                <CardForSlider key={index} img ={info.photo}
