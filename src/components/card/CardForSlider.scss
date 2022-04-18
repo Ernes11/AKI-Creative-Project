@@ -5,7 +5,7 @@
 .main_slides_card {
   background-color: black;
   border: 1px solid #FFFFFF;
-  padding-bottom: 28px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,6 +15,7 @@
   @include mobile {
     height: 200px;
     width: 9rem;
+    padding-bottom: 30px;
 
   }
   h2 {
@@ -49,11 +50,16 @@
   
     h2 {
       color: white;
+      // margin-bottom: 0;
+      @include mobile {
+        margin-top: 10%;
+      }
     }
   }
   .body_container {
     width: 100%;
     padding-left: 24px;
+    // margin-bottom: 20px;
     @include mobile{
       padding-left: 12px;
     }
@@ -70,6 +76,8 @@
       word-wrap: break-word;
       -webkit-box-orient: vertical;
       box-orient: vertical;
+      margin-bottom: 0;
+      height: 22px;
     }
   }
 
@@ -92,7 +100,7 @@
 
 
 .main_social-icons {
-        margin-bottom: 40px;
+        
         width: 100%;
         margin-left: -10px;
         color: rgba(255, 255, 255, 0.541);
@@ -131,6 +139,7 @@
    padding-bottom: 2px;
    background: white;
    top: 48%;
+  //  max-width: 110px;
    
    p {
     color: black;
@@ -143,13 +152,14 @@
     padding-left: 8px;
     padding-bottom: 1px;
     top: 45%;
+    max-width: 110px;
     p {
       font-size: 8px;
+      margin-bottom: 0;
     }
    }
  }
 .founder_position_container {
   position: absolute;
   width: 100%;
-  height: 100%;
 }

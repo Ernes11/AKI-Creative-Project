@@ -2,7 +2,10 @@
 
   .about-slider {
     .main_position {
-      top :unset !important
+      top :unset !important;
+      @include mobile {
+        max-width: 110px;
+      }
     }
     .slick-slide {
       @include mobile{

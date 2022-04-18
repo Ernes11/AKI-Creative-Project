@@ -24,9 +24,20 @@
       &:hover{
         color: $primary-color5;
         background-color: $primary-color6;
+        @include mobile {
+          color: $primary-color5;
+          background-color: transparent;
+        }
       }
     }
-
+    ul {
+    @include mobile {
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+    }
+  
     li{
       margin-top: 30px;
       list-style: none;
@@ -38,6 +49,11 @@
         line-height: 29px;
         transition: all 0.5s ease;
         padding: 5px 10px 5px 10px;
+        @include mobile {
+          font-size: 12px;
+          line-height: 15px;
+          padding: 2px 5px 2px 5px;
+        }
         
 
         &:hover{

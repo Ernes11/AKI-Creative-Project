@@ -59,7 +59,7 @@ function Footer() {
           
         </div>
         <p className="footer-copyright">
-            Copyright &copy; Aki Creative Website 2022
+            Copyright &copy; ACI Creative Website 2022
           </p>
       </footer>
       ))}

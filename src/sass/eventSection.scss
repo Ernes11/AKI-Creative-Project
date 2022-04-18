@@ -111,9 +111,7 @@
     }
   }
 }
-.slider-wrapper {
-  height: 300px !important;
-}
+
 .carousel img {
   height: 300px;
   width: 100%;
@@ -146,6 +144,7 @@
       transform: unset !important;
       transition: initial !important;
       opacity: 1 !important;
+      padding: 0;
     }
   }
 }
