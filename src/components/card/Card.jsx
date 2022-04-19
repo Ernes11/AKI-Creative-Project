@@ -28,7 +28,7 @@ const Card = ({ item }) => {
                   <div className="founder_position_container">
                     <div className="founder_position">
                      <p>
-                     {Val.founder.submit.position}
+                     {Val.founder.position}
                     </p>
                     </div>
                 </div>
@@ -36,10 +36,10 @@ const Card = ({ item }) => {
                 <div className="card-body">
                   <div className="card-title">
                     <p className="founder_name">
-                      {Val.founder.submit.full_name}
+                      {Val.founder.full_name}
                     </p>
                     <p className="founder_company">
-                      {Val.founder.submit.company_name}
+                      {Val.founder.company_name}
                     </p>
                   </div>
                 </div>
@@ -48,21 +48,21 @@ const Card = ({ item }) => {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href={Val.founder.submit.facebook}
+                    href={Val.founder.facebook}
                   >
                     <FaFacebookSquare size={30} className="icons" />
                   </a>
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href={Val.founder.submit.telegram}
+                    href={Val.founder.telegram}
                   >
                     <FaTelegram size={30} className="icons" />
                   </a>
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href={Val.founder.submit.instagram}
+                    href={Val.founder.instagram}
                   >
                     <AiFillInstagram size={32} className="icons" />
                   </a>
