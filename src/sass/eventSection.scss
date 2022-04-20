@@ -25,6 +25,7 @@
       padding-right: 10px;
       @include mobile {
         padding: 20px;
+        padding-top: 0;
       }
 
       div {
@@ -122,6 +123,7 @@
   height: 300px;
   width: 100%;
   @include mobile {
+    object-fit: contain;
    height: 90%;
    width: 80%;
    margin: 0
