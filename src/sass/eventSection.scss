@@ -23,6 +23,9 @@
       height: 100%;
       padding-left: 10px;
       padding-right: 10px;
+      @include mobile {
+        padding: 20px;
+      }
 
       div {
         margin: 0;
@@ -67,7 +70,7 @@
       padding: 2px;
 
       @include mobile {
-        margin-bottom: 1rem;
+        margin-top: 20px;
       }
     }
   }
@@ -96,6 +99,9 @@
     // min-height: 100%;
     // height: auto;
     height: 300px;
+    @include mobile {
+      height: 300px;
+    }
 
     .control-arrow {
       opacity: 0.8;
@@ -115,13 +121,23 @@
 .carousel img {
   height: 300px;
   width: 100%;
-  object-fit: cover;
+  @include mobile {
+   height: 90%;
+   width: 80%;
+   margin: 0
+  }
 }
 .event-section__element1 {
   border-right: 1px solid white;
+  @include mobile {
+    border-right: none
+  }
 }
 .event-section__element0 {
   border-left: 1px solid white;
+  @include mobile { 
+    border-left: none;
+  }
 
   .main-event__info {
     grid-column-start: 2;

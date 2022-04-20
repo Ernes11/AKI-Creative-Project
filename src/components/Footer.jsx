@@ -34,7 +34,7 @@ function Footer() {
 
             <div className="footer-column">
               <ul className="footer-contact">
-                <li><FormattedMessage id="Contacts"/> : {foot.whatsapp}</li>
+                <li><FormattedMessage id="Contacts"/> {foot.whatsapp}</li>
                 <li>{foot.company_name}</li>
                 <li>
                   {foot.company_email}

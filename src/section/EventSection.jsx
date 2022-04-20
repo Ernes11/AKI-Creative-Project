@@ -41,6 +41,7 @@ export default function EventSection({oddClass, info, imageId, title}) {
                     showArrows={true}
                     axis='vertical'
                     showThumbs={false}
+                    showIndicators ={false}
                     showStatus={false}
                     autoPlay={false}
                     interval={4000}
