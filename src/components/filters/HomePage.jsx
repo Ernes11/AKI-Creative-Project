@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import UsersList from "./UsersList";
 import Header from "./Header";
-import Filters from "./Filters";
 import axios from "axios";
 
 const HomePage = () => {

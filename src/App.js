@@ -27,8 +27,7 @@ export default function App() {
     console.log(lang)
     return (
 <IntlProvider messages={messages[locale]}
-      locale={locale}
-      defaultLocale={LOCALES.KYRGYZSTAN}>
+      locale={locale}>
   
     <Navigation menuOpen= {menuOpen} setMenuOpen = {setMenuOpen} setLang={setLang} lang={lang} />
     <Routes>
