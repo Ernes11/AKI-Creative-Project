@@ -34,12 +34,14 @@ function Hero() {
             </div>
           </div>
         </div>
+          <a href="#aki-row-1">
         <div className="scrolldown">
-          <div className="chevrons">
+          <div className="chevrons" >
             <div className="chevrondown"></div>
             <div className="chevrondown"></div>
           </div>
         </div>
+        </a>
       </div>
     </div>
   );

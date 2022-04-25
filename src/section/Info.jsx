@@ -18,7 +18,7 @@ function Info({value}) {
   
     <div className="info">
     <div class="container">
-      <div className="aki-row-1">
+      <div className="aki-row-1" id="aki-row-1">
           <div className="aki_img">
               <img src={MainInfo[0].picture} alt="" />
            </div>
