@@ -29,6 +29,8 @@
     }
 }
 .text_container {
+
+    
     margin-top: 70px;
     h2 {
         color: white;
@@ -52,7 +54,9 @@
         }
     }
     iframe {
+        margin-left: 24%;
         @include mobile {
+            margin-left: 13%;
             max-width: 70vw;
             max-height: 220px;
         }
