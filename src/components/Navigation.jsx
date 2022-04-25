@@ -9,9 +9,12 @@ function Navigation({ setLang , lang }) {
     setLang(value)
   }
   
+  
   const [isMobile, setIsMobile] = useState(false);
   return (
-    <div className="navigation">
+    <div  className="navigation">
+      
+
       <nav className="navbar navbar-expand navbar-dark">
         <div className="container">
           <div className="left">
