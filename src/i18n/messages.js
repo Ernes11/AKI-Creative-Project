@@ -39,7 +39,7 @@ export const messages = {
     Step5 : 'Step 5: Welcome to ACI! ',
     Charter : 'Charter',
     CreativeProjects : 'Creative Projects',
-    Policy : 'Accounting policy',
+    Policy : 'ACI Documents',
     GoodToKnow : 'Good to know for creators',
     GoodTo : 'Useful' ,
     MembersOfACI : 'Members of ACI'
@@ -84,7 +84,7 @@ export const messages = {
     Step5 : 'Шаг 5: Добро пожаловать в АКИ!',
     Charter : 'Устав',
     CreativeProjects : 'Креативные проекты',
-    Policy : 'Учётная политика',
+    Policy : 'Документация АКИ',
     GoodToKnow : 'Полезно знать креативщикам', 
     GoodTo : 'Полезно',
     MembersOfACI : 'Члены АКИ'
@@ -128,7 +128,7 @@ export const messages = {
     Step5 : '5-кадам: КИАга кош келиңиз!',
     Charter : 'Устав',
     CreativeProjects : 'Креативдүү долбоорлор',
-    Policy : 'Эсеп саясаты',
+    Policy : 'КИА документтери',
     GoodToKnow : 'Жаратмандарга пайдалуу маалымат', 
     GoodTo : 'Пайдалуу',
     MembersOfACI : 'КИА мүчөлөрү'
