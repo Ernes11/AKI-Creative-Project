@@ -1,6 +1,12 @@
 @import "../global.scss";
 
 .navigation {
+
+
+
+  img {
+    height : 70px;
+  }
   .navbar {
     box-shadow: 0px 4px 4px 0px #FFFFFF1A;
     background-color: $primary-color;

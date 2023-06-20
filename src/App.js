@@ -24,7 +24,6 @@ export default function App() {
     const [lang,setLang] = useState(LOCALES.RUSSIAN)
     const[menuOpen, setMenuOpen] = useState(false)
     const locale = lang
-    console.log(lang)
     return (
 <IntlProvider messages={messages[locale]}
       locale={locale}>
