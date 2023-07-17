@@ -27,8 +27,8 @@ export default function CardForSlider ({img,name,company ,id,inst,facebook,teleg
             <div className="main_social-icons">
                    <ul >
                        <a target="_blank"  rel="noreferrer" href={facebook}><FaFacebookSquare  className="icons" /></a>
-                       <a  target="_blank" rel="noreferrer"href={telegram}><FaTelegram size={20} className="icons" /></a>
-                       <a  target="_blank" rel="noreferrer"href={inst}><AiFillInstagram size={20} className="icons" /></a>
+                       <a  target="_blank" rel="noreferrer" href={telegram}><FaTelegram size={20} className="icons" /></a>
+                       <a  target="_blank" rel="noreferrer" href={inst}><AiFillInstagram size={20} className="icons" /></a>
                    </ul>
             </div>
         </div>

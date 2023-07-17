@@ -49,7 +49,7 @@ function Footer() {
             </div>
             <div className="footer-logo">
               <img
-                src="../../images/Footer_logo.png"
+                src="/images/Footer_logo.png"
                 alt=""
                 className="footer-img"
               />

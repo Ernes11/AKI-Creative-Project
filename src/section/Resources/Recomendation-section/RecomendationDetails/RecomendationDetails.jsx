@@ -7,7 +7,7 @@ import { FormattedMessage } from 'react-intl';
 function RecommendationDetails({value}){
 
     const { Id } = useParams()
-    console.log(Id)
+
     const [details,setDetails]= useState({})
     function FetchProjectDetails() { axios.get(`https://creative.kg/api/recommendations/${Id}`)
     .then(res =>{
