@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaFacebookSquare, FaTelegram } from "react-icons/fa";
+import { FaFacebookSquare, FaTelegram, FaWhatsapp } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import "../sass/footer.scss";
 import { Link } from "react-router-dom";
@@ -15,6 +15,8 @@ function Footer() {
     useEffect (()=> {
       FetchFooterInfo()
     },[])
+
+    console.log(FooterInfo)
   return (
     
     <div className="footer" id="footer">
@@ -44,7 +46,8 @@ function Footer() {
               <ul className="social-icons">
                 <a target="_blank" rel="noreferrer" href={foot.facebook}> <FaFacebookSquare size={30} className="icons" /></a>
                 <a target="_blank" rel="noreferrer" href={foot.telegram}><FaTelegram size={30} className="icons" /></a>
-                <a target="_blank" rel="noreferrer" href={foot.instagram }><AiFillInstagram size={32} className="icons" /></a>
+                <a target="_blank" rel="noreferrer" href={foot.whatsapp}> <FaWhatsapp size={30} className="icons" /> </a>
+                {/* <a target="_blank" rel="noreferrer" href={foot.instagram }><AiFillInstagram size={32} className="icons" /></a> */}
               </ul>
             </div>
             <div className="footer-logo">
