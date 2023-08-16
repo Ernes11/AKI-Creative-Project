@@ -45,9 +45,9 @@ function Footer() {
 
               <ul className="social-icons">
                 <a target="_blank" rel="noreferrer" href={foot.facebook}> <FaFacebookSquare size={30} className="icons" /></a>
-                <a target="_blank" rel="noreferrer" href={foot.telegram}><FaTelegram size={30} className="icons" /></a>
+                {/* <a target="_blank" rel="noreferrer" href={foot.telegram}><FaTelegram size={30} className="icons" /></a> */}
                 <a target="_blank" rel="noreferrer" href={foot.whatsapp}> <FaWhatsapp size={30} className="icons" /> </a>
-                {/* <a target="_blank" rel="noreferrer" href={foot.instagram }><AiFillInstagram size={32} className="icons" /></a> */}
+                <a target="_blank" rel="noreferrer" href={foot.instagram }><AiFillInstagram size={32} className="icons" /></a>
               </ul>
             </div>
             <div className="footer-logo">
