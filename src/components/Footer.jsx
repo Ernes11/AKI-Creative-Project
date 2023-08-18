@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { FormattedMessage } from 'react-intl';
 import axios from "axios";
 
-function Footer() {
+function Footer({lang}) {
   const [FooterInfo,setFooterInfo] = useState([])
     function FetchFooterInfo() { axios.get('https://creative.kg/api/footer/')
     .then(res =>{
@@ -46,13 +46,13 @@ function Footer() {
               <ul className="social-icons">
                 <a target="_blank" rel="noreferrer" href={foot.facebook}> <FaFacebookSquare size={30} className="icons" /></a>
                 {/* <a target="_blank" rel="noreferrer" href={foot.telegram}><FaTelegram size={30} className="icons" /></a> */}
-                <a target="_blank" rel="noreferrer" href={foot.whatsapp}> <FaWhatsapp size={30} className="icons" /> </a>
+                <a target="_blank" rel="noreferrer" href={'https://api.whatsapp.com/send?phone=996702341766'}> <FaWhatsapp size={30} className="icons" /> </a>
                 <a target="_blank" rel="noreferrer" href={foot.instagram }><AiFillInstagram size={32} className="icons" /></a>
               </ul>
             </div>
             <div className="footer-logo">
               <img
-                src="/images/Footer_logo.png"
+                src={`/images/Footer_logo${lang}.png`}
                 alt=""
                 className="footer-img"
               />

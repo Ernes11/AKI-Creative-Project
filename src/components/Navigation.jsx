@@ -19,7 +19,7 @@ function Navigation({ setLang , lang }) {
         <div className="container">
           <div className="left">
             <NavLink className="navbar-brand" to="/">
-              <img src="../../images/Top_logo.png" alt="" />
+              <img src={`../../images/Top_logo${lang}.png`} alt="" />
             </NavLink>
             <ul
               className={isMobile ? "navbar-nav-mobile" : "navbar-nav"}

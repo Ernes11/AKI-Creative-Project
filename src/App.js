@@ -24,11 +24,12 @@ export default function App() {
     const [lang,setLang] = useState(LOCALES.RUSSIAN)
     const[menuOpen, setMenuOpen] = useState(false)
     const locale = lang
+
     return (
 <IntlProvider messages={messages[locale]}
       locale={locale}>
   
-    <Navigation menuOpen= {menuOpen} setMenuOpen = {setMenuOpen} setLang={setLang} lang={lang} />
+    <Navigation menuOpen= {menuOpen} setMenuOpen = {setMenuOpen} lang={lang} setLang={setLang}  />
     <Routes>
       <Route path="/" element={<Home value={lang} />} />
       <Route path="/about" element={<About value = {lang} />} />
@@ -42,7 +43,7 @@ export default function App() {
       <Route path="/resource/recommendations"element={<Resource value = {lang}/>} />
       <Route path="/resource/utility" element={<Resource value = {lang}/>} />
     </Routes>
-    <Footer />
+    <Footer lang={lang} />
 </IntlProvider>
     ) 
 }
